@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f5f1ea;
+  --foreground: #1c1917;
+  --muted: #6b6158;
+  --subtle: #a8a099;
+  --accent: #8b6f47;
+  --border: #e5ddd0;
+  --surface: #ede7dc;
+}
+
+.dark {
+  --background: #14110f;
+  --foreground: #f0eae0;
+  --muted: #8b847a;
+  --subtle: #5a524a;
+  --accent: #c9a677;
+  --border: #2a2420;
+  --surface: #1c1815;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
