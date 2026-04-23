@@ -11,7 +11,7 @@ export const t = {
     about: { bg: "За мен", en: "About" },
     workWithMe: { bg: "Работи с мен", en: "Work with me" },
     articles: { bg: "Статии", en: "Articles" },
-    guides: { bg: "Наръчници", en: "Guides" },
+    resources: { bg: "Ресурси", en: "Resources" },
     contact: { bg: "Контакт", en: "Contact" },
     openMenu: { bg: "Отвори меню", en: "Open menu" },
     closeMenu: { bg: "Затвори меню", en: "Close menu" },
@@ -509,6 +509,15 @@ export const t = {
     paginationNext: { bg: "Следваща", en: "Next" },
     paginationPageLabel: { bg: "Страница", en: "Page" },
     paginationOf: { bg: "от", en: "of" },
+    // Article detail page
+    backToArticles: {
+      bg: "Обратно към статии",
+      en: "Back to articles",
+    },
+    moreArticles: {
+      bg: "Още статии",
+      en: "More articles",
+    },
   },
   // Homepage "Metrics" section — experience numbers.
   metrics: {
@@ -622,6 +631,68 @@ export const t = {
         "Stress management",
         "Building confidence",
       ],
+    },
+  },
+  // Resources page — books, guides, future subscription materials.
+  resources: {
+    kicker: { bg: "Ресурси", en: "Resources" },
+    titleLead: { bg: "Материали, които", en: "Materials that" },
+    titleAccent: { bg: "остават с теб.", en: "stay with you." },
+    intro: {
+      bg: "Тук ще намираш книги, наръчници и кратки материали по темите, с които работя. Някои са вече в продажба. Други ще се отключват с имейл и предстоят.",
+      en: "Here you'll find books, guides, and short materials on the themes I work with. Some are already for sale. Others will be unlocked with an email and are coming soon.",
+    },
+    // Section 1 — paid / available
+    paidKicker: { bg: "В продажба", en: "Available" },
+    paidTitleLead: { bg: "Книги и", en: "Books and" },
+    paidTitleAccent: { bg: "наръчници.", en: "guides." },
+    paidIntro: {
+      bg: "Материали, които можеш да поръчаш през външна платформа. Линкът те отвежда директно към страницата на книгата.",
+      en: "Materials you can order through an external platform. The link takes you directly to the book's page.",
+    },
+    // Book 1 — placeholder copy, to be replaced with real title/description/URL.
+    book1Type: { bg: "Книга", en: "Book" },
+    book1Title: {
+      bg: "Заглавие на книгата",
+      en: "Book title",
+    },
+    book1Description: {
+      bg: "Кратко описание на книгата — за какво е, за кого е и какво ще отнесе читателят от нея. Замени този текст с истинското описание.",
+      en: "A short description of the book — what it's about, who it's for, and what the reader will take away. Replace this text with the real description.",
+    },
+    book1Cta: { bg: "Купи от платформата", en: "Buy from the platform" },
+    book1ExternalLabel: {
+      bg: "Външен линк",
+      en: "External link",
+    },
+    book1CoverAlt: {
+      bg: "Корица на книгата",
+      en: "Book cover",
+    },
+    // Section 2 — coming soon / subscription
+    comingSoonKicker: { bg: "Скоро", en: "Coming soon" },
+    comingSoonTitleLead: { bg: "Безплатни материали с", en: "Free materials with" },
+    comingSoonTitleAccent: { bg: "абонамент.", en: "a subscription." },
+    comingSoonParagraph: {
+      bg: "Работя по поредица от кратки наръчници и материали, които ще се отключват с имейл. Все още няма форма за абониране — ще я добавя, когато съдържанието е готово.",
+      en: "I'm working on a series of short guides and materials that will be unlocked with an email. There's no subscription form yet — I'll add one when the content is ready.",
+    },
+    comingSoonBadge: { bg: "Очаквай", en: "Expected" },
+    comingSoonItem1Title: {
+      bg: "Наръчник №1",
+      en: "Guide #1",
+    },
+    comingSoonItem1Description: {
+      bg: "Кратък практически материал по една конкретна тема. Заглавието и темата ще бъдат обявени скоро.",
+      en: "A short, practical guide on one specific theme. Title and topic will be announced soon.",
+    },
+    comingSoonItem2Title: {
+      bg: "Наръчник №2",
+      en: "Guide #2",
+    },
+    comingSoonItem2Description: {
+      bg: "Втори материал в поредицата. Ще бъде достъпен срещу имейл абонамент.",
+      en: "The second material in the series. Will be available in exchange for an email subscription.",
     },
   },
 } as const;

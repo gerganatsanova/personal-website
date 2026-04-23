@@ -15,7 +15,7 @@ export function Nav() {
     { label: t.nav.about[lang], href: "/about" },
     { label: t.nav.workWithMe[lang], href: "/work-with-me" },
     { label: t.nav.articles[lang], href: "/articles" },
-    { label: t.nav.guides[lang], href: "/guides" },
+    { label: t.nav.resources[lang], href: "/resources" },
     { label: t.nav.contact[lang], href: "/contact" },
   ];
 

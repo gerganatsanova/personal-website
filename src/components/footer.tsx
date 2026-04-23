@@ -6,7 +6,7 @@ const navLinks = [
   { href: "/about", label: "За мен" },
   { href: "/work-with-me", label: "Работи с мен" },
   { href: "/articles", label: "Статии" },
-  { href: "/guides", label: "Наръчници" },
+  { href: "/resources", label: "Ресурси" },
   { href: "/contact", label: "Контакт" },
 ];
 

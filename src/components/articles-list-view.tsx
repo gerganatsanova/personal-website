@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { fadeUp } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
 import { t } from "@/lib/translations";
@@ -19,9 +19,31 @@ type Props = {
   page: number;
 };
 
+const STORAGE_QUERY_KEY = "articlesQuery";
+const STORAGE_PATH_KEY = "articlesPath";
+
 export function ArticlesListView({ page }: Props) {
   const { lang } = useLanguage();
   const [query, setQuery] = useState("");
+
+  // On mount, restore saved search from a previous visit.
+  useEffect(() => {
+    const saved = sessionStorage.getItem(STORAGE_QUERY_KEY);
+    if (saved) setQuery(saved);
+  }, []);
+
+  // Persist the search term and current path so the article detail page's
+  // "back" links can return the user to this exact state.
+  useEffect(() => {
+    sessionStorage.setItem(STORAGE_QUERY_KEY, query);
+  }, [query]);
+
+  useEffect(() => {
+    sessionStorage.setItem(
+      STORAGE_PATH_KEY,
+      page === 1 ? "/articles" : `/articles/page/${page}`,
+    );
+  }, [page]);
 
   const pages = totalPages();
 

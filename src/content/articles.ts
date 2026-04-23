@@ -9,7 +9,10 @@
 //   3. Save. The article appears automatically on /articles sorted by date
 //      (newest first), and is picked up by the homepage preview and search.
 //
-// BODY FORMAT: paragraphs are separated by a blank line (two line breaks).
+// BODY FORMAT:
+//   - Paragraphs: separated by a blank line (two line breaks).
+//   - Subheadings: start the line with "## " (two hashes + space).
+//   - Quotes: start the line with "> " (one angle bracket + space).
 // ============================================================================
 
 import type { Lang } from "@/lib/i18n";
@@ -207,6 +210,81 @@ export const articles: Article[] = [
     },
     body: { bg: "", en: "" },
   },
+  {
+    slug: "hr-tendencii-2019",
+    date: "2019-02-19",
+    displayDate: { bg: "Февруари 2019", en: "February 2019" },
+    cover:
+      "https://images.unsplash.com/photo-1631203928521-bde1e727e8b7?w=1400&q=80",
+    title: {
+      bg: "3 HR тенденции, които ще променят организациите през 2019 г.",
+      en: "3 HR trends that will reshape organizations in 2019",
+    },
+    excerpt: {
+      bg: "Бизнесът се променя и то с много динамични темпове, а това носи със себе си нови предизвикателства пред компаниите. Запознайте се с най-актуалните HR тенденции, които да очакваме през 2019 година.",
+      en: "Business is changing rapidly, and that brings new challenges for companies. Here are some of the key HR trends to watch in 2019.",
+    },
+    body: {
+      bg: `Навярно сте чували поговорката „Нова година – нов късмет"? Е, 2019 година вече е тук и със сигурност носи със себе си нови предизвикателства. Нека видим кои са част от най-обсъжданите HR тенденции през 2019 година.
+
+Без значение в коя индустрия се намират, компаниите, които остават конкурентни, са тези, които се развиват и адаптират. Компаниите, които се развиват и адаптират, по-лесно отговарят на новите очаквания на пазара и на хората в организациите си. Според международни наблюдения в сферата на лидерството и човешките ресурси, трите тенденции, върху които компаниите да се фокусират през 2019 г., са: ориентация към клиентите; лидерството, ориентирано към хората и ангажираност на служителите.
+
+## Ориентация на компанията към клиентите
+
+Все повече компании насочват усилията си към подобряване на „преживяването на клиента". Докладът на компанията за проучвания Econsultancy гласи, че повечето организации посочват „преживяването на клиента" като най-важното конкурентно предимство за предстоящата година и подчертават няколко важни причини, поради които лидерството не трябва да пренебрегва това. Докладът показва, че организациите, които са наистина ориентирани към клиентите, имат почти два пъти по-голяма вероятност да надхвърлят своите бизнес цели с голям марж.
+
+Ясно е, че изграждането на култура, ориентирана към клиентите, води до голяма възвръщаемост. В доклада се посочва обаче, че „Чудесното преживяване на клиентите не се случва случайно. То се нуждае от добра координация в цялата организация, като първо най-високите нива на управление трябва да се ангажират и да поставят клиентите в центъра при вземането на решения." Изграждането на такава култура започва от топ мениджмънта, но се нуждае от активното участие на всеки един служител в компанията. Мениджмънтът трябва да се ангажира да постави клиента в центъра, но трябва и да моделира такива поведения, които да подкрепят това, за да може и всички останали да последват примера им.
+
+## Лидерство, ориентирано към хората
+
+Служителите съвсем естествено искат да работят с лидери, които имат съпричастност, убеденост и автентичност. За съжаление, според проф. Дахер Келтнер, преподавател от Калифорнийския университет в Бъркли, много лидери изпитват „парадокса на властта". Тоест колкото по-високо се изкачват по стълбата на властта, толкова по-лошо става тяхното поведение. В своето изследване професор Келтнер установява, че лидерите в организациите са три пъти по-склонни да прекъсват или обиждат други, да управляват повече от една задача в срещите и да повишават тон, в сравнение с подчинените си.
+
+Ролята на мениджърите обаче е ключово и те трябва да успяват ефективно да се справят с двете си основни роли – от една страна да познават много добре финансовите показатели, бизнес стратегията и уменията да управляват, но в същото време трябва да умеят да комуникират по правилния начин, да вдъхновяват и хората да са готови да ги следват във всяка една инициатива. Важна е връзката между това, което лидерите доставят като резултати, и начина, по който го постигат.
+
+## Ангажираност на служителите
+
+Според проучването на Gallup за Ангажираността на служителите през 2018 г., данните категорично потвърждават, че тя е нараснала. Докладът показва, че 34% от служителите в световен мащаб са ангажирани, което е най-високият показател, наблюдаван някога. Броят на служителите, които са в активна възраст, но по една или друга причина са откъснати от трудовия живот, също е на рекорден минимум от 13%. Това са страхотни новини за работодателите и това не е случайно. Последните години организациите инвестират много ресурси в подобряването на ангажираността на служителите и сега виждат положителния резултат от тези усилия.
+
+Данните трябва да послужат като мотиватор за компаниите да продължат да влагат усилията си за увеличаване на ангажираността и по този начин — да увеличават и бизнес резултатите. Според Gallup:
+
+> „Организациите, които имат най-високата ангажираност от страна на своите служители, постигат ръст на печалбата четири пъти по-голям от този на своите конкуренти. Топ компаниите в класацията реализират значително по-висока ангажираност на клиентите, по-висока производителност, по-висока степен на задържане на служителите, по-малко инциденти и 21% по-висока доходност. Ангажираните служители също така имат и по-добри здравословни показатели."
+
+Важен елемент, който засилва ангажираността, е обучението и развитието, особено на високо потенциалните служители. Това изисква от ръководството да разработва и да прилага солидни програми, с които да помогне на служителите си да постигнат своите кариерни цели.
+
+## Рецепта за успех
+
+Не е изненада, че тези тенденции представляват три от най-важните компоненти на успешния бизнес: клиенти, лидери и служители. Важно е също така да се признае, че фокусирането върху само една от тези области не е достатъчно. Необходим е всеобхватен стратегически подход, който наистина да пожъне успех през настоящата година. Разгледайте внимателно състоянието на бизнеса си и преценете колко добре се справяте с всяка една от тези три тенденции. Идентифицирайте областите, които се нуждаят от развитие и инвестирайте в тях, за да осигурите успех и на трите сцени.`,
+      en: `You have probably heard the phrase, "New year, new luck." Well, 2019 is already here, and it certainly comes with a new set of challenges. Let's look at some of the HR trends that are shaping conversations this year.
+
+No matter the industry, the companies that stay competitive are the ones that keep evolving and adapting. Those that do are better positioned to respond both to changing market expectations and to the needs of the people within their organizations. Based on broader observations in leadership and human resources, three trends stand out in 2019: customer centricity, people-oriented leadership, and employee engagement.
+
+## Customer centricity
+
+More and more companies are focusing on improving the customer experience. A report by research company Econsultancy found that many organizations see customer experience as their most important competitive advantage for the year ahead, and it highlights several reasons why leadership should not overlook it. The report also shows that organizations that are truly customer-centric are nearly twice as likely to exceed their business goals by a significant margin.
+
+Building a customer-centric culture can bring strong returns. At the same time, the report points out that "great customer experiences don't happen by accident. They require well-coordinated efforts across the entire organization, starting with senior leadership's commitment to putting the customer at the center of decision-making." Building this kind of culture starts at the top, but it also depends on the active involvement of every employee. Management needs to commit to putting the customer first and to model the behaviors that support that commitment so others can follow.
+
+## People-oriented leadership
+
+Employees naturally want to work with leaders who show empathy, conviction, and authenticity. Unfortunately, according to Professor Dacher Keltner of the University of California, Berkeley, many leaders experience what he calls "the power paradox." In other words, the higher they climb, the more likely their behavior is to worsen. In his research, Professor Keltner found that leaders are three times more likely than their subordinates to interrupt or insult others, multitask during meetings, and raise their voices.
+
+At the same time, the role of managers remains critical. They need to balance two core responsibilities effectively. On the one hand, they need a strong understanding of financial indicators, business strategy, and management. On the other, they need to communicate well, inspire people, and lead in a way that others are willing to follow. What matters is the connection between the results leaders deliver and the way they achieve them.
+
+## Employee engagement
+
+According to Gallup's 2018 employee engagement study, engagement has increased. The report found that 34% of employees worldwide are engaged, the highest level ever recorded. The share of working-age people who are disconnected from work for one reason or another has also dropped to a record low of 13%. These are encouraging figures for employers, and they are not accidental. In recent years, organizations have invested significant resources in improving employee engagement, and they are now seeing the results of those efforts.
+
+The data should encourage companies to continue investing in engagement and, as a result, improve business performance. According to Gallup:
+
+> "Organizations with the highest levels of employee engagement achieve earnings-per-share growth that is more than four times higher than that of their competitors. Top-performing companies report significantly stronger customer engagement, higher productivity, better employee retention, fewer incidents, and 21% higher profitability. Engaged employees also show better health outcomes."
+
+One of the important factors behind stronger engagement is learning and development, especially for high-potential employees. This requires leadership teams to create and implement strong programs that support employees in reaching their career goals.
+
+## Looking at the bigger picture
+
+It is no surprise that these trends reflect three of the most important parts of a successful business: customers, leaders, and employees. It is also worth recognizing that focusing on only one of these areas is not enough. What is needed is a broader strategic approach that can make a real difference in the year ahead. Take a close look at where your business stands and assess how well you are addressing each of these three trends. Identify the areas that need development and invest in them to support progress across all three.`,
+    },
+  },
 ];
 
 // ---------------- helpers ----------------
@@ -246,4 +324,8 @@ function normalize(s: string): string {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .trim();
+}
+
+export function getArticleBySlug(slug: string): Article | undefined {
+  return sortedArticles.find((a) => a.slug === slug);
 }
