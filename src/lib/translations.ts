@@ -478,43 +478,37 @@ export const t = {
       bg: "Лични размисли и наблюдения от работата ми с хора. Пиша за видимото, но и за онова, което често остава неизказано, а всъщност движи много от процесите ни.",
       en: "Personal reflections and observations from my work with people. I write about what can be seen, but also about what often remains unspoken and yet drives so many of our processes.",
     },
-    // Placeholder posts — content will be finalized later.
-    item1Title: {
-      bg: "Защо увереността не идва преди действието",
-      en: "Why confidence doesn't come before action",
+    // Search UI on the /articles listing page.
+    searchPlaceholder: {
+      bg: "Търси по заглавие или ключова дума",
+      en: "Search by title or keyword",
     },
-    item1Excerpt: {
-      bg: "Чакаме да се почувстваме готови, преди да направим крачка. Истината е, че увереността не е предпоставка — тя е резултат. Кратко есе за това как се формира вътрешната сигурност и защо повечето хора я търсят на грешното място.",
-      en: "We wait to feel ready before taking a step. The truth is, confidence isn't a prerequisite — it's a result. A short essay on how inner certainty forms and why most people look for it in the wrong place.",
+    searchPlaceholderHint: {
+      bg: "(напр.: лидерство, граници, увереност)",
+      en: "(e.g. leadership, boundaries, confidence)",
     },
-    item1Date: { bg: "Март 2026", en: "March 2026" },
-    item2Title: {
-      bg: "Разликата между да ръководиш и да управляваш",
-      en: "The difference between leading and managing",
+    searchClear: { bg: "Изчисти търсенето", en: "Clear search" },
+    searchResultsFor: {
+      bg: "Резултати за",
+      en: "Results for",
     },
-    item2Excerpt: {
-      bg: "Двете не са синоними, но рядко говорим за това. Ръководенето е за хора и посока. Управлението е за процеси и резултати. Кратко за разликите, които променят всичко.",
-      en: "The two aren't synonyms, though we rarely talk about it. Leading is about people and direction. Managing is about processes and outcomes. A short take on the differences that change everything.",
+    searchNoResults: {
+      bg: "Няма намерени статии. Опитай с друга дума.",
+      en: "No articles found. Try a different word.",
     },
-    item2Date: { bg: "Февруари 2026", en: "February 2026" },
-    item3Title: {
-      bg: "Петте въпроса, които задавам на всеки нов клиент",
-      en: "The five questions I ask every new client",
+    searchResultsCountOne: {
+      bg: "статия",
+      en: "article",
     },
-    item3Excerpt: {
-      bg: "Преди да започнем работа, питам едни и същи пет неща. Не са случайни и не са любопитство — те задават рамката на всичко, което следва.",
-      en: "Before we start working, I ask the same five things. They're not random and they're not curiosity — they set the frame for everything that follows.",
+    searchResultsCountMany: {
+      bg: "статии",
+      en: "articles",
     },
-    item3Date: { bg: "Януари 2026", en: "January 2026" },
-    item4Title: {
-      bg: "Какво означава „да си честен със себе си\" на практика",
-      en: "What \"being honest with yourself\" means in practice",
-    },
-    item4Excerpt: {
-      bg: "Всички говорим за това, малко от нас го правим. Какво всъщност значи да бъдеш честен със себе си — и какво не значи.",
-      en: "We all talk about it; few of us actually do it. What it really means to be honest with yourself — and what it doesn't.",
-    },
-    item4Date: { bg: "Декември 2025", en: "December 2025" },
+    // Pagination
+    paginationPrev: { bg: "Предишна", en: "Previous" },
+    paginationNext: { bg: "Следваща", en: "Next" },
+    paginationPageLabel: { bg: "Страница", en: "Page" },
+    paginationOf: { bg: "от", en: "of" },
   },
   // Homepage "Metrics" section — experience numbers.
   metrics: {

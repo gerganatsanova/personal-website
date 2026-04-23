@@ -6,46 +6,14 @@ import Link from "next/link";
 import { fadeUp } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
 import { t } from "@/lib/translations";
+import { sortedArticles } from "@/content/articles";
 
 export function ArticlesPreview() {
   const { lang } = useLanguage();
 
-  const articles = [
-    {
-      slug: "uverenost-i-deystvieto",
-      title: t.articles.item1Title[lang],
-      excerpt: t.articles.item1Excerpt[lang],
-      date: t.articles.item1Date[lang],
-      image:
-        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1400&q=80",
-    },
-    {
-      slug: "leadership-vs-management",
-      title: t.articles.item2Title[lang],
-      excerpt: "",
-      date: t.articles.item2Date[lang],
-      image:
-        "https://images.unsplash.com/photo-1554774853-719586ee6f64?w=800&q=80",
-    },
-    {
-      slug: "petteto-vaprosa",
-      title: t.articles.item3Title[lang],
-      excerpt: "",
-      date: t.articles.item3Date[lang],
-      image:
-        "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&q=80",
-    },
-    {
-      slug: "chesten-sas-sebe-si",
-      title: t.articles.item4Title[lang],
-      excerpt: "",
-      date: t.articles.item4Date[lang],
-      image:
-        "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
-    },
-  ];
-
-  const [featured, ...rest] = articles;
+  const preview = sortedArticles.slice(0, 4);
+  if (preview.length === 0) return null;
+  const [featured, ...rest] = preview;
 
   return (
     <section className="relative">
@@ -96,7 +64,7 @@ export function ArticlesPreview() {
           >
             <div className="relative aspect-[4/3] overflow-hidden rounded-sm md:col-span-7">
               <Image
-                src={featured.image}
+                src={featured.cover}
                 alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"
@@ -114,14 +82,14 @@ export function ArticlesPreview() {
             <div className="flex flex-col justify-center md:col-span-5">
               <div className="mb-5 flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-subtle">
                 <span className="h-px w-6 bg-accent" aria-hidden />
-                <span>{featured.date}</span>
+                <span>{featured.displayDate[lang]}</span>
               </div>
               <h3 className="font-serif text-3xl leading-[1.15] tracking-tight text-foreground transition-colors group-hover:text-accent md:text-4xl lg:text-[2.5rem]">
-                {featured.title}
+                {featured.title[lang]}
               </h3>
-              {featured.excerpt && (
+              {featured.excerpt[lang] && (
                 <p className="mt-5 text-[15px] leading-[1.75] text-muted md:text-base">
-                  {featured.excerpt}
+                  {featured.excerpt[lang]}
                 </p>
               )}
               <span className="mt-7 inline-flex items-center text-sm font-medium text-foreground">
@@ -152,7 +120,7 @@ export function ArticlesPreview() {
                 {/* Thumbnail */}
                 <div className="relative aspect-[4/3] h-16 w-[84px] overflow-hidden rounded-sm md:h-auto md:w-32">
                   <Image
-                    src={article.image}
+                    src={article.cover}
                     alt=""
                     fill
                     sizes="128px"
@@ -162,16 +130,18 @@ export function ArticlesPreview() {
 
                 {/* Date (desktop only in its own column) */}
                 <div className="hidden text-[11px] uppercase tracking-[0.18em] text-subtle md:block">
-                  <span className="whitespace-nowrap">{article.date}</span>
+                  <span className="whitespace-nowrap">
+                    {article.displayDate[lang]}
+                  </span>
                 </div>
 
                 {/* Title (mobile shows date above) */}
                 <div className="min-w-0">
                   <div className="mb-1.5 text-[10px] uppercase tracking-[0.18em] text-subtle md:hidden">
-                    <span>{article.date}</span>
+                    <span>{article.displayDate[lang]}</span>
                   </div>
                   <h3 className="font-serif text-lg leading-snug tracking-tight text-foreground transition-colors group-hover:text-accent md:text-xl lg:text-2xl">
-                    {article.title}
+                    {article.title[lang]}
                   </h3>
                 </div>
 
