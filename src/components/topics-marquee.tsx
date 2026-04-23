@@ -1,27 +1,17 @@
 "use client";
 
 import { motion } from "motion/react";
-
-const topics = [
-  "Нагласа за растеж",
-  "Лидерство",
-  "Комуникация",
-  "Себепознание",
-  "Увереност",
-  "Презентационни умения",
-  "Разказване на истории",
-  "Управление на промяната",
-  "Личностен растеж",
-  "Управление на времето",
-  "Лидерско присъствие",
-  "Меки умения",
-];
+import { useLanguage } from "@/lib/i18n";
+import { t } from "@/lib/translations";
 
 export function TopicsMarquee() {
+  const { lang } = useLanguage();
+  const topics = t.topicsMarquee.items[lang];
+
   return (
     <section
-      aria-label="Теми, по които работя"
-      className="relative overflow-hidden border-t border-border/50 py-5 md:py-7"
+      aria-label={t.topicsMarquee.ariaLabel[lang]}
+      className="relative overflow-hidden py-4 md:py-5"
     >
       <div
         aria-hidden
@@ -41,10 +31,10 @@ export function TopicsMarquee() {
       />
 
       <motion.div
-        className="flex items-center gap-8 md:gap-10"
+        className="flex items-center gap-6 md:gap-8"
         animate={{ x: ["0%", "-50%"] }}
         transition={{
-          duration: 70,
+          duration: 55,
           ease: "linear",
           repeat: Infinity,
         }}
@@ -53,9 +43,9 @@ export function TopicsMarquee() {
         {[...topics, ...topics].map((topic, i) => (
           <div
             key={i}
-            className="flex shrink-0 items-center gap-8 md:gap-10"
+            className="flex shrink-0 items-center gap-6 md:gap-8"
           >
-            <span className="whitespace-nowrap font-serif text-base italic leading-none text-muted md:text-lg lg:text-xl">
+            <span className="whitespace-nowrap font-serif text-sm italic leading-none text-muted md:text-base lg:text-lg">
               {topic}
             </span>
             <span

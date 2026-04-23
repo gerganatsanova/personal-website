@@ -14,7 +14,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-border/50">
+    <footer className="relative">
       <div className="mx-auto max-w-6xl px-6 pt-16 pb-8 md:px-10 md:pt-20 md:pb-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-10">
           {/* Brand */}

@@ -1,19 +1,27 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Lora, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeScript } from "@/components/theme-script";
 import { LanguageProvider } from "@/lib/i18n";
 
+// Latin serif — original display face for English.
 const fraunces = Fraunces({
   variable: "--font-fraunces",
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin", "latin-ext"],
   display: "swap",
   axes: ["opsz", "SOFT"],
 });
 
+// Cyrillic fallback — used automatically for glyphs Fraunces doesn't have.
+const lora = Lora({
+  variable: "--font-lora",
+  subsets: ["cyrillic"],
+  display: "swap",
+});
+
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin", "latin-ext", "cyrillic"],
   display: "swap",
 });
 
@@ -32,12 +40,15 @@ export default function RootLayout({
     <html
       lang="bg"
       suppressHydrationWarning
-      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${lora.variable} ${inter.variable} h-full antialiased`}
     >
       <head>
         <ThemeScript />
       </head>
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col bg-background text-foreground"
+      >
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

@@ -1,39 +1,39 @@
 "use client";
 
 import { motion } from "motion/react";
-
-type Metric = {
-  value: string;
-  label: string;
-};
-
-const featured: Metric = {
-  value: "2 000+",
-  label: "Участници в програми",
-};
-
-const secondary: Metric[] = [
-  { value: "50+", label: "Управлявани проекти" },
-  { value: "80+", label: "Проведени обучения" },
-  { value: "300+", label: "1:1 коучинг сесии" },
-  { value: "120+", label: "Обучителни модули" },
-];
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 16 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
-    },
-  },
-};
+import { fadeUp } from "@/lib/motion";
+import { useLanguage } from "@/lib/i18n";
+import { t } from "@/lib/translations";
 
 export function Metrics() {
+  const { lang } = useLanguage();
+
+  const featured = {
+    value: t.metrics.featuredValue[lang],
+    label: t.metrics.featuredLabel[lang],
+  };
+
+  const secondary = [
+    {
+      value: t.metrics.projectsValue[lang],
+      label: t.metrics.projectsLabel[lang],
+    },
+    {
+      value: t.metrics.trainingsValue[lang],
+      label: t.metrics.trainingsLabel[lang],
+    },
+    {
+      value: t.metrics.coachingValue[lang],
+      label: t.metrics.coachingLabel[lang],
+    },
+    {
+      value: t.metrics.modulesValue[lang],
+      label: t.metrics.modulesLabel[lang],
+    },
+  ];
+
   return (
-    <section className="relative border-t border-border/50">
+    <section className="relative">
       <div className="mx-auto max-w-6xl px-6 pt-24 pb-16 md:px-10 md:pt-32 md:pb-20">
         {/* Section header */}
         <motion.div
@@ -41,19 +41,21 @@ export function Metrics() {
           whileInView="show"
           viewport={{ once: true, amount: 0.4 }}
           variants={fadeUp}
-          className="max-w-xl"
+          className="max-w-2xl"
         >
           <p className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
             <span className="h-px w-8 bg-accent" aria-hidden />
-            Опит
+            {t.metrics.kicker[lang]}
           </p>
           <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
-            Зад думите —<br className="hidden sm:inline" />{" "}
-            <span className="italic text-accent">практика.</span>
+            {t.metrics.titleLead[lang]}
+            <br className="hidden sm:inline" />{" "}
+            <span className="italic text-accent">
+              {t.metrics.titleAccent[lang]}
+            </span>
           </h2>
           <p className="mt-6 text-[15px] leading-[1.75] text-muted md:text-base">
-            Над 9 години в learning &amp; development, коучинг и фасилитация —
-            с хора, екипи и организации от различни сектори.
+            {t.metrics.intro[lang]}
           </p>
         </motion.div>
 

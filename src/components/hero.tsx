@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
+import { EASE } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
 import { t } from "@/lib/translations";
 
@@ -13,7 +15,7 @@ const fadeUp = {
     transition: {
       duration: 0.8,
       delay: i * 0.08,
-      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
+      ease: EASE,
     },
   }),
 };
@@ -139,7 +141,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
+          transition={{ duration: 1.1, ease: EASE, delay: 0.25 }}
           className="relative z-10 md:col-span-5"
         >
           <div className="relative mx-auto w-full max-w-md md:max-w-none">
@@ -155,10 +157,13 @@ export function Hero() {
               }}
             />
             <div className="relative isolate aspect-[4/5] w-full overflow-hidden border border-border/60">
-              <img
+              <Image
                 src="/images/portrait-v2.png"
                 alt="Gergana Tsanova"
-                className="absolute inset-0 h-full w-full object-cover object-[center_20%]"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover object-[center_20%]"
               />
 
               <div

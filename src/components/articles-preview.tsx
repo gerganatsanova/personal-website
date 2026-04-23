@@ -3,68 +3,52 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-
-type Article = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  image: string;
-};
-
-const articles: Article[] = [
-  {
-    slug: "uverenost-i-deystvieto",
-    title: "Защо увереността не идва преди действието",
-    excerpt:
-      "Чакаме да се почувстваме готови, преди да направим крачка. Истината е, че увереността не е предпоставка — тя е резултат. Кратко есе за това как се формира вътрешната сигурност и защо повечето хора я търсят на грешното място.",
-    date: "Март 2026",
-    image:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1400&q=80",
-  },
-  {
-    slug: "leadership-vs-management",
-    title: "Разликата между да ръководиш и да управляваш",
-    excerpt: "",
-    date: "Февруари 2026",
-    image:
-      "https://images.unsplash.com/photo-1554774853-719586ee6f64?w=800&q=80",
-  },
-  {
-    slug: "petteto-vaprosa",
-    title: "Петте въпроса, които задавам на всеки нов клиент",
-    excerpt: "",
-    date: "Януари 2026",
-    image:
-      "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&q=80",
-  },
-  {
-    slug: "chesten-sas-sebe-si",
-    title: "Какво означава „да си честен със себе си“ на практика",
-    excerpt: "",
-    date: "Декември 2025",
-    image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
-  },
-];
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 16 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
-    },
-  },
-};
+import { fadeUp } from "@/lib/motion";
+import { useLanguage } from "@/lib/i18n";
+import { t } from "@/lib/translations";
 
 export function ArticlesPreview() {
+  const { lang } = useLanguage();
+
+  const articles = [
+    {
+      slug: "uverenost-i-deystvieto",
+      title: t.articles.item1Title[lang],
+      excerpt: t.articles.item1Excerpt[lang],
+      date: t.articles.item1Date[lang],
+      image:
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1400&q=80",
+    },
+    {
+      slug: "leadership-vs-management",
+      title: t.articles.item2Title[lang],
+      excerpt: "",
+      date: t.articles.item2Date[lang],
+      image:
+        "https://images.unsplash.com/photo-1554774853-719586ee6f64?w=800&q=80",
+    },
+    {
+      slug: "petteto-vaprosa",
+      title: t.articles.item3Title[lang],
+      excerpt: "",
+      date: t.articles.item3Date[lang],
+      image:
+        "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&q=80",
+    },
+    {
+      slug: "chesten-sas-sebe-si",
+      title: t.articles.item4Title[lang],
+      excerpt: "",
+      date: t.articles.item4Date[lang],
+      image:
+        "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
+    },
+  ];
+
   const [featured, ...rest] = articles;
 
   return (
-    <section className="relative border-t border-border/50">
+    <section className="relative">
       <div className="mx-auto max-w-6xl px-6 pt-16 pb-12 md:px-10 md:pt-20 md:pb-16">
         {/* Section header */}
         <motion.div
@@ -77,19 +61,21 @@ export function ArticlesPreview() {
           <div>
             <p className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
               <span className="h-px w-8 bg-accent" aria-hidden />
-              Статии
+              {t.articles.kicker[lang]}
             </p>
             <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
-              Мисли, записани
+              {t.articles.titleLead[lang]}
               <br className="hidden sm:inline" />{" "}
-              <span className="italic text-accent">на глас.</span>
+              <span className="italic text-accent">
+                {t.articles.titleAccent[lang]}
+              </span>
             </h2>
           </div>
           <Link
             href="/articles"
             className="group hidden items-center text-sm font-medium text-muted transition-colors hover:text-foreground md:inline-flex"
           >
-            Виж всички
+            {t.articles.viewAll[lang]}
             <span className="ml-2 transition-transform group-hover:translate-x-0.5">
               →
             </span>
@@ -139,7 +125,7 @@ export function ArticlesPreview() {
                 </p>
               )}
               <span className="mt-7 inline-flex items-center text-sm font-medium text-foreground">
-                Прочети
+                {t.articles.readCta[lang]}
                 <span className="ml-2 transition-transform group-hover:translate-x-0.5">
                   →
                 </span>
@@ -209,7 +195,7 @@ export function ArticlesPreview() {
             href="/articles"
             className="group inline-flex items-center text-sm font-medium text-foreground hover:text-accent"
           >
-            Виж всички статии
+            {t.articles.viewAllMobile[lang]}
             <span className="ml-2 transition-transform group-hover:translate-x-0.5">
               →
             </span>
