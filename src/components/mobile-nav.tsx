@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { LanguageToggle } from "./language-toggle";
 import { ThemeToggle } from "./theme-toggle";
+import { useObfuscatedEmail } from "./obfuscated-email";
 import { useLanguage } from "@/lib/i18n";
 import { t, contact } from "@/lib/translations";
 
@@ -13,6 +14,8 @@ type NavLink = { label: string; href: string };
 export function MobileNav({ links }: { links: NavLink[] }) {
   const [open, setOpen] = useState(false);
   const { lang } = useLanguage();
+  const { email, href: emailHref } = useObfuscatedEmail();
+  const emailLabel = lang === "bg" ? "Имейл" : "Email";
 
   // Lock body scroll while menu is open
   useEffect(() => {
@@ -132,10 +135,13 @@ export function MobileNav({ links }: { links: NavLink[] }) {
                   </p>
                   <div className="flex flex-col gap-3 text-[14px]">
                     <a
-                      href={`mailto:${contact.email}`}
+                      href={emailHref ?? "#"}
                       className="text-muted transition-colors hover:text-foreground"
+                      onClick={(e) => {
+                        if (!emailHref) e.preventDefault();
+                      }}
                     >
-                      {contact.email}
+                      {email ?? emailLabel}
                     </a>
                     <a
                       href={contact.linkedin}

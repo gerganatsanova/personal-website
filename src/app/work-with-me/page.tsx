@@ -110,7 +110,7 @@ function Intro() {
           <span className="h-px w-6 bg-accent" aria-hidden />
           {t.workWithMe.topCtaLead[lang]}{" "}
           <Link
-            href="/contact"
+            href="/contact#book"
             className="group not-italic font-medium text-foreground transition-colors hover:text-accent"
           >
             {t.workWithMe.topCtaLink[lang]}

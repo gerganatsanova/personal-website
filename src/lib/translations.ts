@@ -1,7 +1,7 @@
-import type { Lang } from "./i18n";
-
+// NOTE: the email address is intentionally NOT stored here as a plain string —
+// it is character-code-encoded inside `obfuscated-email.tsx` so it never
+// appears in the SSR HTML or the static JS bundle (anti-scraper).
 export const contact = {
-  email: "gergana.tsanova.bs@gmail.com",
   linkedin: "https://www.linkedin.com/in/gerganatsanova/",
 };
 
@@ -715,11 +715,155 @@ export const t = {
       en: "Short guides and tools that you can download for free. I am currently preparing the content that will be published here soon.",
     },
   },
+  // Contact page — booking, channels, FAQ.
+  contactPage: {
+    // 1. Hero
+    kicker: { bg: "Контакт", en: "Contact" },
+    headlineLead: { bg: "Да започнем", en: "Let's start" },
+    headlineAccent: { bg: "разговор.", en: "a conversation." },
+    location: {
+      bg: "Базирана в София, България",
+      en: "Based in Sofia, Bulgaria",
+    },
+    intro: {
+      bg: "Най-лесният начин да започнем е кратък безплатен разговор. Запази час от календара по-долу или ми пиши на имейл. Отговарям до 2 работни дни.",
+      en: "The easiest way to start is with a short free conversation. You can book a time directly from the calendar below or send me an email. I reply within 2 business days.",
+    },
+    // 2. Connect — booking + email (#book anchor lives here)
+    connectKicker: { bg: "Свържи се", en: "Get in touch" },
+    connectTitleLead: {
+      bg: "20 минути, без ангажимент.",
+      en: "20 minutes, no commitment.",
+    },
+    connectIntro: {
+      bg: "Запази безплатен 20-минутен онлайн разговор или просто да ми пишеш с няколко думи. Ще видим какво търсиш и дали мога да бъда полезна. Отговарям в рамките на 2 работни дни.",
+      en: "Book a free 20-minute online call, or simply send me a few lines if that feels easier. We'll see what you're looking for and whether I can be of help. I reply within 2 business days.",
+    },
+    bookBulletsLabel: {
+      bg: "Какво да очакваш на разговора:",
+      en: "What to expect on the call:",
+    },
+    bookBullets: {
+      bg: [
+        "Кратко представяне и контекст за работата ми",
+        "Време да споделиш какво те води към разговор",
+        "Яснота за следващата подходяща стъпка",
+      ],
+      en: [
+        "A short introduction and context about my work",
+        "Time for you to share what brings you to this conversation",
+        "Clarity on the right next step",
+      ],
+    },
+    bookCta: {
+      bg: "Запази час в календара",
+      en: "Pick a time in the calendar",
+    },
+    bookFallback: {
+      bg: "Календарът ще се появи тук скоро. Междувременно можеш да ми пишеш на имейл.",
+      en: "The calendar will appear here soon. In the meantime, feel free to email me.",
+    },
+    transitionOr: {
+      bg: "Или просто ми пиши",
+      en: "Or simply write to me",
+    },
+    emailButton: { bg: "Изпрати имейл", en: "Send an email" },
+    inPersonNote: {
+      bg: "За обучения и фасилитации на живо работя основно в България.",
+      en: "For in-person trainings and facilitations, I work primarily in Bulgaria.",
+    },
+    emailSubject: {
+      bg: "Въпрос от сайта",
+      en: "Inquiry from your website",
+    },
+    // 3. FAQ
+    faqKicker: { bg: "Често задавани въпроси", en: "Frequently asked" },
+    faqTitleLead: { bg: "Преди да", en: "Before you" },
+    faqTitleAccent: { bg: "ми пишеш.", en: "reach out." },
+    faqIntro: {
+      bg: "Отговори на въпросите, които най-често ми задават. Ако твоят не е тук, пиши ми спокойно.",
+      en: "Answers to the questions I'm asked most often. If yours isn't here, just write to me.",
+    },
+    faqOpen: { bg: "Отвори отговора", en: "Open answer" },
+    faqClose: { bg: "Затвори отговора", en: "Close answer" },
+    faq: {
+      bg: [
+        {
+          q: "На какъв език работиш?",
+          a: "Работя на български и английски. Сесиите, обученията и материалите могат да бъдат на който от двата езика предпочиташ. Избираш този, на който се чувстваш по-свободно.",
+        },
+        {
+          q: "Онлайн или на живо?",
+          a: "Индивидуалните коучинг сесии провеждам онлайн в Zoom или Google Meet, за да можеш да се включиш отвсякъде. Фирмените обучения и фасилитации могат да бъдат на живо в България или в онлайн формат, според нуждите и възможностите.",
+        },
+        {
+          q: "Колко време продължава една коучинг сесия и колко срещи са нужни?",
+          a: "Една коучинг сесия обикновено продължава 50 минути. Процесът най-често включва между 6 и 10 срещи, през една или две седмици, но това зависи от темата, целта и темпото, което е подходящо за теб. В запознавателния разговор обсъждаме какъв формат би имал най-много смисъл в твоя случай.",
+        },
+        {
+          q: "Колко струват услугите?",
+          a: "Цената зависи от вида и обхвата на работата. Индивидуалният коучинг, фирмените обучения и фасилитирането се структурират по различен начин, затова не използвам една стандартна цена за всички случаи. След като разбера от какво имаш нужда, ще ти предложа конкретен формат и яснота за цената. Това можем да обсъдим още в безплатния запознавателен разговор.",
+        },
+        {
+          q: "Каква е разликата между коучинг, фасилитиране и обучение?",
+          a: "Накратко, коучингът е процес, в който ти намираш своите отговори, а аз подкрепям мисленето ти чрез въпроси, структура и, когато е полезно, споделяне на гледни точки и опит. Обучението е насочено към развиване на знания и умения по конкретна тема. Фасилитирането е работа с групи, при която помагам на хората да проведат смислен разговор, да подредят различните гледни точки и да стигнат до яснота или решение.",
+        },
+        {
+          q: "За кого коучингът НЕ е подходящ?",
+          a: "Коучингът не е терапия и не замества работа с психотерапевт. Ако в момента преминаваш през тежка житейска криза, дълбока скръб, депресия или травма, най-отговорното от моя страна е да те насоча към квалифициран специалист.\n\nКоучингът е най-полезен, когато имаш достатъчно вътрешен ресурс и пространство да се фокусираш върху това как да продължиш напред.",
+        },
+        {
+          q: "Колко бързо отговаряш на имейли?",
+          a: "Отговарям в рамките на 2 работни дни. Ако ти е по-удобно, можеш директно да запазиш безплатен запознавателен разговор през календара по-горе. Това е най-бързият начин да направим първа стъпка.",
+        },
+        {
+          q: "Какво се случва на запознавателния разговор?",
+          a: "Това е 20-минутен разговор без ангажимент. Накратко се запознаваме, ти ми разказваш с какво искаш да работиш и какво търсиш. В края ще имаме повече яснота дали има смисъл да продължим заедно и каква би била следващата подходяща стъпка, независимо дали тя е работа с мен или друга посока.",
+        },
+      ],
+      en: [
+        {
+          q: "What language do you work in?",
+          a: "I work in Bulgarian and English. Sessions, workshops, and materials can be in either language. You choose the one you feel more comfortable using.",
+        },
+        {
+          q: "Online or in person?",
+          a: "I offer individual coaching sessions online via Zoom or Google Meet, so you can join from anywhere. Corporate trainings and facilitation sessions can take place in person in Bulgaria or online, depending on your needs and availability.",
+        },
+        {
+          q: "How long is a coaching session, and how many sessions are needed?",
+          a: "A coaching session usually lasts 50 minutes. The process typically includes 6 to 10 sessions, spaced one or two weeks apart, but this depends on the topic, the goal, and the pace that feels right for you. During the introductory call, we discuss what format would make the most sense for your situation.",
+        },
+        {
+          q: "How much do your services cost?",
+          a: "The price depends on the type and scope of the work. Individual coaching, corporate trainings, and facilitation are structured differently, so I don't use one standard price for every situation. Once I understand what you need, I'll suggest a specific format and give you clear pricing. We can discuss this during the free introductory call.",
+        },
+        {
+          q: "What is the difference between coaching, facilitation, and training?",
+          a: "In short, coaching is a process in which you find your own answers, while I support your thinking through questions, structure, and, when useful, by sharing perspectives and experience. Training focuses on developing knowledge and skills around a specific topic. Facilitation is group work, where I help people have a meaningful conversation, organize different perspectives, and reach clarity or a decision.",
+        },
+        {
+          q: "Who is coaching not suitable for?",
+          a: "Coaching is not therapy and does not replace working with a psychotherapist. If you are currently going through a serious life crisis, deep grief, depression, or trauma, the most responsible thing I can do is refer you to a qualified specialist.\n\nCoaching is most helpful when you have enough inner capacity and space to focus on how to move forward.",
+        },
+        {
+          q: "How quickly do you reply to emails?",
+          a: "I reply within 2 business days. If it's more convenient, you can book a free introductory call directly through the calendar above. That's the quickest way to take the first step.",
+        },
+        {
+          q: "What happens during the introductory call?",
+          a: "It's a 20-minute, no-obligation conversation. We briefly get to know each other, and you tell me what you'd like to work on and what you're looking for. By the end, we'll have more clarity on whether it makes sense to continue together and what the next right step might be, whether that's working with me or taking another direction.",
+        },
+      ],
+    },
+    // 4. Warm close
+    closeText: {
+      bg: "Радвам се, че стигна дотук.\n\nАко нещо в тези страници е отворило въпрос, посока или желание за разговор, ще се радвам да се чуем.",
+      en: "I'm glad you made it this far.\n\nIf anything on these pages has opened up a question, a direction, or a wish for a conversation, I'd be glad to hear from you.",
+    },
+    closeSignature: {
+      bg: "— Гергана",
+      en: "— Gergana",
+    },
+  },
 } as const;
-
-export function pick<T extends Record<Lang, string>>(
-  entry: T,
-  lang: Lang,
-): string {
-  return entry[lang];
-}

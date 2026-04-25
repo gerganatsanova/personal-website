@@ -3,10 +3,13 @@
 import Link from "next/link";
 import { contact, t } from "@/lib/translations";
 import { useLanguage } from "@/lib/i18n";
+import { useObfuscatedEmail } from "./obfuscated-email";
 
 export function Footer() {
   const { lang } = useLanguage();
   const year = new Date().getFullYear();
+  const { email, href: emailHref } = useObfuscatedEmail();
+  const emailLabel = lang === "bg" ? "Имейл" : "Email";
 
   const navLinks = [
     { href: "/", label: t.nav.home[lang] },
@@ -61,10 +64,13 @@ export function Footer() {
             <ul className="space-y-3 text-[14px]">
               <li>
                 <a
-                  href={`mailto:${contact.email}`}
+                  href={emailHref ?? "#"}
                   className="text-muted transition-colors hover:text-foreground"
+                  onClick={(e) => {
+                    if (!emailHref) e.preventDefault();
+                  }}
                 >
-                  {contact.email}
+                  {email ?? emailLabel}
                 </a>
               </li>
               <li>

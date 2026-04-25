@@ -34,7 +34,7 @@ export function CTA() {
 
           <div className="mt-12 flex justify-center">
             <Link
-              href="/contact"
+              href="/contact#book"
               className="group inline-flex items-center justify-center rounded-full border border-foreground bg-foreground px-7 py-3.5 text-sm font-medium text-background transition-all hover:border-accent hover:bg-accent"
             >
               {t.workWithMe.ctaPrimary[lang]}

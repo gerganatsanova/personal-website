@@ -174,9 +174,10 @@ function RecommendationCard({ article }: { article: Article }) {
 
 /**
  * Parses a small markdown-like format:
- *   - "## " at line start → <h2>
- *   - "> " at line start  → <blockquote>
- *   - blank lines         → paragraph breaks
+ *   - "## " at line start          → <h2>
+ *   - "> " at line start           → <blockquote>
+ *   - line containing " → "        → flow row (chips with arrows)
+ *   - blank lines                  → paragraph breaks
  */
 function ArticleBody({ body }: { body: string }) {
   const blocks = body
@@ -214,8 +215,56 @@ function ArticleBody({ body }: { body: string }) {
             </blockquote>
           );
         }
+        if (block.includes(" → ") && !block.includes("\n")) {
+          const steps = block
+            .split(" → ")
+            .map((s) => s.trim().replace(/[.,;:!?]+$/, ""))
+            .filter(Boolean);
+          return <FlowRow key={i} steps={steps} />;
+        }
         return <p key={i}>{block}</p>;
       })}
     </div>
+  );
+}
+
+function FlowRow({ steps }: { steps: string[] }) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={{
+        hidden: {},
+        show: { transition: { staggerChildren: 0.08 } },
+      }}
+      className="my-8 flex flex-wrap items-center gap-x-3 gap-y-3 md:my-10"
+    >
+      {steps.map((step, i) => (
+        <div key={i} className="flex items-center gap-x-3">
+          <motion.span
+            variants={{
+              hidden: { opacity: 0, y: 8 },
+              show: { opacity: 1, y: 0 },
+            }}
+            className="inline-block rounded-full border border-border/70 bg-foreground/[0.03] px-4 py-1.5 font-sans text-[13px] tracking-wide text-foreground/90 transition-colors hover:border-accent/60 hover:bg-accent/5 hover:text-foreground md:text-sm"
+          >
+            {step}
+          </motion.span>
+          {i < steps.length - 1 && (
+            <motion.span
+              variants={{
+                hidden: { opacity: 0, x: -4 },
+                show: { opacity: 1, x: 0 },
+              }}
+              aria-hidden
+              className="font-sans text-accent"
+            >
+              →
+            </motion.span>
+          )}
+        </div>
+      ))}
+    </motion.div>
   );
 }
