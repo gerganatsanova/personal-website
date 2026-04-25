@@ -1,20 +1,17 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "motion/react";
+import { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "motion/react";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { SectionDivider } from "@/components/section-divider";
 import { CTA } from "@/components/cta";
+import { BookCard } from "@/components/book-card";
 import { fadeUp, EASE } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
 import { t } from "@/lib/translations";
-
-// TODO: replace with the real external purchase link once confirmed.
-const BOOK_EXTERNAL_URL = "https://example.com/book";
-// TODO: replace with real cover image (e.g. /images/book-cover.jpg).
-const BOOK_COVER_SRC =
-  "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=900&q=80";
+import { sortedBooks } from "@/content/books";
 
 export default function ResourcesPage() {
   return (
@@ -25,7 +22,8 @@ export default function ResourcesPage() {
         <SectionDivider />
         <Paid />
         <SectionDivider />
-        <ComingSoon />
+        <Materials />
+        <SectionDivider />
         <CTA />
       </main>
       <SectionDivider variant="thin" />
@@ -77,9 +75,23 @@ function Intro() {
   );
 }
 
-/* ---------------- 2. Paid resources ---------------- */
+/* ---------------- 2. Paid resources (paginator) ---------------- */
 function Paid() {
   const { lang } = useLanguage();
+  const [[index, direction], setState] = useState<[number, number]>([0, 1]);
+  const books = sortedBooks;
+  const current = books[index];
+  const total = books.length;
+  const showPagination = total > 1;
+
+  const goTo = (next: number) => {
+    if (next < 0 || next >= total || next === index) return;
+    setState([next, next > index ? 1 : -1]);
+  };
+
+  const prev = index > 0 ? index - 1 : null;
+  const next = index < total - 1 ? index + 1 : null;
+
   return (
     <section className="relative">
       <div className="mx-auto max-w-6xl px-6 pt-16 pb-20 md:px-10 md:pt-20 md:pb-28">
@@ -88,89 +100,212 @@ function Paid() {
           whileInView="show"
           viewport={{ once: true, amount: 0.4 }}
           variants={fadeUp}
-          className="max-w-2xl"
+          className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
         >
-          <p className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
-            <span className="h-px w-8 bg-accent" aria-hidden />
-            {t.resources.paidKicker[lang]}
-          </p>
-          <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-[2.75rem]">
-            {t.resources.paidTitleLead[lang]}{" "}
-            <span className="italic text-accent">
-              {t.resources.paidTitleAccent[lang]}
-            </span>
-          </h2>
-          <p className="mt-6 text-[15px] leading-[1.75] text-muted md:text-base">
-            {t.resources.paidIntro[lang]}
-          </p>
+          <div className="max-w-2xl">
+            <p className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
+              <span className="h-px w-8 bg-accent" aria-hidden />
+              {t.resources.paidKicker[lang]}
+            </p>
+            <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-[2.75rem]">
+              {t.resources.paidTitleLead[lang]}{" "}
+              <span className="italic text-accent">
+                {t.resources.paidTitleAccent[lang]}
+              </span>
+            </h2>
+          </div>
+
+          {showPagination && (
+            <Link
+              href="/resources/books"
+              className="group hidden items-center text-sm font-medium text-muted transition-colors hover:text-foreground md:inline-flex"
+            >
+              {t.resources.viewAll[lang]}
+              <span className="ml-2 transition-transform group-hover:translate-x-0.5">
+                →
+              </span>
+            </Link>
+          )}
         </motion.div>
 
-        {/* Book card */}
-        <motion.a
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.9, ease: EASE }}
-          href={BOOK_EXTERNAL_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group mt-14 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-12 md:gap-12"
-        >
-          {/* Cover */}
-          <div className="relative aspect-[3/4] overflow-hidden rounded-sm border border-border/60 md:col-span-5">
-            <Image
-              src={BOOK_COVER_SRC}
-              alt={t.resources.book1CoverAlt[lang]}
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.025]"
-            />
-          </div>
+        <div className="mt-14 overflow-hidden md:mt-16">
+          <motion.div
+            key={current.slug}
+            initial={{ x: direction > 0 ? 60 : -60, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: EASE }}
+            className="rounded-lg border border-border/60 bg-surface p-6 md:p-10"
+          >
+            <BookCard book={current} />
+          </motion.div>
+        </div>
 
-          {/* Copy */}
-          <div className="flex flex-col justify-center md:col-span-7">
-            <div className="mb-5 flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-subtle">
-              <span className="h-px w-6 bg-accent" aria-hidden />
-              <span>{t.resources.book1Type[lang]}</span>
+        {showPagination && (
+          <nav
+            aria-label="Books pagination"
+            className="mt-14 flex flex-col items-center gap-5 md:mt-16"
+          >
+            <div className="flex items-center gap-1">
+              <PageButton
+                onClick={prev !== null ? () => goTo(prev) : null}
+                label={t.articles.paginationPrev[lang]}
+                arrow="left"
+              />
+              <ul className="mx-2 flex items-center gap-1">
+                {books.map((book, i) => {
+                  const active = i === index;
+                  return (
+                    <li key={book.slug}>
+                      {active ? (
+                        <span
+                          aria-current="page"
+                          className="inline-flex h-9 min-w-9 items-center justify-center rounded-sm bg-foreground px-3 text-sm font-medium text-background"
+                        >
+                          {i + 1}
+                        </span>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => goTo(i)}
+                          className="inline-flex h-9 min-w-9 items-center justify-center rounded-sm px-3 text-sm text-muted transition-colors hover:bg-foreground/[0.04] hover:text-foreground"
+                        >
+                          {i + 1}
+                        </button>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+              <PageButton
+                onClick={next !== null ? () => goTo(next) : null}
+                label={t.articles.paginationNext[lang]}
+                arrow="right"
+              />
             </div>
-            <h3 className="font-serif text-3xl leading-[1.15] tracking-tight text-foreground transition-colors group-hover:text-accent md:text-4xl lg:text-[2.5rem]">
-              {t.resources.book1Title[lang]}
-            </h3>
-            <p className="mt-5 max-w-[55ch] text-[15px] leading-[1.75] text-muted md:text-base">
-              {t.resources.book1Description[lang]}
+            <p className="text-[11px] uppercase tracking-[0.2em] text-subtle">
+              {t.articles.paginationPageLabel[lang]} {index + 1}{" "}
+              {t.articles.paginationOf[lang]} {total}
             </p>
-            <span className="mt-8 inline-flex items-center text-sm font-medium text-foreground">
-              {t.resources.book1Cta[lang]}
-              <span
-                aria-hidden
-                className="ml-2 transition-transform group-hover:translate-x-0.5"
-              >
-                ↗
+          </nav>
+        )}
+
+        {showPagination && (
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/resources/books"
+              className="group inline-flex items-center text-sm font-medium text-foreground hover:text-accent md:hidden"
+            >
+              {t.resources.viewAllMobile[lang]}
+              <span className="ml-2 transition-transform group-hover:translate-x-0.5">
+                →
               </span>
-            </span>
-            <span className="mt-2 text-[11px] uppercase tracking-[0.18em] text-subtle">
-              {t.resources.book1ExternalLabel[lang]}
-            </span>
+            </Link>
           </div>
-        </motion.a>
+        )}
       </div>
     </section>
   );
 }
 
-/* ---------------- 3. Coming soon ---------------- */
-function ComingSoon() {
+function PageButton({
+  onClick,
+  label,
+  arrow,
+}: {
+  onClick: (() => void) | null;
+  label: string;
+  arrow: "left" | "right";
+}) {
+  const glyph = arrow === "left" ? "←" : "→";
+  if (!onClick) {
+    return (
+      <span
+        aria-disabled
+        className="inline-flex h-9 items-center justify-center rounded-sm px-3 text-sm text-subtle opacity-40"
+      >
+        {arrow === "left" ? (
+          <>
+            <span aria-hidden className="mr-1.5">
+              {glyph}
+            </span>
+            {label}
+          </>
+        ) : (
+          <>
+            {label}
+            <span aria-hidden className="ml-1.5">
+              {glyph}
+            </span>
+          </>
+        )}
+      </span>
+    );
+  }
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="group inline-flex h-9 items-center justify-center rounded-sm px-3 text-sm text-muted transition-colors hover:text-foreground"
+    >
+      {arrow === "left" ? (
+        <>
+          <span
+            aria-hidden
+            className="mr-1.5 transition-transform group-hover:-translate-x-0.5"
+          >
+            {glyph}
+          </span>
+          {label}
+        </>
+      ) : (
+        <>
+          {label}
+          <span
+            aria-hidden
+            className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+          >
+            {glyph}
+          </span>
+        </>
+      )}
+    </button>
+  );
+}
+
+/* ---------------- 3. Materials ---------------- */
+// Each page of the Materials section shows this many items side by side.
+const MATERIALS_PAGE_SIZE = 2;
+
+function Materials() {
   const { lang } = useLanguage();
-  const items = [
-    {
-      title: t.resources.comingSoonItem1Title[lang],
-      description: t.resources.comingSoonItem1Description[lang],
-    },
-    {
-      title: t.resources.comingSoonItem2Title[lang],
-      description: t.resources.comingSoonItem2Description[lang],
-    },
+
+  // Placeholders for upcoming downloadable materials. Add, remove, or replace
+  // entries and pagination adjusts automatically (pages of MATERIALS_PAGE_SIZE).
+  // When a file is ready, swap the <button> in the card body with:
+  //   <a href="/downloads/your-file.pdf" download className={CTA_CLASSES}>New CTA text</a>
+  // and update the title/description translation keys.
+  const placeholders = [
+    { key: "upcoming-1" },
+    { key: "upcoming-2" },
+    { key: "upcoming-3" },
+    { key: "upcoming-4" },
   ];
+
+  const [[pageIndex, direction], setState] = useState<[number, number]>([0, 1]);
+  const totalPages = Math.ceil(placeholders.length / MATERIALS_PAGE_SIZE);
+  const showPagination = totalPages > 1;
+  const currentItems = placeholders.slice(
+    pageIndex * MATERIALS_PAGE_SIZE,
+    (pageIndex + 1) * MATERIALS_PAGE_SIZE,
+  );
+
+  const goTo = (next: number) => {
+    if (next < 0 || next >= totalPages || next === pageIndex) return;
+    setState([next, next > pageIndex ? 1 : -1]);
+  };
+
+  const prevPage = pageIndex > 0 ? pageIndex - 1 : null;
+  const nextPage = pageIndex < totalPages - 1 ? pageIndex + 1 : null;
 
   return (
     <section className="relative">
@@ -180,47 +315,133 @@ function ComingSoon() {
           whileInView="show"
           viewport={{ once: true, amount: 0.4 }}
           variants={fadeUp}
-          className="max-w-2xl"
+          className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
         >
-          <p className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
-            <span className="h-px w-8 bg-accent" aria-hidden />
-            {t.resources.comingSoonKicker[lang]}
-          </p>
-          <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-[2.75rem]">
-            {t.resources.comingSoonTitleLead[lang]}{" "}
-            <span className="italic text-accent">
-              {t.resources.comingSoonTitleAccent[lang]}
-            </span>
-          </h2>
-          <p className="mt-6 text-[15px] leading-[1.75] text-muted md:text-base">
-            {t.resources.comingSoonParagraph[lang]}
-          </p>
+          <div className="max-w-2xl">
+            <p className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
+              <span className="h-px w-8 bg-accent" aria-hidden />
+              {t.resources.materialsKicker[lang]}
+            </p>
+            <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-[2.75rem]">
+              {t.resources.materialsTitleLead[lang]}{" "}
+              <span className="italic text-accent">
+                {t.resources.materialsTitleAccent[lang]}
+              </span>
+            </h2>
+            <p className="mt-6 text-[15px] leading-[1.75] text-muted md:text-base">
+              {t.resources.materialsIntro[lang]}
+            </p>
+          </div>
+
+          {showPagination && (
+            <Link
+              href="/resources/materials"
+              className="group hidden items-center text-sm font-medium text-muted transition-colors hover:text-foreground md:inline-flex"
+            >
+              {t.resources.viewAll[lang]}
+              <span className="ml-2 transition-transform group-hover:translate-x-0.5">
+                →
+              </span>
+            </Link>
+          )}
         </motion.div>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-10">
-          {items.map((item, i) => (
+        <div className="mt-14 overflow-hidden md:mt-16">
+          <AnimatePresence mode="wait">
             <motion.div
-              key={item.title}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeUp}
-              transition={{ delay: i * 0.08 }}
-              className="relative flex flex-col border border-dashed border-border/80 p-7 md:p-8"
+              key={pageIndex}
+              initial={{ x: direction > 0 ? 60 : -60, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: direction > 0 ? -60 : 60, opacity: 0 }}
+              transition={{ duration: 0.5, ease: EASE }}
+              className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8"
             >
-              <span className="mb-5 inline-flex w-fit items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-accent">
-                <span className="h-px w-5 bg-accent" aria-hidden />
-                {t.resources.comingSoonBadge[lang]}
-              </span>
-              <h3 className="font-serif text-2xl leading-tight tracking-tight text-foreground md:text-[1.75rem]">
-                {item.title}
-              </h3>
-              <p className="mt-4 text-[15px] leading-[1.75] text-muted md:text-base">
-                {item.description}
-              </p>
+              {currentItems.map((item) => (
+                <div
+                  key={item.key}
+                  className="group relative flex flex-col items-center rounded-lg border border-border/60 bg-surface p-8 text-center transition-colors md:p-10"
+                >
+                  <h3 className="font-serif text-xl leading-tight tracking-tight text-foreground md:text-2xl">
+                    {t.resources.upcomingMaterialTitle[lang]}
+                  </h3>
+                  <p className="mt-3 max-w-[34ch] text-[14px] leading-[1.7] text-muted md:text-[15px]">
+                    {t.resources.upcomingMaterialDescription[lang]}
+                  </p>
+                  <button
+                    type="button"
+                    disabled
+                    className="mt-8 inline-flex h-11 cursor-not-allowed items-center justify-center rounded-full bg-foreground px-6 text-sm font-medium text-background opacity-60"
+                  >
+                    {t.resources.upcomingMaterialCta[lang]}
+                  </button>
+                </div>
+              ))}
             </motion.div>
-          ))}
+          </AnimatePresence>
         </div>
+
+        {showPagination && (
+          <nav
+            aria-label="Materials pagination"
+            className="mt-14 flex flex-col items-center gap-5 md:mt-16"
+          >
+            <div className="flex items-center gap-1">
+              <PageButton
+                onClick={prevPage !== null ? () => goTo(prevPage) : null}
+                label={t.articles.paginationPrev[lang]}
+                arrow="left"
+              />
+              <ul className="mx-2 flex items-center gap-1">
+                {Array.from({ length: totalPages }, (_, i) => {
+                  const active = i === pageIndex;
+                  return (
+                    <li key={i}>
+                      {active ? (
+                        <span
+                          aria-current="page"
+                          className="inline-flex h-9 min-w-9 items-center justify-center rounded-sm bg-foreground px-3 text-sm font-medium text-background"
+                        >
+                          {i + 1}
+                        </span>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => goTo(i)}
+                          className="inline-flex h-9 min-w-9 items-center justify-center rounded-sm px-3 text-sm text-muted transition-colors hover:bg-foreground/[0.04] hover:text-foreground"
+                        >
+                          {i + 1}
+                        </button>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+              <PageButton
+                onClick={nextPage !== null ? () => goTo(nextPage) : null}
+                label={t.articles.paginationNext[lang]}
+                arrow="right"
+              />
+            </div>
+            <p className="text-[11px] uppercase tracking-[0.2em] text-subtle">
+              {t.articles.paginationPageLabel[lang]} {pageIndex + 1}{" "}
+              {t.articles.paginationOf[lang]} {totalPages}
+            </p>
+          </nav>
+        )}
+
+        {showPagination && (
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/resources/materials"
+              className="group inline-flex items-center text-sm font-medium text-foreground hover:text-accent md:hidden"
+            >
+              {t.resources.viewAllMaterialsMobile[lang]}
+              <span className="ml-2 transition-transform group-hover:translate-x-0.5">
+                →
+              </span>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

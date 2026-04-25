@@ -1,17 +1,21 @@
-import Link from "next/link";
-import { contact } from "@/lib/translations";
+"use client";
 
-const navLinks = [
-  { href: "/", label: "Начало" },
-  { href: "/about", label: "За мен" },
-  { href: "/work-with-me", label: "Работи с мен" },
-  { href: "/articles", label: "Статии" },
-  { href: "/resources", label: "Ресурси" },
-  { href: "/contact", label: "Контакт" },
-];
+import Link from "next/link";
+import { contact, t } from "@/lib/translations";
+import { useLanguage } from "@/lib/i18n";
 
 export function Footer() {
+  const { lang } = useLanguage();
   const year = new Date().getFullYear();
+
+  const navLinks = [
+    { href: "/", label: t.nav.home[lang] },
+    { href: "/about", label: t.nav.about[lang] },
+    { href: "/work-with-me", label: t.nav.workWithMe[lang] },
+    { href: "/articles", label: t.nav.articles[lang] },
+    { href: "/resources", label: t.nav.resources[lang] },
+    { href: "/contact", label: t.nav.contact[lang] },
+  ];
 
   return (
     <footer className="relative">
@@ -20,17 +24,20 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-5">
             <p className="font-serif text-2xl leading-tight tracking-tight text-foreground md:text-[1.75rem]">
-              Гергана <span className="italic text-accent">Цанова</span>
+              {t.footer.brandFirst[lang]}{" "}
+              <span className="italic text-accent">
+                {t.footer.brandLast[lang]}
+              </span>
             </p>
             <p className="mt-4 max-w-sm text-[14px] leading-[1.8] text-muted">
-              Коуч и консултант за растеж — в работата и в живота.
+              {t.footer.tagline[lang]}
             </p>
           </div>
 
           {/* Navigation */}
           <div className="md:col-span-3">
             <p className="mb-5 text-[11px] uppercase tracking-[0.22em] text-subtle">
-              Навигация
+              {t.nav.navigationLabel[lang]}
             </p>
             <ul className="space-y-3 text-[14px]">
               {navLinks.map((link) => (
@@ -49,7 +56,7 @@ export function Footer() {
           {/* Connect */}
           <div className="md:col-span-4">
             <p className="mb-5 text-[11px] uppercase tracking-[0.22em] text-subtle">
-              Свържи се
+              {t.nav.connectLabel[lang]}
             </p>
             <ul className="space-y-3 text-[14px]">
               <li>
@@ -83,9 +90,10 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col items-start justify-between gap-3 border-t border-border/60 pt-6 text-[12px] text-subtle md:flex-row md:items-center">
           <p>
-            © {year} Гергана Цанова. Всички права запазени.
+            © {year} {t.footer.brandFirst[lang]} {t.footer.brandLast[lang]}.{" "}
+            {t.footer.rights[lang]}
           </p>
-          <p className="italic">Направено с внимание.</p>
+          <p className="italic">{t.footer.madeWithCare[lang]}</p>
         </div>
       </div>
     </footer>
