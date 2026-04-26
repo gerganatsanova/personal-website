@@ -135,7 +135,7 @@ function Intro() {
             className="md:col-span-5"
           >
             <FramedImage
-              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&q=80"
+              src="/images/about-portrait.png"
               alt={t.about.portraitAlt[lang]}
               aspect="aspect-[4/5]"
               sizes="(max-width: 768px) 100vw, 40vw"
@@ -165,7 +165,7 @@ function Story() {
             className="md:col-span-5"
           >
             <FramedImage
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=80"
+              src="/images/about-story.png"
               alt={t.about.storyImageAlt[lang]}
               aspect="aspect-[3/4]"
               sizes="(max-width: 768px) 100vw, 40vw"
@@ -476,7 +476,7 @@ function Beyond() {
                 className="relative aspect-[3/4] w-full overflow-hidden rounded-sm border border-border/60"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=700&q=80"
+                  src="/images/about-beyond-1.png"
                   alt={t.about.beyondImage1Alt[lang]}
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
@@ -495,7 +495,7 @@ function Beyond() {
                 className="relative mt-8 aspect-[3/4] w-full overflow-hidden rounded-sm border border-border/60"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1528164344705-47542687000d?w=700&q=80"
+                  src="/images/about-beyond-2.png"
                   alt={t.about.beyondImage2Alt[lang]}
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
