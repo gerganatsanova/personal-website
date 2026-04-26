@@ -12,8 +12,6 @@
 
 export type Book = {
   slug: string;
-  /** ISO date (YYYY-MM-DD) — used for sorting, newest first. */
-  date: string;
   /** Short label above the title, e.g. "Книга" / "Наръчник". */
   type: { bg: string; en: string };
   title: { bg: string; en: string };
@@ -24,58 +22,22 @@ export type Book = {
   externalUrl: string;
 };
 
-// Newest first. When adding a new book, paste it at the top.
+// Display order — first entry shows first.
 export const books: Book[] = [
   {
-    slug: "sreshti-sas-sebe-si",
-    date: "2024-09-01",
-    type: { bg: "Книга", en: "Book" },
-    title: {
-      bg: "Срещи със себе си",
-      en: "Meetings with yourself",
-    },
-    description: {
-      bg: "Книга за вътрешните разговори, които отлагаме, и за стъпките, които започват, когато спрем да бягаме от тях. Кратки глави, въпроси за размисъл и честни наблюдения от работата с хора.",
-      en: "A book about the inner conversations we keep postponing, and the steps that begin when we stop running from them. Short chapters, reflection questions, and honest observations from working with people.",
-    },
-    cover:
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=900&q=80",
-    externalUrl: "https://example.com/sreshti-sas-sebe-si",
-  },
-  {
-    slug: "kogato-dumite-vodyat",
-    date: "2023-05-10",
+    slug: "razbirash-angliyski-zashto-ne-go-govorish",
     type: { bg: "Наръчник", en: "Guide" },
     title: {
-      bg: "Когато думите водят",
-      en: "When words lead",
+      bg: "Разбираш английски език? Тогава защо все още не го говориш",
+      en: "You understand English. So why don't you speak it yet?",
     },
     description: {
-      bg: "Практически наръчник за лидери и фасилитатори, които искат да говорят по-ясно, по-човешки и по-вдъхновяващо. За това как се строи история, която хората искат да следват.",
-      en: "A practical guide for leaders and facilitators who want to speak more clearly, more humanly, and more inspiringly. About building a story people actually want to follow.",
+      bg: "Практическо ръководство за хора, които разбират английски, но не могат да го използват в говорене. Ако превеждаш наум, колебаеш се или не казваш това, което искаш – тук ще намериш начин да го промениш. Кратки ежедневни упражнения и ясна система, която превръща знанието в реално говорене.",
+      en: "A practical guide for people who understand English, but struggle to speak it. If you find yourself translating in your head, hesitating, or not saying what you really want – this will help you change that. Simple daily exercises, real speaking practice, and a clear system to turn passive knowledge into confident communication.",
     },
-    cover:
-      "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=900&q=80",
-    externalUrl: "https://example.com/kogato-dumite-vodyat",
-  },
-  {
-    slug: "tiha-posoka",
-    date: "2022-11-20",
-    type: { bg: "Книга", en: "Book" },
-    title: {
-      bg: "Тиха посока",
-      en: "Quiet direction",
-    },
-    description: {
-      bg: "За вътрешния компас, който често знае повече от плановете ни. Книга за това как да се вслушаш в по-тихите сигнали на собствения си живот и да вземеш решения, които наистина са твои.",
-      en: "About the inner compass that often knows more than our plans do. A book about how to listen to the quieter signals of your own life and make decisions that are truly your own.",
-    },
-    cover:
-      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=900&q=80",
-    externalUrl: "https://example.com/tiha-posoka",
+    cover: "/images/book-english-speaking.jpg",
+    externalUrl: "https://gerrynova.gumroad.com/l/nxkugs",
   },
 ];
 
-export const sortedBooks = [...books].sort((a, b) =>
-  b.date.localeCompare(a.date),
-);
+export const sortedBooks = books;

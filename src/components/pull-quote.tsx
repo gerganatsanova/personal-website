@@ -14,7 +14,7 @@ export function PullQuote({ text }: { text: string }) {
       className="my-10 flex flex-col items-center gap-6 text-center md:my-12"
     >
       <Ornament />
-      <blockquote className="font-serif text-2xl italic leading-[1.3] tracking-tight text-foreground md:text-[1.75rem] md:leading-[1.25]">
+      <blockquote className="whitespace-pre-line font-serif text-2xl italic leading-[1.3] tracking-tight text-foreground md:text-[1.75rem] md:leading-[1.25]">
         {text}
       </blockquote>
       <Ornament />

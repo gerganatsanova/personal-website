@@ -24,14 +24,57 @@ export default function AboutPage() {
         <SectionDivider />
         <Experience />
         <SectionDivider />
-        <Credentials />
-        <SectionDivider />
+        {/* <Credentials />
+        <SectionDivider /> */}
         <Beyond />
+        <SectionDivider />
         <CTA />
       </main>
       <SectionDivider variant="thin" />
       <Footer />
     </>
+  );
+}
+
+function FramedImage({
+  src,
+  alt,
+  aspect,
+  sizes,
+  priority,
+}: {
+  src: string;
+  alt: string;
+  aspect: string;
+  sizes: string;
+  priority?: boolean;
+}) {
+  return (
+    <div className="relative mx-auto w-full max-w-md md:max-w-none">
+      <div
+        aria-hidden
+        className="absolute -right-3 -top-3 h-full w-full"
+        style={{
+          border: "1px solid rgba(139,111,71,0.55)",
+          maskImage:
+            "linear-gradient(to bottom left, black 0%, black 40%, transparent 95%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom left, black 0%, black 40%, transparent 95%)",
+        }}
+      />
+      <div
+        className={`relative isolate ${aspect} w-full overflow-hidden rounded-sm border border-border/60`}
+      >
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes={sizes}
+          className="object-cover"
+          priority={priority}
+        />
+      </div>
+    </div>
   );
 }
 
@@ -42,7 +85,7 @@ function Intro() {
   return (
     <section className="relative">
       <div className="mx-auto max-w-6xl px-6 pt-16 pb-20 md:px-10 md:pt-24 md:pb-28">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16">
           {/* Text */}
           <div className="md:col-span-7">
             <motion.p
@@ -91,16 +134,13 @@ function Intro() {
             transition={{ duration: 1, ease: EASE, delay: 0.2 }}
             className="md:col-span-5"
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-border/60">
-              <Image
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&q=80"
-                alt={t.about.portraitAlt[lang]}
-                fill
-                sizes="(max-width: 768px) 100vw, 40vw"
-                className="object-cover"
-                priority
-              />
-            </div>
+            <FramedImage
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&q=80"
+              alt={t.about.portraitAlt[lang]}
+              aspect="aspect-[4/5]"
+              sizes="(max-width: 768px) 100vw, 40vw"
+              priority
+            />
           </motion.div>
         </div>
       </div>
@@ -115,7 +155,7 @@ function Story() {
   return (
     <section className="relative">
       <div className="mx-auto max-w-6xl px-6 pt-20 pb-20 md:px-10 md:pt-28 md:pb-28">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16">
           {/* Image on left */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -124,15 +164,12 @@ function Story() {
             transition={{ duration: 1, ease: EASE }}
             className="md:col-span-5"
           >
-            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm border border-border/60">
-              <Image
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=80"
-                alt={t.about.storyImageAlt[lang]}
-                fill
-                sizes="(max-width: 768px) 100vw, 40vw"
-                className="object-cover"
-              />
-            </div>
+            <FramedImage
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=80"
+              alt={t.about.storyImageAlt[lang]}
+              aspect="aspect-[3/4]"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
           </motion.div>
 
           {/* Story copy */}
@@ -155,28 +192,15 @@ function Story() {
               </h2>
             </motion.div>
 
-            <div className="mt-8 max-w-[60ch]">
-              <motion.p
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={fadeUp}
-                transition={{ delay: 0.1 }}
-                className="text-[15px] leading-[1.75] text-muted md:text-base"
-              >
-                {paragraphs[0]}
-              </motion.p>
-
-              <PullQuote text={t.about.storyPullQuote[lang]} />
-
-              {paragraphs.slice(1).map((p, i) => (
+            <div className="mt-8 max-w-[60ch] space-y-5">
+              {paragraphs.map((p, i) => (
                 <motion.p
                   key={i}
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.3 }}
                   variants={fadeUp}
-                  transition={{ delay: 0.15 + i * 0.06 }}
+                  transition={{ delay: 0.1 + i * 0.06 }}
                   className="text-[15px] leading-[1.75] text-muted md:text-base"
                 >
                   {p}
@@ -184,6 +208,10 @@ function Story() {
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="mt-16 flex justify-center md:mt-20">
+          <PullQuote text={t.about.storyPullQuote[lang]} />
         </div>
       </div>
     </section>

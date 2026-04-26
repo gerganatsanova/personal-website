@@ -302,19 +302,24 @@ export const t = {
   about: {
     // 1. Intro / Hero
     kicker: { bg: "За мен", en: "About" },
-    introHeadlineLead: { bg: "Помагам на хората да", en: "I help people" },
+    introHeadlineLead: {
+      bg: "Помагам на хора и екипи да мислят по-ясно, да общуват по-смислено и да вървят напред",
+      en: "I help people and teams think more clearly, communicate with more intention, and move forward",
+    },
     introHeadlineAccent: {
-      bg: "растат осъзнато.",
-      en: "grow consciously.",
+      bg: "с повече посока.",
+      en: "with a stronger sense of direction.",
     },
     introParagraphs: {
       bg: [
-        "Казвам се Гергана Цанова. Работя като коуч, фасилитатор и консултант с хора, които искат повече яснота, увереност и смисъл в работата и в живота си.",
-        "Не вярвам в бързите рецепти и в празните мотивационни фрази. Вярвам в честния разговор, в реалната промяна и в това, че всеки човек има своя вътрешна мъдрост, която чака да бъде чута.",
+        "Казвам се Гергана Цанова. Работя като коуч, фасилитатор и обучител с хора и организации, които искат повече яснота, структура и развитие в начина, по който мислят, работят и вземат решения.",
+        "Опитът ми е в сферата на обучението и развитието, фасилитирането, обученията, клиентската работа, координацията и изграждането на вътрешни процеси. Това ми дава едновременно човешка и практична гледна точка към развитието. За мен то не е просто вдъхновение, а процес, който има нужда от смисъл, структура и реално приложение.",
+        "Не вярвам в универсални рецепти. Вярвам в добрите въпроси, честния разговор, ясната рамка и работата, която помага на човек или екип да види следващата си стъпка по-ясно.",
       ],
       en: [
-        "My name is Gergana Tsanova. I work as a coach, facilitator, and consultant with people who want more clarity, confidence, and meaning in their work and in their lives.",
-        "I do not believe in quick fixes or empty motivational phrases. I believe in honest conversation, real change, and in the fact that every person carries an inner wisdom that is waiting to be heard.",
+        "My name is Gergana Tsanova. I work as a coach, facilitator, and trainer with people and organizations who want more clarity, structure, and growth in the way they think, work, and make decisions.",
+        "My experience spans training and development, facilitation, client work, coordination, and building internal processes. This gives me both a human and practical perspective on growth. To me, development is not just about inspiration. It is a process that needs meaning, structure, and real-life application.",
+        "I don't believe in one-size-fits-all solutions. I believe in good questions, honest conversations, clear frameworks, and work that helps a person or a team see their next step more clearly.",
       ],
     },
     portraitAlt: {
@@ -323,21 +328,26 @@ export const t = {
     },
     // 2. Story
     storyKicker: { bg: "Моят път", en: "My path" },
-    storyTitleLead: { bg: "Как стигнах", en: "How I came" },
-    storyTitleAccent: { bg: "дотук.", en: "to this work." },
+    storyTitleLead: {
+      bg: "Последователен избор в посока",
+      en: "A consistent choice in the direction of",
+    },
+    storyTitleAccent: { bg: "развитие.", en: "growth." },
     storyParagraphs: {
       bg: [
-        "Пътят ми към коучинга не беше прав. Мина през корпоративна кариера, през моменти на голям успех и през периоди, в които се чувствах изгубена, въпреки че отвън всичко изглеждаше наред.",
-        "Именно тези моменти ми показаха колко важно е да имаш човек, с когото можеш да мислиш на глас — без съвети, без оценка, без бързи решения. Човек, който ти помага да се чуеш. Това е, което днес правя за другите.",
+        "Професионалният ми път винаги е бил свързан с развитието на хора. Завършила съм бакалавърска и магистърска степен в сферата на човешките ресурси, а през годините работих в различни роли, свързани с обучение, фасилитиране, консултиране, координация и изграждане на работещи процеси.",
+        "В практиката си съм била част от различни етапи на обучителния процес: от разбирането на нуждите и структурирането на съдържание до координацията, фасилитирането и последващата работа с клиенти и екипи. Това ми помогна да видя развитието не само като среща или обучение, а като цялостно преживяване, което започва много преди самата сесия и продължава след нея.",
+        "Този път ми даде практичен поглед към развитието. Научи ме, че добрата работа с хора не е само вдъхновение или съдържание, а комбинация от присъствие, структура, ясна цел и внимание към това какво остава приложимо след края на разговора, сесията или обучението.",
       ],
       en: [
-        "My path to coaching was not a straight one. It went through a corporate career, through moments of great success, and through periods when I felt lost even though everything looked fine from the outside.",
-        "Those exact moments showed me how important it is to have someone with whom you can think out loud — without advice, without judgment, without quick solutions. Someone who helps you hear yourself. That is what I now do for others.",
+        "My professional path has always been connected to people's development. I hold both a Bachelor's and a Master's degree in Human Resources, and over the years I have worked in different roles related to training, facilitation, consulting, coordination, and building effective processes.",
+        "In my practice, I have been part of different stages of the learning process: from understanding needs and structuring content to coordination, facilitation, and follow-up work with clients and teams. This helped me see development not only as a session or a training, but as a complete experience that begins long before the session itself and continues after it.",
+        "This path gave me a practical perspective on development. It taught me that meaningful work with people is not only about inspiration or content, but about the combination of presence, structure, a clear purpose, and attention to what remains applicable after the conversation, session, or training ends.",
       ],
     },
     storyPullQuote: {
-      bg: "Понякога най-смелото нещо е да спреш и да се чуеш.",
-      en: "Sometimes the bravest thing is to stop and listen to yourself.",
+      bg: "Промяната рядко започва с голям скок.\nПо-често започва с честен поглед.",
+      en: "Change rarely begins with a big leap.\nMore often, it begins with an honest look.",
     },
     storyImageAlt: {
       bg: "Работен момент",
@@ -347,32 +357,32 @@ export const t = {
     philosophyKicker: { bg: "В какво вярвам", en: "What I believe" },
     philosophyTitleLead: { bg: "Три неща, които", en: "Three things that" },
     philosophyTitleAccent: {
-      bg: "носят посока.",
-      en: "carry direction.",
+      bg: "създават посока.",
+      en: "create direction.",
     },
     principle1Title: {
-      bg: "Честният разговор",
-      en: "Honest conversation",
+      bg: "Яснота",
+      en: "Clarity",
     },
     principle1Text: {
-      bg: "Истинската промяна започва, когато спрем да се преструваме — пред себе си и пред другите. Затова държа на пространство, в което можеш да си откровен, без да бъдеш оценяван.",
-      en: "Real change begins when we stop pretending — to ourselves and to others. That is why I hold space where you can be honest without being judged.",
+      bg: "Преди да тръгнем към решение, е важно да разберем какво наистина се случва. Яснотата подрежда мислите, нуждите и следващите стъпки.",
+      en: "Before moving toward a solution, it matters to understand what is really happening. Clarity helps organize thoughts, needs, and next steps.",
     },
     principle2Title: {
-      bg: "Човекът е цялостен",
-      en: "A person is whole",
+      bg: "Човешки подход",
+      en: "A human approach",
     },
     principle2Text: {
-      bg: "Не вярвам, че можем да разделим професионалното от личното. Носим себе си навсякъде и когато растем в едното, растем и в другото.",
-      en: "I do not believe we can separate the professional from the personal. We carry ourselves everywhere, and when we grow in one, we grow in the other.",
+      bg: "Развитието не е процес на поправяне. Работя с уважение към човека отсреща, но и с достатъчно честност, за да има реално движение.",
+      en: "Development is not about fixing people. I work with respect for the person in front of me, but also with enough honesty for real movement to happen.",
     },
     principle3Title: {
-      bg: "Смисълът е двигател",
-      en: "Meaning is the engine",
+      bg: "Приложимост",
+      en: "Practical application",
     },
     principle3Text: {
-      bg: "Цели без смисъл изморяват. Работя с хора, които искат не просто да постигат, а да правят нещата, които имат значение за тях.",
-      en: "Goals without meaning are exhausting. I work with people who want not only to achieve, but to do the things that truly matter to them.",
+      bg: "Една сесия, обучение или фасилитиран разговор имат стойност, когато нещо от тях остава използваемо след това: решение, действие, нов поглед или по-добър разговор.",
+      en: "A session, training, or facilitated conversation has value when something from it remains useful afterwards: a decision, an action, a new perspective, or a better conversation.",
     },
     // 4. Experience & numbers
     experienceKicker: { bg: "Опит", en: "Experience" },
@@ -385,25 +395,25 @@ export const t = {
       bg: "Зад работата ми стоят години опит в корпоративна среда, в работа с екипи от различни култури и в обучения на хиляди професионалисти.",
       en: "Behind my work are years of experience in corporate environments, working with teams from different cultures, and training thousands of professionals.",
     },
-    metric1Value: { bg: "10+", en: "10+" },
+    metric1Value: { bg: "600+", en: "600+" },
     metric1Label: {
-      bg: "Години практика в коучинг и фасилитация",
-      en: "Years of practice in coaching and facilitation",
+      bg: "участници в програми",
+      en: "participants in programs",
     },
-    metric2Value: { bg: "500+", en: "500+" },
+    metric2Value: { bg: "60+", en: "60+" },
     metric2Label: {
-      bg: "Индивидуални сесии с клиенти",
-      en: "One-on-one sessions with clients",
+      bg: "проведени обучения",
+      en: "training sessions delivered",
     },
-    metric3Value: { bg: "50+", en: "50+" },
+    metric3Value: { bg: "20+", en: "20+" },
     metric3Label: {
-      bg: "Фасилитирани екипни процеса",
-      en: "Facilitated team processes",
+      bg: "1:1 коучинг сесии",
+      en: "1:1 coaching sessions",
     },
-    metric4Value: { bg: "3 000+", en: "3,000+" },
+    metric4Value: { bg: "30+", en: "30+" },
     metric4Label: {
-      bg: "Участници в обучения и програми",
-      en: "Participants in trainings and programs",
+      bg: "обучителни модула",
+      en: "learning modules",
     },
     // 5. Credentials
     credentialsKicker: { bg: "Сертификати", en: "Credentials" },
@@ -430,19 +440,24 @@ export const t = {
     },
     // 6. Beyond work
     beyondKicker: { bg: "Отвъд работата", en: "Beyond work" },
-    beyondTitleLead: { bg: "Неща, които", en: "Things that" },
+    beyondTitleLead: {
+      bg: "Движение, любопитство и",
+      en: "Movement, curiosity, and",
+    },
     beyondTitleAccent: {
-      bg: "ме хранят.",
-      en: "nourish me.",
+      bg: "смислени разговори.",
+      en: "meaningful conversations.",
     },
     beyondParagraphs: {
       bg: [
-        "Извън работата обичам дългите разходки, книгите, които ме карат да спра на средата, и разговорите, които не бързат за никъде. Вярвам, че тишината и паузата са също толкова важни, колкото действието.",
-        "Живея с идеята, че начинът, по който живеем, е най-честният отговор на това, в което вярваме.",
+        "Извън работата спортът е голяма част от живота ми. Част съм от българския национален отбор по чирлидинг и съм треньор по кондиционни тренировки. Харесвам спортове като кросфит и калистеника, а стойката на ръце е едно от онези неща, които ме учат на търпение, сила и баланс.",
+        "Обичам да пътувам, да откривам нови места, култури и начини на живот. Харесвам и усещането за адреналин. Сред най-смелите ми преживявания досега са плуване с акули и делфини в Индийския океан и скок с бънджи от скалите на остров Нуса Пенида. Пътуванията ми дават перспектива и ми напомнят, че светът е много по-голям от собствените ни навици и представи. До момента Бали е мястото, което най-силно е останало в мен.",
+        "Ценя времето с близки хора, вкусната храна, рисуването, смислените разговори и темите, които ме карат да мисля по-дълбоко. А понякога пея сама вкъщи или в колата, достатъчно уверено, за да ми е хубаво, и достатъчно насаме, за да е безопасно за околните.",
       ],
       en: [
-        "Outside of work, I love long walks, books that make me stop halfway, and conversations that are not in a hurry. I believe that silence and pause are as important as action.",
-        "I live with the idea that the way we live is the most honest answer to what we believe.",
+        "Outside of work, sport is a big part of my life. I am part of the Bulgarian national cheerleading team and a conditioning coach. I enjoy sports like CrossFit and calisthenics, and handstands are one of those things that keep teaching me patience, strength, and balance.",
+        "I love travelling, discovering new places, cultures, and ways of life. I also enjoy a good dose of adrenaline. Some of my boldest experiences so far include swimming with sharks and dolphins in the Indian Ocean and bungee jumping from the cliffs of Nusa Penida. Travel gives me perspective and reminds me that the world is much bigger than our own habits and assumptions. So far, Bali is the place that has stayed with me the most.",
+        "I value time with close people, good food, drawing, meaningful conversations, and topics that make me think more deeply. And sometimes I sing alone at home or in the car, confidently enough to enjoy it, and privately enough to keep everyone else safe.",
       ],
     },
     beyondImage1Alt: {
