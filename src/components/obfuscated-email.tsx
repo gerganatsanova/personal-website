@@ -7,8 +7,8 @@ import { useEffect, useMemo, useState } from "react";
 // for plain "name@domain.tld" patterns will not find it.
 // To change the address, update the two arrays below.
 const LOCAL_CODES = [
-  103, 101, 114, 103, 97, 110, 97, 46, 116, 115, 97, 110, 111, 118, 97, 46, 98,
-  115,
+  116, 115, 97, 110, 111, 118, 97, 46, 99, 111, 110, 115, 117, 108, 116, 105,
+  110, 103,
 ];
 const DOMAIN_CODES = [103, 109, 97, 105, 108, 46, 99, 111, 109];
 

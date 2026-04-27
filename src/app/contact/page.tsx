@@ -11,9 +11,7 @@ import { fadeUp, EASE } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
 import { t } from "@/lib/translations";
 
-// TODO: replace with the real Cal.com booking link once the account is set up.
-// Example format: https://cal.com/gergana-tsanova/intro
-const CAL_BOOKING_URL = "https://cal.com/gergana-tsanova/intro";
+const CAL_BOOKING_URL = "https://cal.com/tsanova-consulting/intro";
 
 export default function ContactPage() {
   return (
