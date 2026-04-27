@@ -8,7 +8,7 @@ import { useObfuscatedEmail } from "./obfuscated-email";
 export function Footer() {
   const { lang } = useLanguage();
   const year = new Date().getFullYear();
-  const { email, href: emailHref } = useObfuscatedEmail();
+  const { email, href: emailHref, copy, copied } = useObfuscatedEmail();
   const emailLabel = lang === "bg" ? "Имейл" : "Email";
 
   const navLinks = [
@@ -62,16 +62,26 @@ export function Footer() {
               {t.nav.connectLabel[lang]}
             </p>
             <ul className="space-y-3 text-[14px]">
-              <li>
+              <li className="relative inline-block">
                 <a
                   href={emailHref ?? "#"}
                   className="text-muted transition-colors hover:text-foreground"
                   onClick={(e) => {
-                    if (!emailHref) e.preventDefault();
+                    if (!emailHref) {
+                      e.preventDefault();
+                      return;
+                    }
+                    copy();
                   }}
                 >
                   {email ?? emailLabel}
                 </a>
+                <span
+                  aria-live="polite"
+                  className={`pointer-events-none absolute left-0 top-full mt-1 whitespace-nowrap text-[11px] uppercase tracking-[0.18em] text-accent transition-opacity duration-200 ${copied ? "opacity-100" : "opacity-0"}`}
+                >
+                  {t.nav.emailCopied[lang]}
+                </span>
               </li>
               <li>
                 <a

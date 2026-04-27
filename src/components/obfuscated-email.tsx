@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 // The email is stored as character codes so the literal string never appears
 // anywhere in the static markup or the JS bundle. Naive scrapers that look
@@ -19,9 +19,9 @@ function decode(codes: readonly number[]): string {
 export function useObfuscatedEmail(subject?: string) {
   const [ready, setReady] = useState(false);
 
-  useEffect(() => {
-    setReady(true);
-  }, []);
+  // Decode email only after client mount so the address is never in SSR HTML.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => setReady(true), []);
 
   const email = useMemo(
     () =>
@@ -39,5 +39,40 @@ export function useObfuscatedEmail(subject?: string) {
     return subject ? `${base}?subject=${encodeURIComponent(subject)}` : base;
   }, [email, subject]);
 
-  return { email, href, ready };
+  const [copied, setCopied] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(
+    () => () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    },
+    [],
+  );
+
+  const copy = useCallback(() => {
+    if (!email) return;
+    const showToast = () => {
+      setCopied(true);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => setCopied(false), 2200);
+    };
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(email).then(showToast).catch(() => {});
+    } else {
+      // Legacy fallback
+      try {
+        const ta = document.createElement("textarea");
+        ta.value = email;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        showToast();
+      } catch {}
+    }
+  }, [email]);
+
+  return { email, href, ready, copy, copied };
 }

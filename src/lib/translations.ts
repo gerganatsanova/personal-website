@@ -17,6 +17,7 @@ export const t = {
     closeMenu: { bg: "Затвори меню", en: "Close menu" },
     navigationLabel: { bg: "Навигация", en: "Navigation" },
     connectLabel: { bg: "Свържи се", en: "Connect" },
+    emailCopied: { bg: "Имейлът е копиран", en: "Email copied" },
   },
   footer: {
     brandFirst: { bg: "Гергана", en: "Gergana" },

@@ -112,7 +112,7 @@ function PinIcon() {
 function Connect() {
   const { lang } = useLanguage();
   const bullets = t.contactPage.bookBullets[lang];
-  const { href: emailHref } = useObfuscatedEmail(
+  const { href: emailHref, copy, copied } = useObfuscatedEmail(
     t.contactPage.emailSubject[lang],
   );
 
@@ -234,21 +234,33 @@ function Connect() {
           transition={{ duration: 0.7, delay: 0.15, ease: EASE }}
           className="mx-auto mt-10 flex max-w-xl flex-col items-center text-center md:mt-12"
         >
-          <a
-            href={emailHref ?? "#"}
-            onClick={(e) => {
-              if (!emailHref) e.preventDefault();
-            }}
-            className="group inline-flex items-center justify-center rounded-full border border-foreground bg-foreground px-9 py-4 text-base font-medium text-background transition-all hover:border-accent hover:bg-accent md:text-[17px]"
-          >
-            {t.contactPage.emailButton[lang]}
-            <span
-              aria-hidden
-              className="ml-2 transition-transform group-hover:translate-x-0.5"
+          <div className="relative inline-flex flex-col items-center">
+            <a
+              href={emailHref ?? "#"}
+              onClick={(e) => {
+                if (!emailHref) {
+                  e.preventDefault();
+                  return;
+                }
+                copy();
+              }}
+              className="group inline-flex items-center justify-center rounded-full border border-foreground bg-foreground px-9 py-4 text-base font-medium text-background transition-all hover:border-accent hover:bg-accent md:text-[17px]"
             >
-              →
+              {t.contactPage.emailButton[lang]}
+              <span
+                aria-hidden
+                className="ml-2 transition-transform group-hover:translate-x-0.5"
+              >
+                →
+              </span>
+            </a>
+            <span
+              aria-live="polite"
+              className={`pointer-events-none mt-3 text-[12px] uppercase tracking-[0.2em] text-accent transition-opacity duration-200 ${copied ? "opacity-100" : "opacity-0"}`}
+            >
+              {t.nav.emailCopied[lang]}
             </span>
-          </a>
+          </div>
 
           <p className="mt-6 text-[13px] italic leading-[1.7] text-subtle md:text-sm">
             {t.contactPage.inPersonNote[lang]}
