@@ -30,7 +30,7 @@ export function Nav() {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden items-center gap-7 md:flex">
+        <div className="hidden items-center gap-7 lg:flex">
           <nav className="flex items-center gap-7">
             {links.map((link) => (
               <Link
@@ -52,8 +52,13 @@ export function Nav() {
           <ThemeToggle />
         </div>
 
-        {/* Mobile */}
-        <MobileNav links={links} />
+        {/* Mobile / tablet */}
+        <div className="flex items-center gap-4 lg:hidden">
+          <LanguageToggle />
+          <span className="h-3 w-px bg-border" aria-hidden />
+          <ThemeToggle />
+          <MobileNav links={links} />
+        </div>
       </div>
     </header>
   );

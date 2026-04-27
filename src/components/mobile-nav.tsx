@@ -1,21 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { LanguageToggle } from "./language-toggle";
 import { ThemeToggle } from "./theme-toggle";
-import { useObfuscatedEmail } from "./obfuscated-email";
 import { useLanguage } from "@/lib/i18n";
-import { t, contact } from "@/lib/translations";
+import { t } from "@/lib/translations";
 
 type NavLink = { label: string; href: string };
 
 export function MobileNav({ links }: { links: NavLink[] }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { lang } = useLanguage();
-  const { email, href: emailHref } = useObfuscatedEmail();
-  const emailLabel = lang === "bg" ? "Имейл" : "Email";
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Lock body scroll while menu is open
   useEffect(() => {
@@ -37,26 +40,15 @@ export function MobileNav({ links }: { links: NavLink[] }) {
     return () => window.removeEventListener("keydown", handler);
   }, [open]);
 
-  return (
-    <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        aria-label={t.nav.openMenu[lang]}
-        aria-expanded={open}
-        className="flex h-8 w-8 items-center justify-center text-foreground transition-colors hover:text-accent md:hidden"
-      >
-        <HamburgerIcon />
-      </button>
-
-      <AnimatePresence>
-        {open && (
+  const overlay = (
+    <AnimatePresence>
+      {open && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-[100] flex flex-col bg-background md:hidden"
+            className="fixed inset-0 z-[100] flex flex-col bg-background lg:hidden"
             style={{
               paddingTop: "env(safe-area-inset-top)",
               paddingBottom: "env(safe-area-inset-bottom)",
@@ -109,66 +101,43 @@ export function MobileNav({ links }: { links: NavLink[] }) {
                       <Link
                         href={link.href}
                         onClick={() => setOpen(false)}
-                        className="group flex items-baseline gap-4 py-1 font-serif text-[2rem] leading-tight tracking-tight text-foreground transition-colors hover:text-accent"
+                        className="block py-1 font-serif text-[2rem] leading-tight tracking-tight text-foreground transition-colors hover:text-accent"
                       >
-                        <span className="text-xs italic text-accent/70">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        <span>{link.label}</span>
+                        {link.label}
                       </Link>
                     </motion.li>
                   ))}
                 </ul>
               </nav>
 
-              {/* Bottom section — contact + toggles */}
+              {/* Bottom section — toggles */}
               <motion.div
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                className="mt-16 flex flex-col gap-8"
+                className="mt-16 flex items-center justify-between border-t border-border/60 pt-6"
               >
-                <div>
-                  <p className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
-                    <span className="h-px w-6 bg-accent" aria-hidden />
-                    {t.nav.connectLabel[lang]}
-                  </p>
-                  <div className="flex flex-col gap-3 text-[14px]">
-                    <a
-                      href={emailHref ?? "#"}
-                      className="text-muted transition-colors hover:text-foreground"
-                      onClick={(e) => {
-                        if (!emailHref) e.preventDefault();
-                      }}
-                    >
-                      {email ?? emailLabel}
-                    </a>
-                    <a
-                      href={contact.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group inline-flex items-center text-muted transition-colors hover:text-foreground"
-                    >
-                      LinkedIn
-                      <span
-                        aria-hidden
-                        className="ml-1.5 transition-transform group-hover:translate-x-0.5"
-                      >
-                        ↗
-                      </span>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between border-t border-border/60 pt-6">
-                  <LanguageToggle />
-                  <ThemeToggle />
-                </div>
+                <LanguageToggle />
+                <ThemeToggle />
               </motion.div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+  );
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        aria-label={t.nav.openMenu[lang]}
+        aria-expanded={open}
+        className="flex h-8 w-8 items-center justify-center text-foreground transition-colors hover:text-accent lg:hidden"
+      >
+        <HamburgerIcon />
+      </button>
+      {mounted ? createPortal(overlay, document.body) : null}
     </>
   );
 }
