@@ -16,9 +16,9 @@ export function MobileNav({ links }: { links: NavLink[] }) {
   const [mounted, setMounted] = useState(false);
   const { lang } = useLanguage();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // Portals must wait for client mount to avoid hydration mismatch
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => setMounted(true), []);
 
   // Lock body scroll while menu is open
   useEffect(() => {
