@@ -109,7 +109,15 @@ export function Footer() {
             © {year} {t.footer.brandFirst[lang]} {t.footer.brandLast[lang]}.{" "}
             {t.footer.rights[lang]}
           </p>
-          <p className="italic">{t.footer.madeWithCare[lang]}</p>
+          <div className="flex items-center gap-5">
+            <Link
+              href="/terms-and-conditions"
+              className="transition-colors hover:text-foreground"
+            >
+              {t.termsPage.footerLink[lang]}
+            </Link>
+            <p className="italic">{t.footer.madeWithCare[lang]}</p>
+          </div>
         </div>
       </div>
     </footer>
