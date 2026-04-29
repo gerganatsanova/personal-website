@@ -64,15 +64,17 @@ function Hero() {
           {t.termsPage.lastUpdatedLabel[lang]}: {t.termsPage.lastUpdated[lang]}
         </motion.p>
 
-        <motion.p
+        <motion.div
           initial="hidden"
           animate="show"
           variants={fadeUp}
           transition={{ delay: 0.15 }}
-          className="mt-8 max-w-3xl text-[15px] leading-[1.85] text-muted md:text-base"
+          className="mt-8 max-w-3xl space-y-5 text-[15px] leading-[1.85] text-muted md:text-base"
         >
-          {t.termsPage.intro[lang]}
-        </motion.p>
+          <p>{t.termsPage.intro1[lang]}</p>
+          <p>{t.termsPage.intro2[lang]}</p>
+          <p>{t.termsPage.intro3[lang]}</p>
+        </motion.div>
       </div>
     </section>
   );
@@ -80,26 +82,12 @@ function Hero() {
 
 function Body() {
   const { lang } = useLanguage();
+  const { email, href: emailHref, copy, copied } = useObfuscatedEmail();
+  const emailLabel = lang === "bg" ? "Имейл" : "Email";
+
   return (
     <section className="relative">
       <div className="mx-auto max-w-4xl px-6 pt-12 pb-16 md:px-10 md:pt-16 md:pb-20">
-        {/* Operator block */}
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}
-          className="mb-14 border-l-2 border-accent/60 pl-6 md:mb-16"
-        >
-          <p className="mb-2 text-[11px] uppercase tracking-[0.22em] text-subtle">
-            {t.termsPage.operatorLabel[lang]}
-          </p>
-          <p className="max-w-3xl text-[15px] leading-[1.85] text-foreground/85 md:text-base">
-            {t.termsPage.operatorBody[lang]}
-          </p>
-        </motion.div>
-
-        {/* Sections */}
         <ol className="space-y-12 md:space-y-14">
           {t.termsPage.sections.map((section, i) => (
             <motion.li
@@ -112,9 +100,37 @@ function Body() {
               <h2 className="mb-4 font-serif text-[1.5rem] leading-tight tracking-tight text-foreground md:text-[1.75rem]">
                 {section.title[lang]}
               </h2>
-              <p className="max-w-3xl text-[15px] leading-[1.85] text-muted md:text-base">
-                {section.body[lang]}
-              </p>
+              <div className="max-w-3xl space-y-4 text-[15px] leading-[1.85] text-muted md:text-base">
+                {section.paragraphs.map((p, j) => (
+                  <p key={j}>{p[lang]}</p>
+                ))}
+                {"emailIntro" in section && section.emailIntro ? (
+                  <div className="pt-1">
+                    <p>{section.emailIntro[lang]}</p>
+                    <div className="relative mt-1 inline-block">
+                      <a
+                        href={emailHref ?? "#"}
+                        onClick={(e) => {
+                          if (!emailHref) {
+                            e.preventDefault();
+                            return;
+                          }
+                          copy();
+                        }}
+                        className="text-accent underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-accent"
+                      >
+                        {email ?? emailLabel}
+                      </a>
+                      <span
+                        aria-live="polite"
+                        className={`pointer-events-none absolute left-0 top-full mt-1 whitespace-nowrap text-[11px] uppercase tracking-[0.18em] text-accent transition-opacity duration-200 ${copied ? "opacity-100" : "opacity-0"}`}
+                      >
+                        {t.nav.emailCopied[lang]}
+                      </span>
+                    </div>
+                  </div>
+                ) : null}
+              </div>
             </motion.li>
           ))}
         </ol>
@@ -142,7 +158,7 @@ function ContactBlock() {
             {t.termsPage.contactLabel[lang]}
           </p>
           <p className="max-w-3xl text-[15px] leading-[1.85] text-muted md:text-base">
-            {t.termsPage.contactBody[lang]}
+            {t.termsPage.contactIntro[lang]}
           </p>
           <div className="relative mt-6 inline-block">
             <a
@@ -165,6 +181,9 @@ function ContactBlock() {
               {t.nav.emailCopied[lang]}
             </span>
           </div>
+          <p className="mt-8 max-w-3xl text-[15px] leading-[1.85] text-muted md:text-base">
+            {t.termsPage.contactOutro[lang]}
+          </p>
         </motion.div>
       </div>
     </section>

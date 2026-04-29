@@ -884,102 +884,307 @@ export const t = {
   },
   termsPage: {
     kicker: { bg: "Правна информация", en: "Legal" },
-    headlineLead: { bg: "Условия за ползване и", en: "Terms of use and" },
-    headlineAccent: { bg: "защита на данните.", en: "data protection." },
-    intro: {
-      bg: "Този документ описва правилата за ползване на сайта gerganatsanova.com и начина, по който се обработват личните данни на посетителите и клиентите. Моля, прочети го преди да използваш услугите, описани в сайта.",
-      en: "This document describes the rules for using the website gerganatsanova.com and how personal data of visitors and clients is processed. Please read it before using the services described on the site.",
+    headlineLead: { bg: "Условия за ползване и", en: "Terms of Use and" },
+    headlineAccent: {
+      bg: "защита на личните данни.",
+      en: "Data Protection.",
+    },
+    intro1: {
+      bg: "Тази страница обяснява как може да използвате сайта gerganatsanova.com и как обработвам лични данни, когато посещавате сайта, свързвате се с мен или запазвате час за консултация.",
+      en: "This page explains how you may use gerganatsanova.com and how I handle personal data when you visit the website, contact me, or book a consultation.",
+    },
+    intro2: {
+      bg: "Стремежът ми е информацията тук да бъде ясна, разбираема и полезна. Ако имате въпрос относно съдържанието на тази страница или начина, по който обработвам лични данни, можете да се свържете с мен на посочения в края имейл адрес.",
+      en: "I want the information here to be clear, understandable, and useful. If you have any questions about this page or about how I handle personal data, you can contact me at the email address listed at the end.",
+    },
+    intro3: {
+      bg: "Моля, използвайте сайта само ако сте съгласни с описаните по-долу условия.",
+      en: "Please use this website only if you agree with the terms described below.",
     },
     lastUpdatedLabel: { bg: "Последна актуализация", en: "Last updated" },
     lastUpdated: { bg: "29 април 2026 г.", en: "29 April 2026" },
-    operatorLabel: { bg: "Оператор на сайта", en: "Site operator" },
-    operatorBody: {
-      bg: "Сайтът се поддържа лично от Гергана Цанова, независим коуч, консултант и фасилитатор, базирана в София, България. За контакт по въпроси, свързани с този документ, използвай имейла, посочен в края на страницата.",
-      en: "The site is maintained personally by Gergana Tsanova, an independent coach, consultant, and facilitator based in Sofia, Bulgaria. For questions related to this document, use the email address listed at the end of this page.",
-    },
     sections: [
       {
-        title: { bg: "1. Интелектуална собственост", en: "1. Intellectual property" },
-        body: {
-          bg: "Цялото съдържание на сайта — текстове, статии, изображения, дизайн, видео и аудио материали — е авторско. Можеш да го четеш и споделяш чрез линкове за лична, нетърговска употреба. Препубликуването, копирането или преработката на цели или съществени части без писмено съгласие не е разрешено.",
-          en: "All content on the site — texts, articles, images, design, video and audio materials — is copyrighted. You may read and share it via links for personal, non-commercial use. Republishing, copying, or adapting whole or substantial parts without written permission is not allowed.",
+        title: {
+          bg: "1. Кой поддържа този сайт",
+          en: "1. Who maintains this website",
+        },
+        paragraphs: [
+          {
+            bg: "Този сайт се поддържа от Гергана Цанова.",
+            en: "This website is maintained by Gergana Tsanova.",
+          },
+          {
+            bg: "Сайтът представя информация за моята професионална дейност, консултантски услуги, опит и начини за контакт. Чрез него можете да се запознаете с работата ми, да ми изпратите запитване или да запазите час за консултация.",
+            en: "The website provides information about my professional work, consulting services, experience, and ways to contact me. Through it, you can learn more about my work, send me an inquiry, or book a consultation.",
+          },
+          {
+            bg: "За целите на защитата на личните данни аз съм лицето, което отговаря за обработването на данните, предоставени чрез този сайт.",
+            en: "For data protection purposes, I am the person responsible for the processing of personal data provided through this website.",
+          },
+        ],
+        emailIntro: {
+          bg: "Можете да се свържете с мен на:",
+          en: "You can contact me at:",
         },
       },
       {
-        title: { bg: "2. Как се ползва сайтът", en: "2. How the site is used" },
-        body: {
-          bg: "Сайтът има информационен и контактен характер. Чрез него можеш да научиш за услугите ми, да четеш статии, да преглеждаш ресурси и да се свържеш с мен. Не се изисква регистрация. Моля, не използвай сайта по начин, който нарушава закона, правата на трети лица или нормалната му работа.",
-          en: "The site is informational and contact-oriented. Through it you can learn about my services, read articles, browse resources, and reach out to me. No registration is required. Please do not use the site in a way that violates the law, the rights of third parties, or its normal operation.",
+        title: {
+          bg: "2. Съдържание и авторски права",
+          en: "2. Content and intellectual property",
         },
+        paragraphs: [
+          {
+            bg: "Съдържанието на този сайт, включително текстове, структура, визуални елементи, материали и други публикувани ресурси, е предназначено да представи моята професионална дейност и консултантски услуги.",
+            en: "The content on this website, including texts, structure, visual elements, materials, and other published resources, is intended to present my professional work and consulting services.",
+          },
+          {
+            bg: "Освен ако не е посочено друго, съдържанието на сайта е моя собственост или се използва с право за това. Не е разрешено копиране, възпроизвеждане, разпространение, публикуване или използване на съдържание от сайта за търговски цели без предварително писмено съгласие.",
+            en: "Unless stated otherwise, the content on this website belongs to me or is used with the appropriate right to do so. Copying, reproducing, distributing, publishing, or using content from this website for commercial purposes is not allowed without my prior written consent.",
+          },
+          {
+            bg: "Можете да споделяте линк към сайта или към конкретна негова страница, когато това се прави коректно и без да се създава подвеждащо впечатление за връзка, партньорство или одобрение от моя страна.",
+            en: "You may share a link to the website or to a specific page, as long as this is done accurately and does not create a misleading impression of association, partnership, or endorsement by me.",
+          },
+        ],
       },
       {
-        title: { bg: "3. Отговорност", en: "3. Liability" },
-        body: {
-          bg: "Полагам грижа съдържанието на сайта да е точно и актуално, но не давам гаранции, че е напълно изчерпателно или приложимо за всеки конкретен случай. Информацията тук не замества професионална консултация. Не нося отговорност за съдържание на външни сайтове, към които има препратки.",
-          en: "I take care to keep the content of the site accurate and up to date, but I do not guarantee that it is exhaustive or applicable to every specific case. The information here does not replace professional advice. I am not responsible for the content of external sites linked from here.",
+        title: {
+          bg: "3. Как може да използвате сайта",
+          en: "3. How you may use the website",
         },
+        paragraphs: [
+          {
+            bg: "Можете да използвате сайта, за да се информирате за моята професионална дейност, консултантски услуги и възможности за контакт.",
+            en: "You may use this website to learn more about my professional work, consulting services, and ways to contact me.",
+          },
+          {
+            bg: "При използването на сайта е важно да не извършвате действия, които могат да нарушат неговата работа, сигурност или достъпност. Не е разрешено използването на сайта за изпращане на подвеждаща, незаконна, обидна или вредоносна информация, както и за действия, които могат да засегнат права или законни интереси на други лица.",
+            en: "When using the website, please do not take any action that could affect its proper operation, security, or availability. You must not use the website to send misleading, unlawful, offensive, or harmful information, or to take actions that may affect the rights or legitimate interests of other people.",
+          },
+          {
+            bg: "Сайтът може да съдържа линкове към външни страници или услуги. Те са предоставени за удобство и информация, но не нося отговорност за тяхното съдържание, политика за поверителност или начин на работа.",
+            en: "The website may contain links to external pages or services. These links are provided for convenience and information, but I am not responsible for their content, privacy policies, or the way they operate.",
+          },
+        ],
       },
       {
-        title: { bg: "4. Услуги и записване на час", en: "4. Services and booking" },
-        body: {
-          bg: "Описанията на услугите в сайта имат информативен характер. Конкретните условия — обхват, продължителност, цена и начин на провеждане — се уточняват писмено или устно преди стартиране на работа. Записването на безплатен разговор става през външна платформа (Cal.com), към която сайтът само препраща.",
-          en: "The service descriptions on the site are informational. Specific terms — scope, duration, price, and format — are agreed in writing or orally before work begins. Booking a free introductory call happens through an external platform (Cal.com) to which the site simply redirects.",
+        title: {
+          bg: "4. Услуги и запазване на консултация",
+          en: "4. Services and booking a consultation",
         },
+        paragraphs: [
+          {
+            bg: "Сайтът представя информация за консултантските услуги, които предлагам. Описанията на услугите имат информативен характер и не представляват автоматично предложение, договор или гаранция за конкретен резултат.",
+            en: "This website provides information about the consulting services I offer. The descriptions of the services are for informational purposes only and do not automatically constitute an offer, an agreement, or a guarantee of a specific result.",
+          },
+          {
+            bg: "Ако изпратите запитване или запазите час за консултация, предоставената от вас информация ще бъде използвана, за да се свържа с вас, да обсъдим нуждите ви и при необходимост да уточним условията за съвместна работа.",
+            en: "If you send an inquiry or book a consultation, the information you provide will be used to contact you, discuss your needs, and, where appropriate, clarify the terms of working together.",
+          },
+          {
+            bg: "Конкретният обхват, срокове, цена и начин на предоставяне на дадена услуга се уточняват индивидуално преди започване на работа. Всяка консултация или съвместна работа зависи от конкретния контекст, предоставената информация и взаимното съгласие за условията.",
+            en: "The specific scope, timeline, price, and way of providing a service are agreed individually before any work begins. Each consultation or collaboration depends on the specific context, the information provided, and mutual agreement on the terms.",
+          },
+        ],
       },
       {
-        title: { bg: "5. Лични данни — какво и защо", en: "5. Personal data — what and why" },
-        body: {
-          bg: "Сайтът сам по себе си не изисква регистрация и не събира лични данни автоматично. Лични данни (име, имейл, тема на запитването, всичко, което сам/а решиш да споделиш) получавам само когато ми пишеш на посочения имейл или когато запазиш час чрез Cal.com. Тези данни обработвам, за да отговоря, да подготвя и проведа договорената работа и за изпълнение на законови задължения (например счетоводни).",
-          en: "The site itself does not require registration and does not automatically collect personal data. I receive personal data (name, email, subject of inquiry, anything you choose to share) only when you write to me at the listed email address or when you book a call via Cal.com. I process this data to reply, to prepare and carry out the agreed work, and to meet legal obligations (such as accounting).",
+        title: {
+          bg: "5. Какви лични данни обработвам",
+          en: "5. What personal data I process",
         },
+        paragraphs: [
+          {
+            bg: "Когато използвате сайта, е възможно да обработвам лични данни, които ми предоставяте доброволно, например когато се свързвате с мен, изпращате запитване или запазвате час за консултация.",
+            en: "When you use the website, I may process personal data that you voluntarily provide, for example when you contact me, send an inquiry, or book a consultation.",
+          },
+          {
+            bg: "Тези данни могат да включват име, имейл адрес, съдържание на съобщението, информация, свързана с темата на запитването или консултацията, както и друга информация, която решите да споделите.",
+            en: "This data may include your name, email address, the content of your message, information related to your inquiry or consultation, and any other information you choose to share.",
+          },
+          {
+            bg: "Възможно е също да се обработват технически данни, свързани с използването на сайта, като IP адрес, тип браузър, устройство, приблизително местоположение, дата и час на посещението, езикови настройки и информация за начина, по който сайтът се зарежда и използва.",
+            en: "Technical data related to the use of the website may also be processed, such as IP address, browser type, device, approximate location, date and time of visit, language settings, and information about how the website loads and is used.",
+          },
+          {
+            bg: "Не изисквам и не събирам чувствителни лични данни чрез този сайт.",
+            en: "I do not request or collect sensitive personal data through this website.",
+          },
+        ],
       },
       {
-        title: { bg: "6. Срок на съхранение", en: "6. Retention period" },
-        body: {
-          bg: "Кореспонденцията по запитвания пазя докато е необходимо за разговора и за разумно проследяване след това. Данни, свързани с активни клиентски ангажименти, пазя за срока на работата ни и до 5 години след това, ако приложимото счетоводно или данъчно законодателство го изисква. След това данните се изтриват или анонимизират.",
-          en: "I keep correspondence related to inquiries for as long as the conversation requires and for reasonable follow-up afterwards. Data related to active client engagements is kept for the duration of our work and for up to 5 years afterwards, where applicable accounting or tax law requires it. After that, data is deleted or anonymised.",
+        title: {
+          bg: "6. Защо и на какво основание обработвам данни",
+          en: "6. Why and on what basis I process data",
         },
+        paragraphs: [
+          {
+            bg: "Обработвам лични данни само когато има конкретна причина за това и доколкото е необходимо във връзка с използването на сайта, комуникацията с вас или предоставянето на консултантски услуги.",
+            en: "I process personal data only when there is a specific reason to do so and only to the extent necessary in connection with the use of the website, communication with you, or the provision of consulting services.",
+          },
+          {
+            bg: "Данните могат да бъдат обработвани, за да отговоря на ваше запитване, да организирам консултация, да обсъдим възможност за съвместна работа, да поддържам нормалната работа и сигурността на сайта или да изпълня законово задължение, ако такова възникне.",
+            en: "The data may be processed in order to respond to your inquiry, arrange a consultation, discuss a possible collaboration, maintain the normal operation and security of the website, or comply with a legal obligation if one arises.",
+          },
+          {
+            bg: "В зависимост от конкретния случай основанието за обработване може да бъде предприемане на стъпки по ваше искане преди сключване на договор, изпълнение на договор, мой легитимен интерес, спазване на законово задължение или ваше съгласие, когато такова е необходимо.",
+            en: "Depending on the specific situation, the basis for processing may be taking steps at your request before entering into an agreement, performing an agreement, my legitimate interest, compliance with a legal obligation, or your consent where such consent is required.",
+          },
+        ],
       },
       {
-        title: { bg: "7. Бисквитки и локално съхранение", en: "7. Cookies and local storage" },
-        body: {
-          bg: "Сайтът не използва аналитични или маркетингови бисквитки и не те проследява. Запазвам само две локални настройки в браузъра ти (localStorage): избран език и тема (светла/тъмна), за да помня предпочитанията ти при следващото посещение. Тази информация остава на твоето устройство и не се изпраща никъде.",
-          en: "The site does not use analytics or marketing cookies and does not track you. I store only two local preferences in your browser (localStorage): your chosen language and theme (light/dark), so I can remember your preferences on your next visit. This information stays on your device and is not sent anywhere.",
+        title: {
+          bg: "7. Колко дълго съхранявам данните",
+          en: "7. How long I keep the data",
         },
+        paragraphs: [
+          {
+            bg: "Съхранявам лични данни само толкова дълго, колкото е необходимо за целите, за които са предоставени или обработени.",
+            en: "I keep personal data only for as long as necessary for the purposes for which it was provided or processed.",
+          },
+          {
+            bg: "Данни, свързани със запитвания и комуникация, се съхраняват за периода, необходим за отговор, последваща комуникация и организиране на евентуална консултация или съвместна работа.",
+            en: "Data related to inquiries and communication is kept for the period necessary to respond, continue the communication, and arrange a possible consultation or collaboration.",
+          },
+          {
+            bg: "Ако започнем съвместна работа, част от данните може да бъдат съхранявани за по-дълъг период, когато това е необходимо за изпълнение на договор, счетоводни, данъчни или други законови задължения.",
+            en: "If we start working together, some data may be kept for a longer period where this is necessary for the performance of an agreement, accounting, tax, or other legal obligations.",
+          },
+          {
+            bg: "Когато данните вече не са необходими, те се изтриват или анонимизират, освен ако закон не изисква по-дълго съхранение.",
+            en: "When the data is no longer needed, it is deleted or anonymized, unless the law requires it to be kept for a longer period.",
+          },
+        ],
       },
       {
-        title: { bg: "8. Външни услуги", en: "8. External services" },
-        body: {
-          bg: "За някои функции сайтът използва външни доставчици: Cal.com (за записване на безплатен разговор) и LinkedIn (връзка към професионалния ми профил). Когато преминеш към тяхна страница, се прилагат техните условия и политики за поверителност.",
-          en: "For certain features the site uses external providers: Cal.com (for booking a free introductory call) and LinkedIn (a link to my professional profile). When you navigate to their pages, their own terms and privacy policies apply.",
+        title: {
+          bg: "8. Cookies, local storage и технически данни",
+          en: "8. Cookies, local storage, and technical data",
         },
+        paragraphs: [
+          {
+            bg: "Сайтът може да използва cookies, local storage или сходни технологии, за да работи правилно и да запомня определени настройки, свързани с използването му.",
+            en: "The website may use cookies, local storage, or similar technologies to function properly and remember certain settings related to its use.",
+          },
+          {
+            bg: "Такива настройки могат да включват избран език, предпочитана тема на визуализация или друга функционална информация, която помага сайтът да се зарежда и използва по-удобно.",
+            en: "These settings may include the selected language, preferred visual theme, or other functional information that helps the website load and work more conveniently.",
+          },
+          {
+            bg: "Възможно е също да се обработват технически данни, които помагат за поддръжката, сигурността и нормалната работа на сайта. Тези данни могат да включват информация за браузър, устройство, IP адрес, дата и час на посещението, както и данни за зареждането и използването на страниците.",
+            en: "Technical data may also be processed to support the maintenance, security, and normal operation of the website. This data may include information about the browser, device, IP address, date and time of visit, and how the pages load and are used.",
+          },
+          {
+            bg: "Ако в бъдеще бъдат добавени аналитични, рекламни или други технологии, които изискват допълнително уведомяване или съгласие, тази страница ще бъде актуализирана.",
+            en: "If analytics, advertising, or other technologies that require additional notice or consent are added in the future, this page will be updated.",
+          },
+        ],
       },
       {
-        title: { bg: "9. Твоите права", en: "9. Your rights" },
-        body: {
-          bg: "Имаш право да поискаш достъп, корекция или изтриване на личните си данни, ограничаване на обработването, преносимост, както и да възразиш срещу обработване, основано на легитимен интерес. Можеш да оттеглиш дадено съгласие по всяко време. За да упражниш което и да е право, пиши ми на имейла, посочен по-долу. Имаш и право на жалба до Комисията за защита на личните данни (cpdp.bg).",
-          en: "You have the right to request access, correction, or deletion of your personal data, restriction of processing, portability, and to object to processing based on legitimate interest. You may withdraw a given consent at any time. To exercise any of these rights, write to me at the email below. You also have the right to lodge a complaint with the Bulgarian Commission for Personal Data Protection (cpdp.bg).",
+        title: {
+          bg: "9. Външни услуги",
+          en: "9. External services",
         },
+        paragraphs: [
+          {
+            bg: "За поддръжката и нормалната работа на сайта може да използвам външни услуги и доставчици. Това може да включва услуги за хостинг, управление на домейна, защита на сайта, имейл комуникация, запазване на часове за консултация, обработване на плащания или други технически и организационни функции.",
+            en: "To support and maintain the normal operation of the website, I may use external services and providers. This may include services for hosting, domain management, website protection, email communication, booking consultations, processing payments, or other technical and organizational functions.",
+          },
+          {
+            bg: "Такива доставчици могат да обработват ограничена информация, необходима за предоставянето на съответната услуга. Те обработват данните съобразно собствените си условия, политики за поверителност и приложимите правила за защита на личните данни.",
+            en: "Such providers may process limited information necessary to provide the relevant service. They process data in accordance with their own terms, privacy policies, and applicable data protection rules.",
+          },
+          {
+            bg: "Към момента сайтът използва или може да бъде свързан с услуги като Vercel, Cloudflare, GitHub, Google и Gumroad. Ако в бъдеще бъдат добавени други съществени външни услуги, тази страница ще бъде актуализирана, когато това е необходимо.",
+            en: "At the moment, the website uses or may be connected to services such as Vercel, Cloudflare, GitHub, Google, and Gumroad. If other significant external services are added in the future, this page will be updated where necessary.",
+          },
+        ],
       },
       {
-        title: { bg: "10. Промени в условията", en: "10. Changes to these terms" },
-        body: {
-          bg: "Запазвам си правото да актуализирам този документ, когато услугите, технологията или законът се променят. Винаги ще виждаш в горната част на страницата датата на последна актуализация. Препоръчвам ти да я преглеждаш от време на време.",
-          en: "I reserve the right to update this document when services, technology, or applicable law changes. The date of the most recent update is always shown at the top of this page. I recommend reviewing it from time to time.",
+        title: {
+          bg: "10. Вашите права",
+          en: "10. Your rights",
         },
+        paragraphs: [
+          {
+            bg: "Имате право да получите информация за това какви лични данни обработвам за вас и с каква цел.",
+            en: "You have the right to receive information about what personal data I process about you and for what purpose.",
+          },
+          {
+            bg: "При условията на приложимото законодателство можете да поискате достъп до личните си данни, корекция на неточни или непълни данни, изтриване на данни, ограничаване на обработването, както и възражение срещу обработването в определени случаи.",
+            en: "Subject to applicable law, you may request access to your personal data, correction of inaccurate or incomplete data, deletion of data, restriction of processing, and objection to processing in certain cases.",
+          },
+          {
+            bg: "Когато обработването се основава на ваше съгласие, имате право да го оттеглите по всяко време. Оттеглянето на съгласието не засяга законосъобразността на обработването, извършено преди това.",
+            en: "Where processing is based on your consent, you have the right to withdraw it at any time. Withdrawing consent does not affect the lawfulness of processing carried out before the withdrawal.",
+          },
+          {
+            bg: "Ако искате да упражните свое право или имате въпрос относно обработването на личните ви данни, можете да се свържете с мен на посочения в края имейл адрес.",
+            en: "If you would like to exercise any of your rights or have a question about the processing of your personal data, you can contact me at the email address listed at the end.",
+          },
+          {
+            bg: "Ако смятате, че правата ви във връзка със защитата на личните данни са нарушени, имате право да подадете жалба до компетентния надзорен орган.",
+            en: "If you believe that your data protection rights have been violated, you have the right to lodge a complaint with the competent supervisory authority.",
+          },
+        ],
       },
       {
-        title: { bg: "11. Приложимо право", en: "11. Governing law" },
-        body: {
-          bg: "Тези условия се уреждат от законодателството на Република България и от приложимото право на Европейския съюз, включително Регламент (ЕС) 2016/679 (GDPR). Спорове, които не могат да бъдат решени по добронамерен път, са от компетентността на българските съдилища.",
-          en: "These terms are governed by the laws of the Republic of Bulgaria and by applicable European Union law, including Regulation (EU) 2016/679 (GDPR). Disputes that cannot be resolved amicably fall under the jurisdiction of the Bulgarian courts.",
+        title: {
+          bg: "11. Сигурност на данните",
+          en: "11. Data security",
         },
+        paragraphs: [
+          {
+            bg: "Полагам разумни усилия да защитавам личните данни, които се обработват чрез сайта, от неоторизиран достъп, загуба, злоупотреба или разкриване.",
+            en: "I make reasonable efforts to protect the personal data processed through the website from unauthorized access, loss, misuse, or disclosure.",
+          },
+          {
+            bg: "Въпреки това нито един метод за предаване или съхранение на информация в интернет не може да бъде напълно сигурен. Затова не мога да гарантирам абсолютна защита, но се стремя да използвам адекватни мерки според естеството на сайта и обработваната информация.",
+            en: "However, no method of transmitting or storing information on the internet can be completely secure. For this reason, I cannot guarantee absolute protection, but I aim to use appropriate measures based on the nature of the website and the information processed.",
+          },
+        ],
+      },
+      {
+        title: {
+          bg: "12. Промени в тази страница",
+          en: "12. Changes to this page",
+        },
+        paragraphs: [
+          {
+            bg: "Възможно е тази страница да бъде актуализирана при промяна в сайта, услугите, използваните външни доставчици или приложимите правила.",
+            en: "This page may be updated if there are changes to the website, the services, the external providers used, or the applicable rules.",
+          },
+          {
+            bg: "При съществена промяна ще бъде посочена нова дата на актуализация. Препоръчвам периодично да преглеждате тази страница, за да сте информирани за актуалните условия и начина, по който се обработват лични данни.",
+            en: "If a significant change is made, a new update date will be indicated. I recommend reviewing this page from time to time so that you stay informed about the current terms and the way personal data is processed.",
+          },
+        ],
+      },
+      {
+        title: {
+          bg: "13. Приложимо право",
+          en: "13. Governing law",
+        },
+        paragraphs: [
+          {
+            bg: "Тези условия и използването на сайта се уреждат от приложимото право на Република България, доколкото не се прилагат задължителни правила на друго законодателство.",
+            en: "These terms and the use of the website are governed by the applicable laws of the Republic of Bulgaria, unless mandatory rules of another jurisdiction apply.",
+          },
+          {
+            bg: "Ако възникне спор във връзка със сайта, неговото използване или обработването на лични данни, ще се стремим първо да го разрешим чрез добросъвестна комуникация.",
+            en: "If a dispute arises in connection with the website, its use, or the processing of personal data, we will first seek to resolve it through good-faith communication.",
+          },
+        ],
       },
     ],
     contactLabel: { bg: "Въпроси и заявки", en: "Questions and requests" },
-    contactBody: {
-      bg: "За всичко, свързано с този документ, лични данни или работа със сайта, можеш да ми пишеш на имейла по-долу. Старая се да отговоря в рамките на 2 работни дни.",
-      en: "For anything related to this document, personal data, or use of the site, you can write to me at the email below. I aim to reply within 2 business days.",
+    contactIntro: {
+      bg: "Ако имате въпроси относно тези условия, използването на сайта или начина, по който обработвам лични данни, можете да се свържете с мен на:",
+      en: "If you have any questions about these terms, the use of the website, or how I process personal data, you can contact me at:",
+    },
+    contactOutro: {
+      bg: "Ще се постарая да отговоря в разумен срок и да съдействам според естеството на запитването.",
+      en: "I will do my best to respond within a reasonable time and assist according to the nature of the inquiry.",
     },
     footerLink: { bg: "Условия за ползване", en: "Terms of use" },
     contactNoticePrefix: {
