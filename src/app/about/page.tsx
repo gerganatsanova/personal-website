@@ -24,8 +24,8 @@ export default function AboutPage() {
         <SectionDivider />
         <Experience />
         <SectionDivider />
-        {/* <Credentials />
-        <SectionDivider /> */}
+        <Credentials />
+        <SectionDivider />
         <Beyond />
         <SectionDivider />
         <CTA />

@@ -417,26 +417,27 @@ export const t = {
       en: "learning modules",
     },
     // 5. Credentials
-    credentialsKicker: { bg: "Сертификати", en: "Credentials" },
-    credentialsTitleLead: { bg: "Обучения, които", en: "Trainings that" },
+    credentialsKicker: {
+      bg: "Квалификация",
+      en: "Background",
+    },
+    credentialsTitleLead: { bg: "Образование и", en: "Education and" },
     credentialsTitleAccent: {
-      bg: "ме формираха.",
-      en: "shaped me.",
+      bg: "професионално развитие.",
+      en: "professional development.",
     },
     credentials: {
       bg: [
-        "Сертифициран коуч — международна програма",
-        "Фасилитация на групови процеси — специализация",
-        "Неврология на поведението — приложни модули",
-        "Системен подход в работа с организации",
-        "Storytelling и комуникация пред публика",
+        "Бакалавър и магистър по управление на човешките ресурси",
+        "Сертифициран треньор по групово-динамичен тренинг",
+        "Обучение по графично фасилитиране",
+        "Обучения за обучители и storytelling",
       ],
       en: [
-        "Certified coach — international program",
-        "Facilitation of group processes — specialization",
-        "Behavioral neuroscience — applied modules",
-        "Systemic approach to working with organizations",
-        "Storytelling and public communication",
+        "Bachelor's and Master's degrees in Human Resource Management",
+        "Certified trainer in group-dynamic training",
+        "Training in graphic facilitation",
+        "Train-the-trainer programs and storytelling",
       ],
     },
     // 6. Beyond work
