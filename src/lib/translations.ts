@@ -982,5 +982,14 @@ export const t = {
       en: "For anything related to this document, personal data, or use of the site, you can write to me at the email below. I aim to reply within 2 business days.",
     },
     footerLink: { bg: "Условия за ползване", en: "Terms of use" },
+    contactNoticePrefix: {
+      bg: "Свързвайки се с мен, приемаш",
+      en: "By contacting me, you agree to the",
+    },
+    contactNoticeLink: {
+      bg: "условията за ползване и защита на данните",
+      en: "terms of use and data protection policy",
+    },
+    contactNoticeSuffix: { bg: "", en: "." },
   },
 } as const;

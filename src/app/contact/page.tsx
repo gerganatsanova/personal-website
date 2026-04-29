@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Link from "next/link";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { SectionDivider } from "@/components/section-divider";
@@ -264,6 +265,16 @@ function Connect() {
 
           <p className="mt-6 text-[13px] italic leading-[1.7] text-subtle md:text-sm">
             {t.contactPage.inPersonNote[lang]}
+          </p>
+          <p className="mt-4 text-[12px] leading-[1.7] text-subtle">
+            {t.termsPage.contactNoticePrefix[lang]}{" "}
+            <Link
+              href="/terms-and-conditions"
+              className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-accent"
+            >
+              {t.termsPage.contactNoticeLink[lang]}
+            </Link>
+            {t.termsPage.contactNoticeSuffix[lang]}
           </p>
         </motion.div>
       </div>
