@@ -99,6 +99,22 @@ export function Footer() {
                   </span>
                 </a>
               </li>
+              <li>
+                <a
+                  href={contact.x}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center text-muted transition-colors hover:text-foreground"
+                >
+                  X
+                  <span
+                    aria-hidden
+                    className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                  >
+                    ↗
+                  </span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

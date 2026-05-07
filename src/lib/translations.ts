@@ -3,6 +3,7 @@
 // appears in the SSR HTML or the static JS bundle (anti-scraper).
 export const contact = {
   linkedin: "https://www.linkedin.com/in/gerganatsanova/",
+  x: "https://x.com/GerganaTsanova",
 };
 
 export const t = {
