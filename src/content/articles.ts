@@ -327,6 +327,129 @@ And perhaps now you are wondering why I am telling you all this and how it affec
     },
   },
   {
+    slug: "liderstvoto-zapochva-otvatre",
+    date: "2021-05-17",
+    displayDate: { bg: "Май 2021", en: "May 2021" },
+    cover:
+      "https://images.unsplash.com/photo-1569851325621-266c8332dcc6?w=1400&q=80",
+    title: {
+      bg: "Лидерството започва първо вътре в нас",
+      en: "When leadership begins on the inside",
+    },
+    excerpt: {
+      bg: "Когато човек стане мениджър за първи път, често очаква от себе си да бъде по-уверен, по-ясен и по-готов, отколкото реално се чувства. Но може би лидерството не започва с липсата на несигурност, а с начина, по който се учим да я разбираме и да водим през собствените си силни страни.",
+      en: "When someone becomes a manager for the first time, they often expect themselves to feel more confident, more prepared, and more certain than they actually do. But maybe leadership does not begin with the absence of doubt. Maybe it begins with learning how to understand that doubt and how to lead through our own strengths.",
+    },
+    body: {
+      bg: `Когато човек стане мениджър за първи път, отвън това често изглежда като признание. Нова роля, повече доверие, повече отговорност. Някой е видял потенциал в теб и ти е дал възможност да направиш следваща крачка.
+
+Но отвътре понякога усещането е съвсем различно.
+
+Не винаги идва увереност. Понякога първо идва шумът.
+
+Дали ще се справя? Дали ще ме приемат? Дали ще знам какво да кажа, когато стане трудно? Дали ще успея да бъда едновременно човечен и ясен? Дали трябва да стана друг тип човек, за да бъда възприеман като лидер?
+
+Мисля, че за тази част от прехода към лидерство не говорим достатъчно. Много по-често говорим за техниките. Как да делегираме. Как да даваме обратна връзка. Как да поставяме цели. Как да следим резултатите.
+
+И всичко това е важно. Няма как да водим екип само с добри намерения. Нужни са структура, инструменти и умения. Но понякога, докато говорим за всички тези техники, забравяме човека, който трябва да ги използва.
+
+А истината е, че новата роля не променя само задачите ни. Променя и тежестта на присъствието ни.
+
+Думите ни започват да имат по-голямо значение. Реакциите ни се усещат по-силно. Мълчанието ни също се тълкува. Начинът, по който влизаме в напрежение, начинът, по който показваме доверие или съмнение, начинът, по който реагираме, когато не сме сигурни, започва да влияе не само на работата, а и на средата около нас.
+
+И точно тук често се появява страхът.
+
+Понякога той изглежда като контрол. Проверяваме повече, отколкото е нужно, защото вътрешно ни е страх да не се изпусне нещо.
+
+Понякога изглежда като доказване. Говорим повече, обясняваме повече, опитваме се да покажем, че сме на мястото си.
+
+Понякога изглежда като прекалено старание да бъдем харесвани. Омекотяваме трудните разговори, отлагаме яснотата, правим компромиси, които после тежат.
+
+И това не означава, че не ставаме за лидери. Означава, че сме хора, които се учат да стоят в нова отговорност.
+
+Може би първата по-зряла крачка не е да нямаме страх. А да започнем да го разпознаваме, преди той да започне да води вместо нас.
+
+Има и още нещо, което ми се струва много важно. Много нови мениджъри се опитват да влязат в образ. Представят си как „трябва" да изглежда един лидер. По-уверен. По-категоричен. По-спокоен. По-твърд. По-различен.
+
+И неусетно започват да се отдалечават от себе си.
+
+А аз все повече вярвам, че лидерството не е да станеш някой друг. Не е да облечеш чужда кожа, защото така си мислиш, че трябва да изглежда човек на тази позиция.
+
+Лидерството е да разбереш през кои свои силни страни можеш да водиш.
+
+Някой води през спокойствие. Друг през яснота. Трети през емпатия. Четвърти през структура. Пети през способността да вижда потенциала в хората. Шести през смелостта да казва трудните неща по човешки начин.
+
+Разбира се, това не означава да не се развиваме. Не можем просто да кажем „аз съм си такъв човек" и да очакваме това да е достатъчно. Адаптацията е част от лидерството.
+
+Но адаптацията не е имитация.
+
+Може да си чувствителен човек и пак да поставяш граници. Може да си по-мек като присъствие и пак да бъдеш ясен. Може да ти пука много за хората и пак да не носиш всичко вместо тях. Може да не си най-шумният човек в стаята и пак да имаш силно лидерско присъствие.
+
+Може би не е нужно да ставаме други хора, за да бъдем лидери. Може би е нужно да изградим повече зрялост около човека, който вече сме.
+
+Защото титлата може да дойде в един конкретен ден. Но лидерът в нас се изгражда по-бавно.
+
+В начина, по който реагираме, когато ни е страх. В начина, по който използваме силните си страни, вместо да се преструваме на някой друг. В начина, по който се грижим за хората, без да забравяме себе си.
+
+И може би един от най-важните въпроси в началото не е „как да бъда перфектен лидер".
+
+А: Какъв лидер ставам, докато се уча да нося тази отговорност?`,
+      en: `When someone becomes a manager for the first time, from the outside it often looks like recognition. A new role, more trust, more responsibility. Someone has seen potential in you and has given you the opportunity to take the next step.
+
+But on the inside, it can feel very different.
+
+Confidence does not always come first. Sometimes, the first thing that appears is the noise.
+
+Will I manage? Will they accept me? Will I know what to say when things get difficult? Can I be both human and clear? Do I need to become a different kind of person in order to be seen as a leader?
+
+I think we do not talk enough about this part of the transition into leadership. We usually talk much more about the techniques. How to delegate. How to give feedback. How to set goals. How to track results.
+
+And all of that matters. Of course it does. We cannot lead a team with good intentions alone. We need structure, tools, and skills. But sometimes, while we talk so much about all these techniques, we forget the person who has to use them.
+
+Because the truth is, a new leadership role does not change only our tasks. It also changes the weight of our presence.
+
+Our words start to matter more. Our reactions are felt more strongly. Even our silence can be interpreted. The way we enter tense situations, the way we show trust or doubt, the way we react when we are not sure what to do, starts to influence not only the work, but also the environment around us.
+
+And this is often where fear appears.
+
+Sometimes it looks like control. We check more than we need to, because deep down we are afraid something might be missed.
+
+Sometimes it looks like proving ourselves. We speak more, explain more, try harder to show that we deserve to be in this role.
+
+Sometimes it looks like trying too hard to be liked. We soften difficult conversations, postpone clarity, make compromises that later become heavy.
+
+And none of this means that we are not meant to be leaders. It means we are human beings learning how to stand in a new kind of responsibility.
+
+Maybe the first more mature step is not to have no fear. Maybe it is to start recognizing fear before it starts leading on our behalf.
+
+There is something else that feels very important to me. Many new managers try to step into an image. They imagine what a leader is "supposed" to look like. More confident. More decisive. More calm. More firm. More different.
+
+And without noticing, they start moving away from themselves.
+
+But I increasingly believe that leadership is not about becoming someone else. It is not about putting on someone else's skin because we think this is how a person in this position should look.
+
+Leadership is about understanding which of our own strengths we can lead through.
+
+Some people lead through calmness. Others through clarity. Some through empathy. Others through structure. Some through their ability to see potential in people. Others through the courage to say difficult things in a human way.
+
+Of course, this does not mean we do not need to grow. We cannot simply say, "This is just who I am," and expect that to be enough. Adaptation is part of leadership.
+
+But adaptation is not imitation.
+
+You can be a sensitive person and still set boundaries. You can have a softer presence and still be clear. You can care deeply about people and still not carry everything for them. You can be not the loudest person in the room and still have a strong leadership presence.
+
+Maybe we do not need to become different people in order to be leaders. Maybe we need to build more maturity around the person we already are.
+
+Because the title may come on one specific day. But the leader within us is built more slowly.
+
+In the way we respond when we are afraid. In the way we use our strengths instead of pretending to be someone else. In the way we care for people without forgetting ourselves.
+
+And maybe one of the most important questions in the beginning is not, "How do I become the perfect leader?"
+
+But: What kind of leader am I becoming while I am learning to carry this responsibility?`,
+    },
+  },
+  {
     slug: "pohvala-koyato-ima-znachenie",
     date: "2020-08-31",
     displayDate: { bg: "Август 2020", en: "August 2020" },
