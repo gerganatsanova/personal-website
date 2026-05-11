@@ -327,7 +327,7 @@ function CompactRow({
     >
       <Link
         href={`/articles/${article.slug}`}
-        className="group grid grid-cols-[84px_1fr_auto] items-center gap-5 border-b border-border/60 py-6 transition-colors hover:bg-foreground/[0.02] md:grid-cols-[128px_auto_1fr_auto] md:gap-x-6 md:py-7"
+        className="group grid grid-cols-[84px_1fr_auto] items-center gap-5 border-b border-border/60 py-6 transition-colors hover:bg-foreground/[0.02] md:grid-cols-[128px_160px_1fr_auto] md:gap-x-6 md:py-7"
       >
         <div className="relative aspect-[4/3] h-16 w-[84px] overflow-hidden rounded-sm md:h-auto md:w-32">
           <Image
