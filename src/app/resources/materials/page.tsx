@@ -125,13 +125,13 @@ function Search({
   lang: "bg" | "en";
 }) {
   return (
-    <div className="border-b border-border/60 bg-background/85">
+    <div className="sticky top-[calc(3.5rem+2px)] z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <motion.div
         initial="hidden"
         animate="show"
         variants={fadeUp}
         transition={{ delay: 0.2 }}
-        className="mx-auto max-w-6xl px-6 pb-8 md:px-10 md:pb-10"
+        className="mx-auto max-w-6xl px-6 py-3 md:px-10 md:py-3.5"
       >
         <div className="relative">
           <label htmlFor="materials-search" className="sr-only">
