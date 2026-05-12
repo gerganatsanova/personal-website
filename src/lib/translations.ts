@@ -729,8 +729,8 @@ export const t = {
       en: "Search by title or keyword",
     },
     materialsSearchPlaceholderHint: {
-      bg: "(напр.: наръчник, лидерство, екип)",
-      en: "(e.g. guide, leadership, team)",
+      bg: "(напр.: мини-наръчник, лидерство, екип)",
+      en: "(e.g. mini-guide, leadership, team)",
     },
     materialsSearchClear: { bg: "Изчисти търсенето", en: "Clear search" },
     materialsSearchResultsFor: { bg: "Резултати за", en: "Results for" },

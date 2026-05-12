@@ -16,7 +16,7 @@ import type { Lang } from "@/lib/i18n";
 
 export type Material = {
   slug: string;
-  /** Short label above the title, e.g. "Наръчник" / "Guide". */
+  /** Short label above the title, e.g. "Мини-наръчник" / "Mini-guide". */
   type: { bg: string; en: string };
   title: { bg: string; en: string };
   description: { bg: string; en: string };
@@ -28,7 +28,7 @@ export type Material = {
 export const materials: Material[] = [
   {
     slug: "first-aid-for-new-managers",
-    type: { bg: "Наръчник", en: "Guide" },
+    type: { bg: "Мини-наръчник", en: "Mini-guide" },
     title: {
       bg: "Първа помощ за мениджъри",
       en: "First Aid for New Managers",
@@ -44,7 +44,7 @@ export const materials: Material[] = [
   },
   {
     slug: "giving-feedback-for-development",
-    type: { bg: "Наръчник", en: "Guide" },
+    type: { bg: "Мини-наръчник", en: "Mini-guide" },
     title: {
       bg: "Даване на обратна връзка",
       en: "Giving feedback",
