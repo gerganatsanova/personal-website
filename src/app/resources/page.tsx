@@ -12,6 +12,7 @@ import { fadeUp, EASE } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
 import { t } from "@/lib/translations";
 import { sortedBooks } from "@/content/books";
+import { materials } from "@/content/materials";
 
 export default function ResourcesPage() {
   return (
@@ -279,22 +280,10 @@ const MATERIALS_PAGE_SIZE = 2;
 function Materials() {
   const { lang } = useLanguage();
 
-  // Placeholders for upcoming downloadable materials. Add, remove, or replace
-  // entries and pagination adjusts automatically (pages of MATERIALS_PAGE_SIZE).
-  // When a file is ready, swap the <button> in the card body with:
-  //   <a href="/downloads/your-file.pdf" download className={CTA_CLASSES}>New CTA text</a>
-  // and update the title/description translation keys.
-  const placeholders = [
-    { key: "upcoming-1" },
-    { key: "upcoming-2" },
-    { key: "upcoming-3" },
-    { key: "upcoming-4" },
-  ];
-
   const [[pageIndex, direction], setState] = useState<[number, number]>([0, 1]);
-  const totalPages = Math.ceil(placeholders.length / MATERIALS_PAGE_SIZE);
+  const totalPages = Math.max(1, Math.ceil(materials.length / MATERIALS_PAGE_SIZE));
   const showPagination = totalPages > 1;
-  const currentItems = placeholders.slice(
+  const currentItems = materials.slice(
     pageIndex * MATERIALS_PAGE_SIZE,
     (pageIndex + 1) * MATERIALS_PAGE_SIZE,
   );
@@ -356,24 +345,28 @@ function Materials() {
               transition={{ duration: 0.5, ease: EASE }}
               className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8"
             >
-              {currentItems.map((item) => (
+              {currentItems.map((material) => (
                 <div
-                  key={item.key}
+                  key={material.slug}
                   className="group relative flex flex-col items-center rounded-lg border border-border/60 bg-surface p-8 text-center transition-colors md:p-10"
                 >
+                  <p className="mb-3 text-[11px] uppercase tracking-[0.22em] text-muted">
+                    {material.type[lang]}
+                  </p>
                   <h3 className="font-serif text-xl leading-tight tracking-tight text-foreground md:text-2xl">
-                    {t.resources.upcomingMaterialTitle[lang]}
+                    {material.title[lang]}
                   </h3>
                   <p className="mt-3 max-w-[34ch] text-[14px] leading-[1.7] text-muted md:text-[15px]">
-                    {t.resources.upcomingMaterialDescription[lang]}
+                    {material.description[lang]}
                   </p>
-                  <button
-                    type="button"
-                    disabled
-                    className="mt-8 inline-flex h-11 cursor-not-allowed items-center justify-center rounded-full bg-foreground px-6 text-sm font-medium text-background opacity-60"
+                  <a
+                    href={material.file[lang]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 inline-flex h-11 items-center justify-center rounded-full bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90"
                   >
-                    {t.resources.upcomingMaterialCta[lang]}
-                  </button>
+                    {t.resources.openMaterialCta[lang]}
+                  </a>
                 </div>
               ))}
             </motion.div>

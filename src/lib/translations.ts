@@ -704,8 +704,8 @@ export const t = {
     materialsTitleLead: { bg: "Полезни", en: "Helpful" },
     materialsTitleAccent: { bg: "материали", en: "resources" },
     materialsIntro: {
-      bg: "Подготвям кратки материали и наръчници по темите, с които работя. Скоро ще можеш да ги намериш тук.",
-      en: "I'm working on a selection of short guides and materials around the topics I work with. You'll find them here soon.",
+      bg: "Кратки наръчници и материали по темите, с които работя. Можеш да ги отвориш и прочетеш безплатно.",
+      en: "Short guides and resources around the topics I work with. You can open and read them for free.",
     },
     upcomingMaterialTitle: {
       bg: "Предстоящ материал",
@@ -719,6 +719,27 @@ export const t = {
       bg: "Скоро тук",
       en: "Coming soon",
     },
+    openMaterialCta: {
+      bg: "Отвори",
+      en: "Open",
+    },
+    // Search UI on the /resources/materials listing page.
+    materialsSearchPlaceholder: {
+      bg: "Търси по заглавие или ключова дума",
+      en: "Search by title or keyword",
+    },
+    materialsSearchPlaceholderHint: {
+      bg: "(напр.: наръчник, лидерство, екип)",
+      en: "(e.g. guide, leadership, team)",
+    },
+    materialsSearchClear: { bg: "Изчисти търсенето", en: "Clear search" },
+    materialsSearchResultsFor: { bg: "Резултати за", en: "Results for" },
+    materialsSearchNoResults: {
+      bg: "Няма намерени материали. Опитай с друга дума.",
+      en: "No resources found. Try a different word.",
+    },
+    materialsSearchCountOne: { bg: "материал", en: "resource" },
+    materialsSearchCountMany: { bg: "материала", en: "resources" },
     // View-all link for materials on /resources (shown when more than one page).
     viewAllMaterialsMobile: {
       bg: "Виж всички материали",
@@ -729,8 +750,8 @@ export const t = {
     materialsPageTitleLead: { bg: "Материали за", en: "Resources to" },
     materialsPageTitleAccent: { bg: "изтегляне.", en: "download." },
     materialsPageIntro: {
-      bg: "Кратки наръчници и материали, които можеш да свалиш безплатно. В момента подготвям съдържанието, което ще бъде публикувано тук скоро.",
-      en: "Short guides and tools that you can download for free. I am currently preparing the content that will be published here soon.",
+      bg: 'Кратки наръчници и материали, които можеш да отвориш и прочетеш безплатно. Натисни „Отвори", за да го видиш в браузъра, и от там можеш да го свалиш, ако желаеш.',
+      en: 'Short guides and resources that you can open and read for free. Click "Open" to view it in your browser, and from there you can download it if you\'d like.',
     },
   },
   // Contact page — booking, channels, FAQ.
