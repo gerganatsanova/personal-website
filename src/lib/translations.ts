@@ -58,12 +58,16 @@ export const t = {
       en: "I work with people who want more clarity, confidence, and direction in life and at work. I do not believe in empty phrases. I believe in honest conversation, meaningful work, and real next steps.",
     },
     ctaPrimary: {
-      bg: "Работи с мен",
-      en: "Work with me",
+      bg: "Свържи се с мен",
+      en: "Contact me",
     },
     ctaSecondary: {
       bg: "Запознай се с мен",
       en: "Get to know me",
+    },
+    ctaTertiary: {
+      bg: "Как работя",
+      en: "How I work",
     },
     watermark: {
       bg: "Израстване.",

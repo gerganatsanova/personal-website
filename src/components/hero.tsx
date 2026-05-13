@@ -119,21 +119,27 @@ export function Hero() {
             className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
             <Link
-              href="/work-with-me"
+              href="/contact#book"
               className="group inline-flex h-11 items-center justify-center rounded-full bg-foreground px-6 text-sm font-medium text-background transition-all hover:bg-accent"
             >
               {t.hero.ctaPrimary[lang]}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
-            <Link
-              href="/about"
-              className="group inline-flex h-11 items-center justify-center rounded-full px-4 text-sm font-medium text-foreground transition-colors hover:text-accent"
-            >
-              {t.hero.ctaSecondary[lang]}
-              <span className="ml-2 inline-block transition-transform group-hover:translate-x-0.5">
-                →
-              </span>
-            </Link>
+            {[
+              { href: "/about", label: t.hero.ctaSecondary[lang] },
+              { href: "/work-with-me", label: t.hero.ctaTertiary[lang] },
+            ].map((cta) => (
+              <Link
+                key={cta.href}
+                href={cta.href}
+                className="group inline-flex h-11 items-center justify-center rounded-full px-4 text-sm font-medium text-foreground transition-colors hover:text-accent"
+              >
+                {cta.label}
+                <span className="ml-2 inline-block transition-transform group-hover:translate-x-0.5">
+                  →
+                </span>
+              </Link>
+            ))}
           </motion.div>
         </div>
 
