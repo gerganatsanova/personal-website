@@ -218,7 +218,9 @@ function SearchSummary({
       <p className="text-[13px] uppercase tracking-[0.18em] text-subtle">
         {count} {countWord} · {t.resources.materialsSearchResultsFor[lang]}{" "}
         <span className="text-foreground normal-case tracking-normal">
-          „{query}"
+          {"„"}
+          {query}
+          {"“"}
         </span>
       </p>
     </div>

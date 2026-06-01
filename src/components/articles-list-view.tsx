@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useSyncExternalStore } from "react";
 import { fadeUp } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
 import { t } from "@/lib/translations";
@@ -24,25 +24,20 @@ const STORAGE_PATH_KEY = "articlesPath";
 
 export function ArticlesListView({ page }: Props) {
   const { lang } = useLanguage();
-  const [query, setQuery] = useState("");
+  const query = useSyncExternalStore(
+    subscribeToArticlesQuery,
+    getArticlesQuerySnapshot,
+    getArticlesQueryServerSnapshot,
+  );
 
-  // On mount, restore saved search from a previous visit.
-  useEffect(() => {
-    const saved = sessionStorage.getItem(STORAGE_QUERY_KEY);
-    if (saved) setQuery(saved);
-  }, []);
-
-  // Persist the search term and current path so the article detail page's
+  // Persist the current path so the article detail page's
   // "back" links can return the user to this exact state.
-  useEffect(() => {
-    sessionStorage.setItem(STORAGE_QUERY_KEY, query);
-  }, [query]);
-
   useEffect(() => {
     sessionStorage.setItem(
       STORAGE_PATH_KEY,
       page === 1 ? "/articles" : `/articles/page/${page}`,
     );
+    window.dispatchEvent(new Event("articles-path-change"));
   }, [page]);
 
   const pages = totalPages();
@@ -72,7 +67,7 @@ export function ArticlesListView({ page }: Props) {
         >
           <SearchBox
             value={query}
-            onChange={setQuery}
+            onChange={setStoredArticlesQuery}
             lang={lang}
           />
         </motion.div>
@@ -116,6 +111,28 @@ export function ArticlesListView({ page }: Props) {
       </section>
     </>
   );
+}
+
+function subscribeToArticlesQuery(onStoreChange: () => void) {
+  window.addEventListener("storage", onStoreChange);
+  window.addEventListener("articles-query-change", onStoreChange);
+  return () => {
+    window.removeEventListener("storage", onStoreChange);
+    window.removeEventListener("articles-query-change", onStoreChange);
+  };
+}
+
+function getArticlesQuerySnapshot() {
+  return sessionStorage.getItem(STORAGE_QUERY_KEY) || "";
+}
+
+function getArticlesQueryServerSnapshot() {
+  return "";
+}
+
+function setStoredArticlesQuery(next: string) {
+  sessionStorage.setItem(STORAGE_QUERY_KEY, next);
+  window.dispatchEvent(new Event("articles-query-change"));
 }
 
 /* ---------------- Intro ---------------- */
@@ -242,7 +259,9 @@ function SearchSummary({
     <p className="mb-10 text-[13px] uppercase tracking-[0.18em] text-subtle md:mb-12">
       {count} {countWord} · {t.articles.searchResultsFor[lang]}{" "}
       <span className="text-foreground normal-case tracking-normal">
-        „{query}"
+        {"„"}
+        {query}
+        {"“"}
       </span>
     </p>
   );

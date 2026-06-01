@@ -5,7 +5,7 @@ import {
   useCallback,
   useContext,
   useEffect,
-  useState,
+  useSyncExternalStore,
   type ReactNode,
 } from "react";
 
@@ -19,22 +19,21 @@ type LanguageContextValue = {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
-
-  useEffect(() => {
-    const stored = localStorage.getItem("lang") as Lang | null;
-    if (stored === "bg" || stored === "en") setLangState(stored);
-  }, []);
+  const lang = useSyncExternalStore(
+    subscribeToLanguage,
+    getLanguageSnapshot,
+    getLanguageServerSnapshot,
+  );
 
   useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);
 
   const setLang = useCallback((next: Lang) => {
-    setLangState(next);
     try {
       localStorage.setItem("lang", next);
     } catch {}
+    window.dispatchEvent(new Event("language-change"));
   }, []);
 
   return (
@@ -42,6 +41,24 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       {children}
     </LanguageContext.Provider>
   );
+}
+
+function subscribeToLanguage(onStoreChange: () => void) {
+  window.addEventListener("storage", onStoreChange);
+  window.addEventListener("language-change", onStoreChange);
+  return () => {
+    window.removeEventListener("storage", onStoreChange);
+    window.removeEventListener("language-change", onStoreChange);
+  };
+}
+
+function getLanguageSnapshot(): Lang {
+  const stored = localStorage.getItem("lang") as Lang | null;
+  return stored === "bg" || stored === "en" ? stored : "en";
+}
+
+function getLanguageServerSnapshot(): Lang {
+  return "en";
 }
 
 export function useLanguage() {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useMemo, useSyncExternalStore } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,21 +19,18 @@ export function ArticleDetail({ article, others }: Props) {
   const { lang } = useLanguage();
   const body = article.body[lang];
 
-  const [recommendations, setRecommendations] = useState<Article[]>(() =>
-    others.slice(0, 2),
+  const recommendations = useMemo(
+    () => getRecommendations(article.slug, others),
+    [article.slug, others],
   );
-  useEffect(() => {
-    const shuffled = [...others].sort(() => Math.random() - 0.5);
-    setRecommendations(shuffled.slice(0, 2));
-  }, [others]);
 
   // Return to wherever the user came from in the articles list — preserves
   // their search term and pagination. Falls back to /articles.
-  const [backHref, setBackHref] = useState("/articles");
-  useEffect(() => {
-    const saved = sessionStorage.getItem("articlesPath");
-    if (saved) setBackHref(saved);
-  }, []);
+  const backHref = useSyncExternalStore(
+    subscribeToArticlesPath,
+    getArticlesPathSnapshot,
+    getArticlesPathServerSnapshot,
+  );
 
   return (
     <article className="relative">
@@ -142,6 +139,42 @@ export function ArticleDetail({ article, others }: Props) {
       )}
     </article>
   );
+}
+
+function subscribeToArticlesPath(onStoreChange: () => void) {
+  window.addEventListener("storage", onStoreChange);
+  window.addEventListener("articles-path-change", onStoreChange);
+  return () => {
+    window.removeEventListener("storage", onStoreChange);
+    window.removeEventListener("articles-path-change", onStoreChange);
+  };
+}
+
+function getArticlesPathSnapshot() {
+  return sessionStorage.getItem("articlesPath") || "/articles";
+}
+
+function getArticlesPathServerSnapshot() {
+  return "/articles";
+}
+
+function getRecommendations(currentSlug: string, others: Article[]) {
+  return [...others]
+    .sort(
+      (a, b) =>
+        recommendationScore(currentSlug, a.slug) -
+        recommendationScore(currentSlug, b.slug),
+    )
+    .slice(0, 2);
+}
+
+function recommendationScore(seed: string, slug: string) {
+  const input = `${seed}:${slug}`;
+  let hash = 0;
+  for (let i = 0; i < input.length; i += 1) {
+    hash = (hash * 31 + input.charCodeAt(i)) >>> 0;
+  }
+  return hash;
 }
 
 function RecommendationCard({ article }: { article: Article }) {

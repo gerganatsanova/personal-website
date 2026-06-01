@@ -35,6 +35,137 @@ export const ARTICLES_PER_PAGE = 10;
 // Newest first. When adding a new article, paste it at the top.
 export const articles: Article[] = [
   {
+    slug: "tihoto-napuskane-e-signal",
+    date: "2026-06-01",
+    displayDate: { bg: "Юни 2026", en: "June 2026" },
+    cover:
+      "https://images.unsplash.com/photo-1696123460860-db4ba71573b8?w=1400&q=80&auto=format&fit=crop",
+    title: {
+      bg: "Тихото напускане не е просто неангажираност. То е сигнал.",
+      en: "Quiet quitting is not just disengagement. It is a signal.",
+    },
+    excerpt: {
+      bg: "Понякога човек не спира да работи. Спира да вярва, че допълнителното усилие има смисъл. За тихото отдръпване, което често започва много преди реалното напускане.",
+      en: "Sometimes people do not stop working. They stop believing that extra effort still makes sense. On the quiet withdrawal that often begins long before the actual resignation.",
+    },
+    body: {
+      bg: `Случвало ли ви се е човек от екипа ви постепенно да стане по-тих?
+
+Не изведнъж. Не драматично. Не с конфликт или отказ да работи. Просто нещо се променя.
+
+Преди е участвал повече в разговорите. Давал е идеи. Питал е, предлагал е, поемал е инициатива. А после малко по малко започва да се отдръпва. Отговаря по-кратко. Присъства на срещите, но не съвсем. Изпълнява задачите си, но вече не носи същата енергия.
+
+Отстрани това лесно може да изглежда като неангажираност.
+
+И понякога точно така го наричаме. Човекът вече не е толкова активен. Не проявява същия интерес. Не дава повече от необходимото. Все едно просто е изгубил желание.
+
+Но според мен това е твърде бърз прочит.
+
+Тихото напускане не е моментът, в който човек спира да работи. Често е моментът, в който вече е спрял да вярва, че допълнителното усилие има смисъл.
+
+Казвам това не само като човек, който е наблюдавал подобни ситуации в работна среда. Казвам го и като човек, който познава това състояние отвътре. Не като теория, а като онова тихо вътрешно отдръпване, което понякога се случва много преди реалното напускане.
+
+Защото човек рядко се отдръпва изведнъж.
+
+Преди това обикновено е имало опити. Да каже нещо. Да предложи. Да даде повече. Да се справи, въпреки умората. Да повярва, че ситуацията ще се промени. Да остане ангажиран, дори когато нещо в него вече започва да се къса.
+
+И точно там често се пропуска важният момент. Ние забелязваме отдръпването, но не винаги си даваме сметка какво е имало преди него.
+
+Понякога преди тишината е имало идеи, които не са били чути. Понякога повече усилие, което постепенно се е превърнало в очакване. Понякога нужда от разговор, но насреща са стояли само нови задачи. Понякога човек е давал сигнали, че нещо не е наред, но тези сигнали са останали незабелязани.
+
+И в един момент спира.
+
+Не задължително да работи. Спира да влага себе си по същия начин.
+
+Започва да пази енергията си. Да не предлага, когато вече не вярва, че ще има значение. Да не влиза в разговори, които преди са му били важни. Да прави необходимото, но да не дава онова допълнително присъствие, което никога не може да бъде поискано с длъжностна характеристика.
+
+Затова, когато наречем това просто неангажираност, рискуваме да затворим разговора твърде рано.
+
+Неангажираността описва как изглежда поведението отвън. Но не винаги обяснява какво се е случило отвътре.
+
+И тук идват по-трудните въпроси.
+
+Кога този човек започна да се отдръпва? Имаше ли момент, в който спря да говори? Имаше ли нещо, което не чухме навреме? Очаквахме ли твърде дълго сам да поддържа мотивацията си, без средата да му дава причина за това?
+
+Това не означава, че всяко тихо напускане е вина на мениджъра. Работните отношения са по-сложни от това. Хората са различни, ситуациите също.
+
+Но мениджърът често е първият човек, който може да забележи промяната. Не чрез повече контрол. Не чрез още един статус ъпдейт. А чрез внимание.
+
+Понякога един по-смислен разговор може да започне съвсем просто:
+
+> „Забелязвам, че напоследък си по-тих. Искам да разбера дали има нещо, което пропускаме.“
+
+Такъв разговор няма да реши всичко. Понякога идва късно. Понякога доверието вече е прекъснато. Понякога човек вътрешно си е тръгнал и реалното напускане е само последната стъпка.
+
+Но понякога точно такъв разговор може да отвори врата. Не непременно към мигновено връщане на мотивацията, защото мотивацията не се включва с бутон. А към разбиране. Към признание, че нещо се е променило. Към възможност човекът отново да бъде видян не само като изпълнител на задачи, а като човек.
+
+Тихото напускане не винаги е отказ от работа. Понякога е отказ от безкрайно даване без смисъл. Понякога е самозащита. Понякога е последният тих начин човек да остане, преди окончателно да си тръгне.
+
+И може би най-важният въпрос не е „как да го направим отново ангажиран“.
+
+А какво трябва да се промени, за да има защо да бъде.
+
+Защото преди човек да напусне компанията, често първо напуска вътрешно. И ако слушаме внимателно, тази тишина може да ни каже много.`,
+      en: `Have you ever noticed someone in your team gradually becoming quieter?
+
+Not suddenly. Not dramatically. Not through conflict or refusal to work. Something simply starts to change.
+
+They used to participate more in conversations. They shared ideas. They asked questions, made suggestions, took initiative. Then, little by little, they start to pull back. Their answers become shorter. They are present in meetings, but not fully there. They still complete their tasks, but they no longer bring the same energy.
+
+From the outside, this can easily look like disengagement.
+
+And sometimes that is exactly what we call it. The person is no longer as active. They do not show the same interest. They no longer give more than what is necessary. It seems as if they have simply lost motivation.
+
+But in my view, that is too quick a conclusion.
+
+Quiet quitting is not the moment when a person stops working. Often, it is the moment when they have stopped believing that extra effort still makes sense.
+
+I say this not only as someone who has observed similar situations in the workplace. I say it also as someone who knows this state from the inside. Not as a theory, but as that quiet internal withdrawal that sometimes happens long before the actual resignation.
+
+Because people rarely withdraw all at once.
+
+Before that, there have usually been attempts. To say something. To suggest something. To give more. To keep going despite the tiredness. To believe that the situation might change. To stay engaged, even when something inside has already started to break.
+
+And this is often where the important part gets missed. We notice the withdrawal, but we do not always ask ourselves what came before it.
+
+Sometimes, before the silence, there were ideas that were not heard. Sometimes, extra effort slowly turned into an expectation. Sometimes, there was a need for a real conversation, but what came in response was only more tasks. Sometimes, a person had been giving signals that something was not right, but those signals remained unnoticed.
+
+And at some point, they stop.
+
+Not necessarily working. They stop investing themselves in the same way.
+
+They begin to protect their energy. They stop suggesting things when they no longer believe it will matter. They stop entering conversations that once felt important to them. They do what is necessary, but they no longer give that additional presence that can never truly be required in a job description.
+
+That is why, when we call this simply disengagement, we risk closing the conversation too early.
+
+Disengagement describes how the behaviour looks from the outside. But it does not always explain what has happened on the inside.
+
+And this is where the more difficult questions begin.
+
+When did this person start to pull back? Was there a moment when they stopped speaking up? Was there something we did not hear in time? Did we expect them to maintain their own motivation for too long, without the environment giving them a reason to do so?
+
+This does not mean that every case of quiet quitting is the manager's fault. Work relationships are more complex than that. People are different, and so are situations.
+
+But the manager is often the first person who can notice the change. Not through more control. Not through another status update. But through attention.
+
+Sometimes, a more meaningful conversation can begin very simply:
+
+> “I've noticed you seem quieter lately. I'd like to understand if there is something we are missing.”
+
+That conversation will not solve everything. Sometimes, it comes too late. Sometimes, trust has already been broken. Sometimes, the person has already left internally, and the actual resignation is only the final step.
+
+But sometimes, exactly this kind of conversation can open a door. Not necessarily to instantly “bringing motivation back”, because motivation is not something we switch on with a button. But to understanding. To acknowledging that something has changed. To giving the person a chance to be seen again, not only as someone who completes tasks, but as a human being.
+
+Quiet quitting is not always a refusal to work. Sometimes, it is a refusal to keep giving endlessly without meaning. Sometimes, it is self-protection. Sometimes, it is the last quiet way a person stays before they leave for good.
+
+And maybe the most important question is not “how do we make this person engaged again?”
+
+But what needs to change, so that they have a reason to be.
+
+Because before people leave a company, they often leave internally first. And if we listen carefully, that silence can tell us a lot.`,
+    },
+  },
+  {
     slug: "mozakat-spira-da-se-trenira",
     date: "2026-01-21",
     displayDate: { bg: "Януари 2026", en: "January 2026" },
