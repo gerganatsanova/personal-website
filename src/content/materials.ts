@@ -27,6 +27,22 @@ export type Material = {
 // Display order — first entry shows first.
 export const materials: Material[] = [
   {
+    slug: "before-i-leave-on-the-inside",
+    type: { bg: "МИНИ-НАРЪЧНИК", en: "MINI GUIDE" },
+    title: {
+      bg: "Преди да напусна вътрешно",
+      en: "Before I Leave on the Inside",
+    },
+    description: {
+      bg: "Кратък гайд за моментите, в които мотивацията започва да се отдръпва тихо, а ние търсим яснота и смисъл.",
+      en: "A short reflection guide for the moments when motivation quietly fades and we start looking for clarity and meaning.",
+    },
+    file: {
+      bg: "/materials/03_before-i-leave-on-the-inside-bg.pdf",
+      en: "/materials/03_before-i-leave-on-the-inside-en.pdf",
+    },
+  },
+  {
     slug: "first-aid-for-new-managers",
     type: { bg: "Мини-наръчник", en: "Mini-guide" },
     title: {
