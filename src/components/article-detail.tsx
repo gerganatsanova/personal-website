@@ -9,6 +9,7 @@ import { useLanguage } from "@/lib/i18n";
 import { t } from "@/lib/translations";
 import { SectionDivider } from "@/components/section-divider";
 import type { Article } from "@/content/articles";
+import { getMaterialBySlug, type Material } from "@/content/materials";
 
 type Props = {
   article: Article;
@@ -18,6 +19,9 @@ type Props = {
 export function ArticleDetail({ article, others }: Props) {
   const { lang } = useLanguage();
   const body = article.body[lang];
+  const material = article.materialSlug
+    ? getMaterialBySlug(article.materialSlug)
+    : undefined;
 
   const recommendations = useMemo(
     () => getRecommendations(article.slug, others),
@@ -106,6 +110,7 @@ export function ArticleDetail({ article, others }: Props) {
         className="mx-auto max-w-4xl px-6 pt-16 pb-12 md:px-10 md:pt-24 md:pb-16"
       >
         <ArticleBody body={body} />
+        {material && <ArticleMaterialCallout material={material} />}
 
         <div className="mt-16 md:mt-20">
           <Link
@@ -138,6 +143,38 @@ export function ArticleDetail({ article, others }: Props) {
         </nav>
       )}
     </article>
+  );
+}
+
+function ArticleMaterialCallout({ material }: { material: Material }) {
+  const { lang } = useLanguage();
+
+  return (
+    <aside className="mt-12 border-l-2 border-accent bg-surface/55 px-5 py-5 font-sans md:mt-14 md:px-6 md:py-6">
+      <p className="mb-2 text-[10px] font-medium uppercase tracking-[0.22em] text-muted">
+        {material.type[lang]}
+      </p>
+      <h2 className="font-serif text-2xl leading-tight tracking-tight text-foreground md:text-[1.75rem]">
+        {material.title[lang]}
+      </h2>
+      <p className="mt-3 max-w-[58ch] text-[14px] leading-[1.75] text-muted md:text-[15px]">
+        {material.description[lang]}
+      </p>
+      <a
+        href={material.file[lang]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group mt-5 inline-flex items-center text-[13px] font-medium text-foreground transition-colors hover:text-accent"
+      >
+        {lang === "bg" ? "Отвори материала" : "Open the guide"}
+        <span
+          aria-hidden
+          className="ml-2 transition-transform group-hover:translate-x-0.5"
+        >
+          →
+        </span>
+      </a>
+    </aside>
   );
 }
 

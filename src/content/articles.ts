@@ -28,6 +28,7 @@ export type Article = {
   title: { bg: string; en: string };
   excerpt: { bg: string; en: string };
   body: { bg: string; en: string };
+  materialSlug?: string;
 };
 
 export const ARTICLES_PER_PAGE = 10;
@@ -48,6 +49,7 @@ export const articles: Article[] = [
       bg: "Понякога човек не спира да работи. Спира да вярва, че допълнителното усилие има смисъл. За тихото отдръпване, което често започва много преди реалното напускане.",
       en: "Sometimes people do not stop working. They stop believing that extra effort still makes sense. On the quiet withdrawal that often begins long before the actual resignation.",
     },
+    materialSlug: "before-i-leave-on-the-inside",
     body: {
       bg: `Случвало ли ви се е човек от екипа ви постепенно да стане по-тих?
 

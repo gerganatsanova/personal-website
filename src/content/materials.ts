@@ -76,6 +76,10 @@ export const materials: Material[] = [
   },
 ];
 
+export function getMaterialBySlug(slug: string): Material | undefined {
+  return materials.find((m) => m.slug === slug);
+}
+
 /** Case/diacritic-insensitive search across type + title + description. */
 export function searchMaterials(query: string, lang: Lang): Material[] {
   const q = normalize(query);
