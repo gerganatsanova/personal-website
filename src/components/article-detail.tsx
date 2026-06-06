@@ -273,9 +273,7 @@ function ArticleBody({ body }: { body: string }) {
             .split("\n")
             .map((l) => (l.startsWith("> ") ? l.slice(2) : l))
             .join(" ")
-            .trim()
-            .replace(/^["„"]/, "")
-            .replace(/["""]$/, "");
+            .trim();
           return (
             <blockquote
               key={i}
