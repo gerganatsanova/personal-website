@@ -28,7 +28,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Gergana Tsanova — Coach, Facilitator, Consultant",
   description:
-    "1:1 коучинг, фасилитация и обучения за хора, които искат да растат осъзнато — в кариерата и в живота си.",
+    "Coaching, training, and facilitation for people and teams who want more clarity, confidence, and direction in life and at work.",
 };
 
 export default function RootLayout({
@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="bg"
+      lang="en"
       suppressHydrationWarning
       className={`${fraunces.variable} ${lora.variable} ${inter.variable} h-full antialiased`}
     >
