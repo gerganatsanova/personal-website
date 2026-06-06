@@ -91,7 +91,11 @@ export function Hero() {
             animate="show"
             variants={fadeUp}
             custom={1}
-            className="font-serif text-5xl leading-[1.02] tracking-tight text-foreground sm:text-6xl md:text-[4rem] lg:text-[4.75rem] xl:text-[5.25rem]"
+            className={`font-serif leading-[1.02] tracking-tight text-foreground ${
+              lang === "bg"
+                ? "text-[2.875rem] sm:text-[3.5rem] md:text-[3.75rem] lg:text-[4.45rem] xl:text-[4.95rem]"
+                : "text-5xl sm:text-6xl md:text-[4rem] lg:text-[4.75rem] xl:text-[5.25rem]"
+            }`}
           >
             {t.hero.headlineLine1[lang]}
             <br />

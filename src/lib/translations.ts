@@ -54,8 +54,8 @@ export const t = {
       en: " at work.",
     },
     paragraph: {
-      bg: "Работя с хора, които искат повече яснота, увереност и посока в живота и в работата си. Не вярвам в празните фрази. Вярвам в честния разговор, смисъла и реалните следващи стъпки.",
-      en: "I work with people who want more clarity, confidence, and direction in life and at work. I do not believe in empty phrases. I believe in honest conversation, meaningful work, and real next steps.",
+      bg: "Помагам на хора и екипи да намират повече яснота, увереност и посока чрез коучинг, обучения и фасилитирани разговори.",
+      en: "I help people and teams find more clarity, confidence, and direction through coaching, training, and facilitated conversations.",
     },
     ctaPrimary: {
       bg: "Свържи се с мен",
