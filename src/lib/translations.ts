@@ -259,7 +259,7 @@ export const t = {
       en: "Each format is built around the same principle of honest conversation, clarity, and a next step that leads to real results.",
     },
     service1Numeral: { bg: "I.", en: "I." },
-    service1Title: { bg: "Индивидуален коучинг", en: "Personal coaching" },
+    service1Title: { bg: "Индивидуален\nкоучинг", en: "Personal\ncoaching" },
     service1Description: {
       bg: "Пространство за повече яснота, посока и личностно израстване. Индивидуалният коучинг е подходящ, когато си на кръстопът, в период на колебания или просто усещаш, че нещо имаш нужда от промяна. Работим по теми, които засягат както личния, така и професионалния ти живот. Това може да бъде нужда от повече увереност, по-ясна посока, справяне със стрес, усещане за застой или развитие на конкретни умения. Целта не е просто да говорим, а да стигнеш до повече яснота, осъзнаване и следващи стъпки, които има смисъл за теб.",
       en: "A space for greater clarity, direction, and personal growth. Individual coaching is suitable when you are at a crossroads, in a period of uncertainty, or simply feel that something needs to change. We work on topics that affect both your personal and professional life. This may include a need for more confidence, clearer direction, better stress management, a sense of feeling stuck, or the development of specific skills. The goal is not simply to talk, but to help you reach greater clarity, awareness, and next steps that truly make sense for you.",
@@ -275,8 +275,8 @@ export const t = {
     },
     service3Numeral: { bg: "III.", en: "III." },
     service3Title: {
-      bg: "Обучително съдържание",
-      en: "Learning content",
+      bg: "Дизайн на обучения и материали",
+      en: "Learning design and materials",
     },
     service3Description: {
       bg: "Съдържание, което дава структура, яснота и смисъл на обучителния процес. Разработването на обучително съдържание е подходящо, когато има нужда от по-ясна структура, по-добра логика и материали, които да работят в реален контекст. За мен доброто съдържание не е просто добре написан текст, а добре обмислен процес, съобразен с аудиторията, целта и начина, по който хората учат. Това може да включва програми, фасилитаторски насоки, упражнения, работни материали и цялостна рамка, която прави обучението по-смислено, ангажиращо и приложимо.",
@@ -488,16 +488,16 @@ export const t = {
       en: "Three formats, one philosophy, with a focus on growth that responds to your life, not to someone else's model.",
     },
     service1Description: {
-      bg: "Когато имаш нужда от повече яснота, увереност и посока, индивидуалният коучинг създава пространство за реално движение напред. Не само разговор, а процес със смисъл и следващи стъпки.",
-      en: "When you need more clarity, confidence, and direction, individual coaching creates space for real movement forward. Not just a conversation, but a process with meaning and clear next steps.",
+      bg: "Когато си в период на промяна, колебание или вътрешно напрежение и имаш нужда да подредиш мислите си, да чуеш себе си по-ясно и да направиш следваща стъпка.",
+      en: "When you are in a period of change, uncertainty, or inner tension and need space to sort through your thoughts, hear yourself more clearly, and take the next step.",
     },
     service2Description: {
-      bg: "Когато искаш хората не просто да слушат, а да мислят, участват и стигат до нещо реално заедно, обученията и фасилитирането създават процес с яснота, стойност и практическа полза.",
-      en: "When you want people not just to listen, but to think, take part, and arrive at something real together, training and facilitation create a process with clarity, value, and practical benefit.",
+      bg: "Когато екипът има нужда от по-ясна комуникация, повече участие и разговор, който води до обща посока и конкретни следващи стъпки.",
+      en: "When a team needs clearer communication, more active participation, and a conversation that leads to shared direction and concrete next steps.",
     },
     service3Description: {
-      bg: "Когато искаш едно обучение да бъде не просто добре написано, а добре измислено, обучителното съдържание създава структура, яснота и реална практическа стойност.",
-      en: "When you want a training to be not just well written, but well designed, learning content creates structure, clarity, and real practical value.",
+      bg: "Когато имаш тема, програма или идея за обучение, но ѝ липсва ясна структура, логика и материали, които хората могат реално да използват.",
+      en: "When you have a topic, program, or training idea, but it needs clearer structure, stronger logic, and materials people can actually use.",
     },
   },
   // Homepage "Articles preview" section — featured + list.

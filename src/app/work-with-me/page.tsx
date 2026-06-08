@@ -447,7 +447,7 @@ function HowWeWork() {
                 </span>
               </div>
 
-              <h3 className="mt-6 flex min-h-[3.25rem] items-center font-serif text-2xl leading-tight tracking-tight text-foreground md:min-h-[4.5rem] md:text-[1.75rem]">
+              <h3 className="mt-6 flex min-h-[3.25rem] items-center whitespace-pre-line font-serif text-2xl leading-tight tracking-tight text-foreground md:min-h-[4.5rem] md:text-[1.75rem]">
                 {service.title}
               </h3>
               <p className="mt-5 text-[15px] leading-[1.75] text-muted">
@@ -460,4 +460,3 @@ function HowWeWork() {
     </section>
   );
 }
-

@@ -74,7 +74,7 @@ export function Services() {
                 <span className="font-serif text-sm italic text-accent">
                   {service.numeral}
                 </span>
-                <h3 className="mt-4 flex min-h-[4rem] items-center font-serif text-2xl leading-tight tracking-tight text-foreground md:min-h-[4.5rem] md:text-[1.75rem]">
+                <h3 className="mt-4 flex min-h-[4rem] items-center whitespace-pre-line font-serif text-2xl leading-tight tracking-tight text-foreground md:min-h-[4.5rem] md:text-[1.75rem]">
                   {service.title}
                 </h3>
               </div>
