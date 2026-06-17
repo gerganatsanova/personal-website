@@ -398,28 +398,8 @@ export const t = {
       en: "practice.",
     },
     experienceParagraph: {
-      bg: "Зад работата ми стоят години опит в корпоративна среда, в работа с екипи от различни култури и в обучения на хиляди професионалисти.",
-      en: "Behind my work are years of experience in corporate environments, working with teams from different cultures, and training thousands of professionals.",
-    },
-    metric1Value: { bg: "600+", en: "600+" },
-    metric1Label: {
-      bg: "участници в програми",
-      en: "participants in programs",
-    },
-    metric2Value: { bg: "60+", en: "60+" },
-    metric2Label: {
-      bg: "проведени обучения",
-      en: "training sessions delivered",
-    },
-    metric3Value: { bg: "20+", en: "20+" },
-    metric3Label: {
-      bg: "1:1 коучинг сесии",
-      en: "1:1 coaching sessions",
-    },
-    metric4Value: { bg: "30+", en: "30+" },
-    metric4Label: {
-      bg: "обучителни модула",
-      en: "learning modules",
+      bg: "Зад работата ми стоят години опит в корпоративна среда, в работа с екипи от различни култури и в обучения на стотици професионалисти.",
+      en: "Behind my work are years of experience in corporate environments, working with teams from different cultures, and training hundreds of professionals.",
     },
     // 5. Credentials
     credentialsKicker: {

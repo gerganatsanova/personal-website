@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { SectionDivider } from "@/components/section-divider";
 import { PullQuote } from "@/components/pull-quote";
 import { CTA } from "@/components/cta";
+import { ExperienceMetricsGrid } from "@/components/experience-metrics-grid";
 import { fadeUp, EASE } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
 import { t } from "@/lib/translations";
@@ -290,24 +291,6 @@ function Philosophy() {
 /* ---------------- 4. Experience ---------------- */
 function Experience() {
   const { lang } = useLanguage();
-  const metrics = [
-    {
-      value: t.about.metric1Value[lang],
-      label: t.about.metric1Label[lang],
-    },
-    {
-      value: t.about.metric2Value[lang],
-      label: t.about.metric2Label[lang],
-    },
-    {
-      value: t.about.metric3Value[lang],
-      label: t.about.metric3Label[lang],
-    },
-    {
-      value: t.about.metric4Value[lang],
-      label: t.about.metric4Label[lang],
-    },
-  ];
 
   return (
     <section className="relative">
@@ -334,30 +317,7 @@ function Experience() {
           </p>
         </motion.div>
 
-        <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 md:mt-16 md:grid-cols-4 md:gap-x-8">
-          {metrics.map((m, i) => (
-            <motion.div
-              key={m.label}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeUp}
-              transition={{ delay: i * 0.08 }}
-              className="flex flex-col"
-            >
-              <span
-                aria-hidden
-                className="mb-4 block h-px w-8 bg-accent"
-              />
-              <span className="font-serif text-4xl leading-none tracking-tight text-foreground md:text-5xl">
-                {m.value}
-              </span>
-              <span className="mt-3 text-[13px] leading-[1.6] text-muted md:text-sm">
-                {m.label}
-              </span>
-            </motion.div>
-          ))}
-        </div>
+        <ExperienceMetricsGrid />
       </div>
     </section>
   );
@@ -509,4 +469,3 @@ function Beyond() {
     </section>
   );
 }
-
