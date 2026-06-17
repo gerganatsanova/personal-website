@@ -63,7 +63,7 @@ export function Metrics() {
         </motion.div>
 
         <div className="mt-8 border-y border-border/60 md:mt-10">
-          <div className="grid grid-cols-1 gap-0 md:grid-cols-3">
+          <div className="grid grid-cols-2 gap-0 md:grid-cols-3">
             {metrics.map((metric, i) => (
               <motion.div
                 key={metric.label}
@@ -72,8 +72,10 @@ export function Metrics() {
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeUp}
                 transition={{ delay: i * 0.06 }}
-                className={`group relative flex min-h-[9.5rem] flex-col justify-between border-border/60 py-7 md:min-h-[10.5rem] md:px-10 md:py-8 ${
-                  i > 0 ? "border-t md:border-t-0" : ""
+                className={`group relative flex min-h-[8.5rem] flex-col justify-between border-border/60 px-4 py-6 sm:px-5 md:min-h-[10.5rem] md:px-10 md:py-8 ${
+                  i % 2 !== 0 ? "border-l md:border-l-0" : ""
+                } ${
+                  i >= 2 ? "border-t" : ""
                 } ${
                   i % 3 !== 0 ? "md:border-l" : ""
                 } ${
@@ -85,13 +87,13 @@ export function Metrics() {
                   className="absolute left-0 top-0 h-px w-12 bg-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:left-10"
                 />
                 <div className="flex flex-col gap-5">
-                  <span className="whitespace-nowrap font-serif text-[4.25rem] leading-[0.9] tracking-tight text-foreground md:text-[4.75rem] lg:text-[5.25rem]">
+                  <span className="whitespace-nowrap font-serif text-[3.1rem] leading-[0.9] tracking-tight text-foreground sm:text-[4rem] md:text-[4.75rem] lg:text-[5.25rem]">
                     <span className="italic text-accent">
                       {metric.value.charAt(0)}
                     </span>
                     {metric.value.slice(1)}
                   </span>
-                  <span className="max-w-[14rem] text-[11px] uppercase leading-relaxed tracking-[0.2em] text-muted">
+                  <span className="max-w-[14rem] text-[10px] uppercase leading-relaxed tracking-[0.16em] text-muted md:text-[11px] md:tracking-[0.2em]">
                     {metric.label}
                   </span>
                 </div>
