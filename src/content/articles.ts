@@ -473,6 +473,7 @@ And perhaps now you are wondering why I am telling you all this and how it affec
       bg: "Когато човек стане мениджър за първи път, често очаква от себе си да бъде по-уверен, по-ясен и по-готов, отколкото реално се чувства. Но може би лидерството не започва с липсата на несигурност, а с начина, по който се учим да я разбираме и да водим през собствените си силни страни.",
       en: "When someone becomes a manager for the first time, they often expect themselves to feel more confident, more prepared, and more certain than they actually do. But maybe leadership does not begin with the absence of doubt. Maybe it begins with learning how to understand that doubt and how to lead through our own strengths.",
     },
+    materialSlug: "first-aid-for-new-managers",
     body: {
       bg: `Когато човек стане мениджър за първи път, отвън това често изглежда като признание. Нова роля, повече доверие, повече отговорност. Някой е видял потенциал в теб и ти е дал възможност да направиш следваща крачка.
 
@@ -596,6 +597,7 @@ But: What kind of leader am I becoming while I am learning to carry this respons
       bg: "Похвалата е една от най-силните, но най-рядко използваните форми на обратна връзка. Кога да я даваме и какво да включва, за да наистина мотивира служителите.",
       en: "Praise is one of the most powerful – yet least used – forms of feedback. When to give it and what it should include to genuinely motivate employees.",
     },
+    materialSlug: "giving-feedback-for-development",
     body: {
       bg: `Даването и получаването на обратна връзка е част от живота ни, особено в работен контекст, когато се изисква да се постигат резултати. Когато даваме на служителите обратна връзка, те могат да получат по-добра представа за това как мениджърът гледа на работата им и до каква степен се справят със задълженията си. Това им помага да разберат какво правят добре и какво биха могли да подобрят. Понякога обаче обратната връзка, която даваме или получаваме, нито е полезна, нито е значима (като например „Ти си мързелив"). За да бъде полезна дадената обратна връзка, тя трябва да носи стойност.
 
