@@ -346,23 +346,23 @@ export const t = {
     // 1. Intro / Hero
     kicker: { bg: "За мен", en: "About" },
     introHeadlineLead: {
-      bg: "Помагам на хора и екипи да мислят по-ясно, да общуват по-смислено и да вървят напред",
-      en: "I help people and teams think more clearly, communicate with more intention, and move forward",
+      bg: "Помагам на хора и екипи да продължат напред",
+      en: "I help people and teams move forward",
     },
     introHeadlineAccent: {
-      bg: "с повече посока.",
-      en: "with a stronger sense of direction.",
+      bg: "с повече увереност.",
+      en: "with greater confidence.",
     },
     introParagraphs: {
       bg: [
-        "Казвам се Гергана Цанова. Работя като коуч, фасилитатор и обучител с хора и организации, които искат повече яснота, структура и развитие в начина, по който мислят, работят и вземат решения.",
-        "Опитът ми е в сферата на обучението и развитието, фасилитирането, обученията, клиентската работа, координацията и изграждането на вътрешни процеси. Това ми дава едновременно човешка и практична гледна точка към развитието. За мен то не е просто вдъхновение, а процес, който има нужда от смисъл, структура и реално приложение.",
-        "Не вярвам в универсални рецепти. Вярвам в добрите въпроси, честния разговор, ясната рамка и работата, която помага на човек или екип да види следващата си стъпка по-ясно.",
+        "Казвам се Гергана Цанова, но повечето хора ме познават като Гери. Работя като обучител, фасилитатор и ментор с хора и организации, които искат да разберат по-добре какво ги спира, да общуват по-ефективно и да създадат смислена промяна в начина, по който мислят, общуват и работят заедно.",
+        "Работата ми в различни роли ми даде по-широк поглед върху това как се случва развитието на практика. Видях, че напредъкът рядко идва от един разговор, едно обучение или една добра идея. Той се случва, когато хората имат пространство да погледнат честно към ситуацията, да разберат какво е важно и да намерят начин да го приложат в ежедневието си.",
+        "Тази гледна точка определя и начина, по който работя. Фокусирам се върху онова, което е смислено, честно и полезно за конкретния човек или екип.",
       ],
       en: [
-        "My name is Gergana Tsanova. I work as a coach, facilitator, and trainer with people and organizations who want more clarity, structure, and growth in the way they think, work, and make decisions.",
-        "My experience spans training and development, facilitation, client work, coordination, and building internal processes. This gives me both a human and practical perspective on growth. To me, development is not just about inspiration. It is a process that needs meaning, structure, and real-life application.",
-        "I don't believe in one-size-fits-all solutions. I believe in good questions, honest conversations, clear frameworks, and work that helps a person or a team see their next step more clearly.",
+        "My name is Gergana Tsanova, though most people know me as Geri. I work as a trainer, facilitator, and mentor with people and organizations who want to understand what is holding them back, communicate more effectively, and create meaningful change in the way they think, communicate, and work together.",
+        "Working across different roles has given me a broader view of how development happens in practice. I have seen that progress rarely comes from one conversation, one training session, or one good idea. It happens when people have the space to look honestly at their situation, understand what matters, and find a way to apply it in everyday life.",
+        "This perspective shapes the way I work. I focus on what is meaningful, honest, and useful for the person or team in front of me.",
       ],
     },
     portraitAlt: {
@@ -378,19 +378,21 @@ export const t = {
     storyTitleAccent: { bg: "развитие.", en: "growth." },
     storyParagraphs: {
       bg: [
-        "Професионалният ми път винаги е бил свързан с развитието на хора. Завършила съм бакалавърска и магистърска степен в сферата на човешките ресурси, а през годините работих в различни роли, свързани с обучение, фасилитиране, консултиране, координация и изграждане на работещи процеси.",
-        "В практиката си съм била част от различни етапи на обучителния процес: от разбирането на нуждите и структурирането на съдържание до координацията, фасилитирането и последващата работа с клиенти и екипи. Това ми помогна да видя развитието не само като среща или обучение, а като цялостно преживяване, което започва много преди самата сесия и продължава след нея.",
-        "Този път ми даде практичен поглед към развитието. Научи ме, че добрата работа с хора не е само вдъхновение или съдържание, а комбинация от присъствие, структура, ясна цел и внимание към това какво остава приложимо след края на разговора, сесията или обучението.",
+        "Професионалният ми път започна с бакалавърска и магистърска степен по управление на човешките ресурси. През годините натрупах опит в обучение и развитие, консултиране, фасилитиране, работа с клиенти, координация, управление на екип и управление на знанието.",
+        "Създавала и водила съм обучения, анализирала съм нуждите на клиенти и екипи, разработвала съм обучително съдържание, подкрепяла съм работата на други фасилитатори и съм координирала комплексни проекти. Управлявала съм екип и съм изграждала вътрешни процеси и системи за организиране и споделяне на знание.",
+        "Работата по различни позиции ми помогна да развия умения, на които разчитам и днес. Научих се да чувам какво стои зад първоначалната заявка, да свързвам нуждите на бизнеса с човешкото поведение и да превръщам сложната информация в нещо ясно и приложимо. Помогна ми и да създавам структура, без да губя човешкия елемент.",
+        "Този опит ме научи да гледам на процеса като на едно цяло. Това, което се случва преди и след една среща или обучение, е също толкова важно, колкото самото преживяване. Истинската стойност често се вижда в онова, което остава и се прилага след него.",
       ],
       en: [
-        "My professional path has always been connected to people's development. I hold both a Bachelor's and a Master's degree in Human Resources, and over the years I have worked in different roles related to training, facilitation, consulting, coordination, and building effective processes.",
-        "In my practice, I have been part of different stages of the learning process: from understanding needs and structuring content to coordination, facilitation, and follow-up work with clients and teams. This helped me see development not only as a session or a training, but as a complete experience that begins long before the session itself and continues after it.",
-        "This path gave me a practical perspective on development. It taught me that meaningful work with people is not only about inspiration or content, but about the combination of presence, structure, a clear purpose, and attention to what remains applicable after the conversation, session, or training ends.",
+        "My professional path began with a Bachelor's and a Master's degree in Human Resource Management. Over the years, I have gained experience in learning and development, consulting, facilitation, client work, coordination, team management, and knowledge management.",
+        "I have designed and delivered training programs, explored the needs of clients and teams, developed learning content, supported other facilitators, and coordinated complex projects. I have also managed a team and built internal processes and systems for organizing and sharing knowledge.",
+        "Working in different positions helped me develop skills that I still rely on today. I learned to listen beyond the initial request, connect business needs with human behaviour, and turn complex information into something clear and practical. It also taught me how to create structure without losing the human element.",
+        "This experience helped me see the process as a whole. What happens before and after a conversation or training session matters just as much as the experience itself. The real value often becomes visible in what people remember, use, and continue doing afterwards.",
       ],
     },
     storyPullQuote: {
-      bg: "Промяната рядко започва с голям скок.\nПо-често започва с честен поглед.",
-      en: "Change rarely begins with a big leap.\nMore often, it begins with an honest look.",
+      bg: "Промяната не започва с готов отговор.\nЗапочва с честен поглед към това, което наистина се случва.",
+      en: "Change does not begin with a ready-made answer.\nIt begins with an honest look at what is really happening.",
     },
     storyImageAlt: {
       bg: "Работен момент",
@@ -408,24 +410,24 @@ export const t = {
       en: "Clarity",
     },
     principle1Text: {
-      bg: "Преди да тръгнем към решение, е важно да разберем какво наистина се случва. Яснотата подрежда мислите, нуждите и следващите стъпки.",
-      en: "Before moving toward a solution, it matters to understand what is really happening. Clarity helps organize thoughts, needs, and next steps.",
+      bg: "Преди да търсим решение, е важно да разберем какво всъщност се случва. Яснотата помага да видим ситуацията, нуждите и възможните следващи стъпки.",
+      en: "Before looking for a solution, it is important to understand what is really happening. Clarity helps us see the situation, the needs, and the possible next steps.",
     },
     principle2Title: {
       bg: "Човешки подход",
       en: "A human approach",
     },
     principle2Text: {
-      bg: "Развитието не е процес на поправяне. Работя с уважение към човека отсреща, но и с достатъчно честност, за да има реално движение.",
-      en: "Development is not about fixing people. I work with respect for the person in front of me, but also with enough honesty for real movement to happen.",
+      bg: "Развитието не означава да поправяме хората. То започва с уважение към човека отсреща и с достатъчно честност, за да бъде възможна промяната.",
+      en: "Development is not about fixing people. It begins with respect for the person in front of us and enough honesty to make meaningful change possible.",
     },
     principle3Title: {
       bg: "Приложимост",
       en: "Practical application",
     },
     principle3Text: {
-      bg: "Една сесия, обучение или фасилитиран разговор имат стойност, когато нещо от тях остава използваемо след това: решение, действие, нов поглед или по-добър разговор.",
-      en: "A session, training, or facilitated conversation has value when something from it remains useful afterwards: a decision, an action, a new perspective, or a better conversation.",
+      bg: "Една идея има стойност, когато може да бъде използвана в реалния живот. Търся решения, които водят до конкретно действие, избор или различен начин на поведение.",
+      en: "An idea has value when it can be used in real life. I look for approaches that lead to a concrete action, decision, or change in behaviour.",
     },
     // 4. Experience & numbers
     experienceKicker: { bg: "Опит", en: "Experience" },
@@ -450,16 +452,18 @@ export const t = {
     },
     credentials: {
       bg: [
-        "Бакалавър и магистър по управление на човешките ресурси",
-        "Сертифициран треньор по групово-динамичен тренинг",
-        "Обучение по графично фасилитиране",
-        "Обучения за обучители и storytelling",
+        "Бакалавърска степен по управление на човешките ресурси",
+        "Магистърска степен по управление на човешките ресурси",
+        "Сертифициран обучител по групово-динамичен тренинг",
+        "Обучение по графична фасилитация",
+        "Train-the-trainer програми",
       ],
       en: [
-        "Bachelor's and Master's degrees in Human Resource Management",
+        "Bachelor's degree in Human Resource Management",
+        "Master's degree in Human Resource Management",
         "Certified trainer in group-dynamic training",
         "Training in graphic facilitation",
-        "Train-the-trainer programs and storytelling",
+        "Train-the-trainer programs",
       ],
     },
     // 6. Beyond work
@@ -474,14 +478,14 @@ export const t = {
     },
     beyondParagraphs: {
       bg: [
-        "Извън работата спортът е голяма част от живота ми. Част съм от българския национален отбор по чирлидинг и съм треньор по кондиционни тренировки. Харесвам спортове като кросфит и калистеника, а стойката на ръце е едно от онези неща, които ме учат на търпение, сила и баланс.",
-        "Обичам да пътувам, да откривам нови места, култури и начини на живот. Харесвам и усещането за адреналин. Сред най-смелите ми преживявания досега са плуване с акули и делфини в Индийския океан и скок с бънджи от скалите на остров Нуса Пенида. Пътуванията ми дават перспектива и ми напомнят, че светът е много по-голям от собствените ни навици и представи. До момента Бали е мястото, което най-силно е останало в мен.",
-        "Ценя времето с близки хора, вкусната храна, рисуването, смислените разговори и темите, които ме карат да мисля по-дълбоко. А понякога пея сама вкъщи или в колата, достатъчно уверено, за да ми е хубаво, и достатъчно насаме, за да е безопасно за околните.",
+        "Извън работата спортът е голяма част от живота ми. Част съм от българския национален отбор по чирлидинг, където също така съм треньор по кондиционна подготовка. Харесвам спортове като кросфит и калистеника, а стойката на ръце е едно от онези неща, които продължават да ме учат на търпение, постоянство, сила и баланс.",
+        "Обичам да пътувам, да откривам нови места, култури и начини на живот. Харесвам и усещането за адреналин. Сред най-смелите ми преживявания досега са плуването с акули и делфини в Индийския океан и скокът с бънджи от скалите на остров Нуса Пенида. Пътуванията ми дават по-широка перспектива и ми напомнят, че светът е много по-голям от собствените ни навици, представи и гледни точки. До момента Бали е мястото, което е оставило най-силен отпечатък в мен.",
+        "Ценя времето с близки хора, вкусната храна, рисуването, смислените разговори и темите, които ме карат да погледна по различен начин на познати неща. А понякога пея сама вкъщи или в колата, достатъчно уверено, за да ми е хубаво, и достатъчно насаме, за да е безопасно за околните.",
       ],
       en: [
-        "Outside of work, sport is a big part of my life. I am part of the Bulgarian national cheerleading team and a conditioning coach. I enjoy sports like CrossFit and calisthenics, and handstands are one of those things that keep teaching me patience, strength, and balance.",
-        "I love travelling, discovering new places, cultures, and ways of life. I also enjoy a good dose of adrenaline. Some of my boldest experiences so far include swimming with sharks and dolphins in the Indian Ocean and bungee jumping from the cliffs of Nusa Penida. Travel gives me perspective and reminds me that the world is much bigger than our own habits and assumptions. So far, Bali is the place that has stayed with me the most.",
-        "I value time with close people, good food, drawing, meaningful conversations, and topics that make me think more deeply. And sometimes I sing alone at home or in the car, confidently enough to enjoy it, and privately enough to keep everyone else safe.",
+        "Outside of work, sport is a big part of my life. I am a member of the Bulgarian national cheerleading team, where I also work as a conditioning coach. I enjoy sports such as CrossFit and calisthenics, and handstands are one of those things that continue to teach me patience, consistency, strength, and balance.",
+        "I love travelling, discovering new places, cultures, and ways of life. I also enjoy the feeling of adrenaline. Some of my boldest experiences so far include swimming with sharks and dolphins in the Indian Ocean and bungee jumping from the cliffs of Nusa Penida. Travelling gives me a broader perspective and reminds me that the world is much bigger than our own habits, assumptions, and ways of seeing things. So far, Bali is the place that has left the strongest impression on me.",
+        "I value time with the people close to me, good food, drawing, meaningful conversations, and topics that make me look at familiar things differently. And sometimes I sing alone at home or in the car, with enough confidence to enjoy it and enough privacy to keep everyone around me safe.",
       ],
     },
     beyondImage1Alt: {

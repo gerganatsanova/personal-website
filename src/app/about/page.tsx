@@ -426,7 +426,7 @@ function Beyond() {
           </div>
 
           {/* Two personal images */}
-          <div className="md:col-span-6">
+          <div className="md:col-span-6 md:pt-14 lg:pt-16">
             <div className="grid grid-cols-2 gap-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
