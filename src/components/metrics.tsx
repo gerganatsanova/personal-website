@@ -8,12 +8,15 @@ import { t } from "@/lib/translations";
 export function Metrics() {
   const { lang } = useLanguage();
 
-  const featured = {
-    value: t.metrics.featuredValue[lang],
-    label: t.metrics.featuredLabel[lang],
-  };
-
-  const secondary = [
+  const metrics = [
+    {
+      value: t.metrics.featuredValue[lang],
+      label: t.metrics.featuredLabel[lang],
+    },
+    {
+      value: t.metrics.participantsValue[lang],
+      label: t.metrics.participantsLabel[lang],
+    },
     {
       value: t.metrics.projectsValue[lang],
       label: t.metrics.projectsLabel[lang],
@@ -23,12 +26,12 @@ export function Metrics() {
       label: t.metrics.trainingsLabel[lang],
     },
     {
-      value: t.metrics.coachingValue[lang],
-      label: t.metrics.coachingLabel[lang],
-    },
-    {
       value: t.metrics.modulesValue[lang],
       label: t.metrics.modulesLabel[lang],
+    },
+    {
+      value: t.metrics.coachingValue[lang],
+      label: t.metrics.coachingLabel[lang],
     },
   ];
 
@@ -59,48 +62,39 @@ export function Metrics() {
           </p>
         </motion.div>
 
-        {/* Asymmetric metrics layout */}
-        <div className="mt-16 grid grid-cols-1 gap-x-10 gap-y-14 border-t border-border/60 pt-14 md:mt-20 md:grid-cols-12 md:gap-x-14 md:pt-16">
-          {/* Featured metric — big, left */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeUp}
-            className="flex flex-col gap-4 md:col-span-5"
-          >
-            <span className="whitespace-nowrap font-serif text-[5.5rem] leading-[0.95] tracking-tight text-foreground md:text-[6.5rem] lg:text-[8rem]">
-              <span className="italic text-accent">
-                {featured.value.charAt(0)}
-              </span>
-              {featured.value.slice(1)}
-            </span>
-            <span className="text-[11px] uppercase tracking-[0.2em] leading-relaxed text-muted">
-              {featured.label}
-            </span>
-          </motion.div>
-
-          {/* Secondary metrics — 2x2 grid, right */}
-          <div className="grid grid-cols-2 gap-x-8 gap-y-10 md:col-span-7 md:gap-x-10 md:gap-y-12 md:border-l md:border-border/60 md:pl-14">
-            {secondary.map((metric, i) => (
+        <div className="mt-8 border-y border-border/60 md:mt-10">
+          <div className="grid grid-cols-1 gap-0 md:grid-cols-3">
+            {metrics.map((metric, i) => (
               <motion.div
                 key={metric.label}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeUp}
-                transition={{ delay: 0.1 + i * 0.08 }}
-                className="flex flex-col gap-3"
+                transition={{ delay: i * 0.06 }}
+                className={`group relative flex min-h-[9.5rem] flex-col justify-between border-border/60 py-7 md:min-h-[10.5rem] md:px-10 md:py-8 ${
+                  i > 0 ? "border-t md:border-t-0" : ""
+                } ${
+                  i % 3 !== 0 ? "md:border-l" : ""
+                } ${
+                  i >= 3 ? "md:border-t" : ""
+                }`}
               >
-                <span className="whitespace-nowrap font-serif text-4xl leading-none tracking-tight text-foreground md:text-5xl lg:text-[3.5rem]">
-                  <span className="italic text-accent">
-                    {metric.value.charAt(0)}
+                <span
+                  aria-hidden
+                  className="absolute left-0 top-0 h-px w-12 bg-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:left-10"
+                />
+                <div className="flex flex-col gap-5">
+                  <span className="whitespace-nowrap font-serif text-[4.25rem] leading-[0.9] tracking-tight text-foreground md:text-[4.75rem] lg:text-[5.25rem]">
+                    <span className="italic text-accent">
+                      {metric.value.charAt(0)}
+                    </span>
+                    {metric.value.slice(1)}
                   </span>
-                  {metric.value.slice(1)}
-                </span>
-                <span className="text-[11px] uppercase tracking-[0.18em] leading-relaxed text-muted">
-                  {metric.label}
-                </span>
+                  <span className="max-w-[14rem] text-[11px] uppercase leading-relaxed tracking-[0.2em] text-muted">
+                    {metric.label}
+                  </span>
+                </div>
               </motion.div>
             ))}
           </div>

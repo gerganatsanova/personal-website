@@ -563,33 +563,38 @@ export const t = {
     titleLead: { bg: "Зад думите стои", en: "Behind the words is" },
     titleAccent: { bg: "практика", en: "practice" },
     intro: {
-      bg: "Над 10 години опит в обучение и развитие, фасилитиране и коучинг с хора, екипи и организации от различни сектори.",
-      en: "More than 10 years of experience in learning and development, facilitation, and coaching with people, teams, and organizations across different sectors.",
+      bg: "Практиката ми съчетава обучение и развитие, фасилитиране и коучинг с хора, екипи и организации от различни сектори.",
+      en: "My work brings together learning and development, facilitation, and coaching with people, teams, and organizations across different sectors.",
     },
-    featuredValue: { bg: "600+", en: "600+" },
+    featuredValue: { bg: "10+", en: "10+" },
     featuredLabel: {
+      bg: "години опит",
+      en: "years of experience",
+    },
+    participantsValue: { bg: "600+", en: "600+" },
+    participantsLabel: {
       bg: "участници в програми",
       en: "participants in programs",
     },
     projectsValue: { bg: "1 000+", en: "1,000+" },
     projectsLabel: {
-      bg: "реализирани проекта",
-      en: "delivered projects",
+      bg: "корпоративни проекта",
+      en: "corporate projects",
     },
     trainingsValue: { bg: "60+", en: "60+" },
     trainingsLabel: {
       bg: "проведени обучения",
       en: "training sessions delivered",
     },
-    coachingValue: { bg: "20+", en: "20+" },
-    coachingLabel: {
-      bg: "1:1 коучинг сесии",
-      en: "1:1 coaching sessions",
-    },
     modulesValue: { bg: "30+", en: "30+" },
     modulesLabel: {
       bg: "обучителни модула",
       en: "learning modules",
+    },
+    coachingValue: { bg: "20+", en: "20+" },
+    coachingLabel: {
+      bg: "индивидуални коучинг сесии",
+      en: "individual coaching sessions",
     },
   },
   // Homepage "Directions" section — two-column intro to the two growth paths.
