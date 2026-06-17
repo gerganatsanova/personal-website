@@ -74,6 +74,43 @@ export const t = {
       en: "Becoming.",
     },
   },
+  // Homepage recognition section — short situations before services.
+  recognition: {
+    titleLead: {
+      bg: "Може би",
+      en: "You might",
+    },
+    titleAccent: {
+      bg: "си тук",
+      en: "be here",
+    },
+    titleRest: {
+      bg: "ако...",
+      en: "if...",
+    },
+    subtitle: {
+      bg: "Понякога първата стъпка е просто да разпознаеш ситуацията, в която се намираш.",
+      en: "Sometimes the first step is simply recognizing the situation you are in.",
+    },
+    items: {
+      bg: [
+        "Имаш нужда да подредиш мислите си и да чуеш себе си по-ясно.",
+        "Преминаваш през промяна, колебание или вътрешно напрежение.",
+        "Екипът ти има нужда от по-ясна комуникация, повече участие и конкретни следващи стъпки.",
+        "Предстои важен разговор, среща или процес, който има нужда от добра структура и водене.",
+        "Имаш тема, обучение или идея, която трябва да стане по-ясна, структурирана и използваема.",
+        "Искаш съдържание, което не просто звучи добре, а помага на хората да мислят, участват и прилагат.",
+      ],
+      en: [
+        "You need space to sort through your thoughts and hear yourself more clearly.",
+        "You are moving through change, uncertainty, or inner tension.",
+        "Your team needs clearer communication, more participation, and concrete next steps.",
+        "An important conversation, meeting, or process needs clear structure and thoughtful facilitation.",
+        "You have a topic, training, or idea that needs to become clearer, more structured, and usable.",
+        "You want content that does not only sound good, but helps people think, participate, and apply.",
+      ],
+    },
+  },
   workWithMe: {
     kicker: {
       bg: "Работи с мен",
