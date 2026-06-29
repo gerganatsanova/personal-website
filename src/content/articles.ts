@@ -36,9 +36,149 @@ export const ARTICLES_PER_PAGE = 10;
 // Newest first. When adding a new article, paste it at the top.
 export const articles: Article[] = [
   {
-    slug: "tihoto-napuskane-e-signal",
-    date: "2026-06-01",
+    slug: "kolko-struva-malchanieto-v-edin-ekip",
+    date: "2026-06-28",
     displayDate: { bg: "Юни 2026", en: "June 2026" },
+    cover: "/images/cost-of-silence-team.jpg",
+    title: {
+      bg: "Колко струва мълчанието в един екип?",
+      en: "The Cost of Silence in a Team",
+    },
+    excerpt: {
+      bg: "Понякога най-големият проблем в един екип не е конфликтът. А тишината. Днес споделям мислите си за онова мълчание, което рядко се забелязва навреме, но почти винаги оставя след себе си пропуснати идеи, скрити проблеми и изгубени възможности.",
+      en: "Sometimes the biggest problem in a team isn't conflict. It's silence. On the kind of silence that often goes unnoticed, yet quietly leaves behind missed ideas, hidden problems, and lost opportunities.",
+    },
+    body: {
+      bg: `Кога за последно премълча нещо на работното си място?
+
+Не защото нямаше мнение. Не защото не ти пукаше. А защото за миг си помисли, че е по-добре да не казваш нищо.
+
+Може би си забелязал проблем, но си решил да не го повдигаш на въпрос. Може би си имал идея, която не си се усмелил да изкажеш на глас и е останала само в главата ти. Може би не си бил съгласен с решение, но си преценил, че няма смисъл да започваш разговор, който вероятно няма да промени нищо. Или пък не си разбрал нещо, но не си попитал, за да не изглеждаш неподготвен.
+
+Почти всеки е бил в подобна ситуация. И точно затова тя е толкова коварна. Изглежда като нещо дребно. Един премълчан въпрос. Една неизказана идея. Едно несъгласие. Една грешка, която никой не споменава. Поотделно те не изглеждат като проблем. Но когато започнат да се натрупват, постепенно променят начина, по който работи целият екип.
+
+Най-голямата загуба всъщност не е, че някой е замълчал. А че заедно с него е замълчала информация, която е можела да помогне за по-добро решение, да предотврати грешка или да доведе до нова идея. Така организациите започват да работят с непълна картина. Проблемите се откриват по-късно, решенията се вземат с по-малко информация, а възможностите за подобрение остават неизползвани.
+
+Отстрани подобен екип може дори да изглежда спокоен. Няма конфликти, никой не спори, срещите приключват бързо, всички кимат в знак на съгласие. Но спокойствието невинаги е признак за добра екипна динамика. Понякога то е знак, че хората просто са се научили, че е по-безопасно да мълчат.
+
+Това поведение си има име.
+
+Нарича се психологическа сигурност и през последните две десетилетия се превръща в една от най-изследваните теми в организационната психология.
+
+Най-просто казано, психологическата сигурност е усещането, че можеш да говориш открито. Да задаваш въпроси, да признаваш грешки, да търсиш помощ или да изразиш различно мнение, без страх, че това ще се обърне срещу теб.
+
+Важно е да направим едно уточнение. Психологическата сигурност не означава всички да са съгласни помежду си. Не означава липса на критика, ниски стандарти или избягване на трудните разговори. Напротив. Именно когато хората се чувстват достатъчно сигурни, те са по-склонни да повдигат неудобни теми, да оспорват идеи и да дават честна обратна връзка. Разликата е, че го правят с фокус върху решението, а не върху обвинението.
+
+Една от първите изследователки, които обръщат сериозно внимание на темата, е професор Ейми Едмъндсън от Харвардското бизнес училище. В свои изследвания върху болнични екипи тя стига до извод, който първоначално изглежда напълно нелогичен: най-добрите екипи съобщават повече грешки.
+
+На пръв поглед това звучи като доказателство, че работят по-зле от останалите.
+
+Оказва се точно обратното.
+
+Те не допускат повече грешки от другите. Просто не се страхуват да ги признаят. А когато една грешка бъде споделена навреме, тя може да бъде коригирана, вместо да се превърне в по-голям проблем. Така организациите започват да учат от случилото се, вместо да повтарят грешките си.
+
+Тази идея по-късно намира потвърждение и извън здравеопазването. В рамките на вътрешното си изследване Project Aristotle Google анализира стотици екипи с една основна цел: да разбере какво отличава най-успешните от останалите. Изследвани са множество фактори, сред които професионален опит, образование, личностни характеристики и начин на работа. В крайна сметка един фактор се откроява най-силно: психологическата сигурност.
+
+Не защото сама по себе си гарантира успех. А защото създава условия хората да използват знанията и опита си много по-пълноценно.
+
+Именно тук се крие връзката с продуктивността.
+
+Често свързваме продуктивността с по-добри процеси, повече технологии или по-висока индивидуална ефективност. Всичко това има значение. Но дори най-добрите процеси трудно могат да компенсират среда, в която хората премълчават проблемите си.
+
+Екип, в който хората задават въпроси навреме, признават грешките си и споделят различни гледни точки, учи по-бързо. Решенията се вземат с повече информация. Рисковете се откриват по-рано. Добрите идеи имат шанс да бъдат чути. А грешките по-рядко се превръщат в повтарящ се модел, защото не остават скрити.
+
+Затова психологическата сигурност не е просто тема за човешките отношения. Тя има пряко отражение върху начина, по който един екип работи, учи и се развива.
+
+Темата е много по-широка, отколкото може да се побере в една статия. Тя обхваща лидерството, обратната връзка, ученето, иновациите и организационната култура. Но може би първият въпрос, от който си струва да започнем, е много по-прост.
+
+Колко добри идеи никога не са били чути?
+
+Колко проблеми са останали скрити?
+
+И колко по-добри решения не са били взети, защото някой е преценил, че е по-безопасно да замълчи?`,
+      en: `When was the last time you held something back at work?
+
+Not because you didn't have an opinion.
+
+Not because you didn't care.
+
+But because, for a brief moment, it simply felt safer to stay quiet.
+
+Maybe you spotted a problem but chose not to bring it up. Maybe you had an idea that never made it past your own thoughts. Perhaps you disagreed with a decision but felt the conversation wouldn't change the outcome anyway. Or maybe you didn't understand something but avoided asking, worried it might make you look unprepared.
+
+Most of us have been there.
+
+That's exactly what makes these moments so deceptive. They seem insignificant. One unasked question. One unspoken idea. One disagreement left unsaid. One mistake nobody mentions. On their own, they don't appear to matter much. But over time, they begin to shape the way an entire team works.
+
+The real loss isn't that someone stayed silent.
+
+It's that valuable information stayed silent with them. Information that could have led to a better decision, prevented a mistake, or sparked a new idea. Gradually, teams begin operating with an incomplete picture. Problems are discovered later. Decisions are made with less information. Opportunities for improvement quietly disappear.
+
+From the outside, such a team may even look harmonious. There are no conflicts. Meetings end quickly. Everyone seems to agree.
+
+But a lack of disagreement doesn't necessarily mean everything is working well.
+
+Sometimes it simply means people have learned that staying quiet feels safer than speaking up.
+
+This experience has a name.
+
+It's called **psychological safety**, and over the past two decades it has become one of the most researched topics in organizational psychology.
+
+At its core, psychological safety is the belief that you can ask questions, admit mistakes, seek help, or express a different opinion without fearing embarrassment, punishment, or damage to your reputation.
+
+One important clarification is worth making.
+
+Psychological safety does not mean everyone agrees with each other. It doesn't mean avoiding difficult conversations, lowering standards, or eliminating constructive criticism.
+
+Quite the opposite.
+
+When people feel psychologically safe, they are more willing to challenge ideas, raise uncomfortable issues, and give honest feedback. The difference is that these conversations focus on solving problems rather than blaming people.
+
+One of the pioneering researchers in this field is Professor Amy Edmondson from Harvard Business School. In her research on hospital teams, she uncovered a finding that initially seemed completely counterintuitive.
+
+The highest-performing teams reported more mistakes.
+
+At first glance, that sounds like evidence of poorer performance.
+
+In reality, the opposite was true.
+
+They weren't making more mistakes. They were simply more willing to report them. When mistakes are acknowledged early, they can be corrected before they grow into larger problems. That allows teams to learn instead of repeating the same errors.
+
+Years later, similar conclusions emerged beyond healthcare.
+
+Through its well-known Project Aristotle, Google set out to understand what separates highly effective teams from the rest. Researchers examined a wide range of factors, including professional experience, educational background, personality traits, and team composition.
+
+One factor consistently stood out.
+
+Psychological safety.
+
+Not because it guarantees success on its own, but because it creates the conditions for people to fully use their knowledge, experience, and perspectives.
+
+This is where psychological safety connects directly to productivity.
+
+We often associate productivity with better processes, improved technology, or individual efficiency. All of these matter. But even the best systems cannot fully compensate for an environment where people hesitate to speak up.
+
+Teams that ask questions early, acknowledge mistakes, and openly exchange different perspectives learn faster. They make better-informed decisions. They identify risks sooner. Good ideas have a chance to be heard. Mistakes are less likely to become recurring patterns because they don't remain hidden.
+
+That's why psychological safety is far more than a conversation about workplace relationships.
+
+It has a direct impact on how teams perform, learn, and grow.
+
+The topic is much broader than a single article can cover. It touches leadership, feedback, learning, innovation, and organizational culture.
+
+But perhaps the best place to start is with a much simpler question.
+
+How many good ideas have never been heard?
+
+How many problems have remained hidden?
+
+And how many better decisions were never made because someone believed it was safer to stay silent?`,
+    },
+  },
+  {
+    slug: "tihoto-napuskane-e-signal",
+    date: "2026-05-01",
+    displayDate: { bg: "Май 2026", en: "May 2026" },
     cover:
       "https://images.unsplash.com/photo-1696123460860-db4ba71573b8?w=1400&q=80&auto=format&fit=crop",
     title: {
