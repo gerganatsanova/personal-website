@@ -4,6 +4,7 @@
 export const contact = {
   linkedin: "https://www.linkedin.com/in/gerganatsanova/",
   x: "https://x.com/GerganaTsanova",
+  instagram: "https://www.instagram.com/tsanova.gergana/",
 };
 
 export const t = {
