@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Lora, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeScript } from "@/components/theme-script";
+import { PointerEffects } from "@/components/pointer-effects";
 import { LanguageProvider } from "@/lib/i18n";
 
 // Latin serif — original display face for English.
@@ -50,6 +51,7 @@ export default function RootLayout({
         className="min-h-full flex flex-col bg-background text-foreground"
       >
         <LanguageProvider>{children}</LanguageProvider>
+        <PointerEffects />
       </body>
     </html>
   );
