@@ -479,12 +479,12 @@ export const t = {
     },
     beyondParagraphs: {
       bg: [
-        "Извън работата спортът е голяма част от живота ми. Част съм от българския национален отбор по чирлидинг, където също така съм треньор по кондиционна подготовка. Харесвам спортове като кросфит и калистеника, а стойката на ръце е едно от онези неща, които продължават да ме учат на търпение, постоянство, сила и баланс.",
+        "Извън работата движението и спортът са важна част от живота ми. Те ми носят енергия, предизвикват ме да излизам от зоната си на комфорт и продължават да ме учат на търпение, постоянство, сила и баланс. Харесва ми да откривам нови начини да се движа, да развивам уменията си и да виждам докъде мога да стигна.",
         "Обичам да пътувам, да откривам нови места, култури и начини на живот. Харесвам и усещането за адреналин. Сред най-смелите ми преживявания досега са плуването с акули и делфини в Индийския океан и скокът с бънджи от скалите на остров Нуса Пенида. Пътуванията ми дават по-широка перспектива и ми напомнят, че светът е много по-голям от собствените ни навици, представи и гледни точки. До момента Бали е мястото, което е оставило най-силен отпечатък в мен.",
         "Ценя времето с близки хора, вкусната храна, рисуването, смислените разговори и темите, които ме карат да погледна по различен начин на познати неща. А понякога пея сама вкъщи или в колата, достатъчно уверено, за да ми е хубаво, и достатъчно насаме, за да е безопасно за околните.",
       ],
       en: [
-        "Outside of work, sport is a big part of my life. I am a member of the Bulgarian national cheerleading team, where I also work as a conditioning coach. I enjoy sports such as CrossFit and calisthenics, and handstands are one of those things that continue to teach me patience, consistency, strength, and balance.",
+        "Outside of work, movement and sport are an important part of my life. They give me energy, challenge me to step outside my comfort zone, and continue to teach me patience, consistency, strength, and balance. I enjoy discovering new ways to move, developing my skills, and seeing how far I can go.",
         "I love travelling, discovering new places, cultures, and ways of life. I also enjoy the feeling of adrenaline. Some of my boldest experiences so far include swimming with sharks and dolphins in the Indian Ocean and bungee jumping from the cliffs of Nusa Penida. Travelling gives me a broader perspective and reminds me that the world is much bigger than our own habits, assumptions, and ways of seeing things. So far, Bali is the place that has left the strongest impression on me.",
         "I value time with the people close to me, good food, drawing, meaningful conversations, and topics that make me look at familiar things differently. And sometimes I sing alone at home or in the car, with enough confidence to enjoy it and enough privacy to keep everyone around me safe.",
       ],
