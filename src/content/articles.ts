@@ -544,7 +544,7 @@ And here comes the bigger question: what does this mean for us? Artificial intel
     },
     excerpt: {
       bg: "Защо едни хора постигат повече от други? Често отговорът е в начина, по който мозъкът ни сортира света. За ретикуларната активираща система и нагласата за растеж.",
-      en: "Why do some people achieve more than others? Often the answer lies in how our brain sorts the world. On the Reticular Activating System and the growth mindset.",
+      en: "Why Do Some People Achieve More Than Others? Often, the answer lies in the way our brain sorts the world. This is an article about the Reticular Activating System and the growth mindset.",
     },
     body: {
       bg: `Всеки човек живее живота си с желанието да бъде успешен и да се чувства удовлетворен от онова, което прави. В света има много примери за успешни хора – било то защото са открили нещо ново и непознато, което ще е в полза на обществото, или са станали невероятни професионалисти в областта, в която работят, или пък са натрупали богатство, което им носи дивиденти. Каквато и да е причината, всички приемаме тези хора за успели и ги даваме за пример. Но на какво се дължат постиженията им? Какво правят по-различно от нас, за да постигнат успеха? А не можем ли и ние да се превърнем в успешни хора за пример?
@@ -572,31 +572,91 @@ And here comes the bigger question: what does this mean for us? Artificial intel
 ## Ключът към развитието
 
 И може би сега се чудите защо ви разказвам всичко това и по какъв начин то влияе върху нашето развитие и нашите успехи? Разказвам го, защото ключът към успеха е именно настройката на нашия мозък. С правилната настройка, с правилното програмиране на нашата РАС, можем да се превърнем в хората, които постигат и са пример за другите. Веднъж настроили мозъка си да мисли за развитие и растеж във всяко наше ежедневно действие, резултатите са само въпрос на време. Приемем ли предизвикателствата в ежедневието си като възможности, които да ни развиват, които да ни правят по-добри с всеки следващ опит (например, докато сме в задръстването, да си пуснем аудиокнигата, за която никога не ни достига време, а ни е толкова важна в работното ежедневие), правим следващата крачка към крайната дестинация – причисляването ни към категорията на успешните личности.`,
-      en: `Every person lives with the desire to be successful and to feel fulfilled by what they do. The world is full of examples of successful people — whether because they have discovered something new and unknown that benefits society, become exceptional professionals in their field, or built wealth that brings them returns. Whatever the reason, we see these people as successful and often hold them up as examples. But what are their achievements due to? What do they do differently from us in order to succeed? And can we also become successful people others look up to?
+      en: `Every person wants to be successful and to feel fulfilled by what they do. The world is full of examples of successful people. Some have discovered something new and previously unknown that benefits society. Others have become exceptional professionals in their field or built wealth that continues to generate returns. Whatever the reason, we see these people as successful and often hold them up as examples.
 
-The answers to these questions are both simple and complex. Studies exploring the reasons behind people's success confirm that, however different their achievements may be in nature and substance, there is one very important thing that connects them: the way successful people perceive the world and what happens around them. Before I tell you more about that, I want to draw your attention to a system that is key to how our brain functions.
+But what are their achievements due to? What do they do differently from the rest of us in order to succeed? And can we also become successful people whom others look up to?
+
+The answers to these questions are both simple and complex. Studies exploring the reasons behind people’s success confirm that, however different their achievements may be in nature and substance, there is one very important thing that connects them: the way successful people perceive the world and what happens around them.
+
+Before I tell you more about that, I want to draw your attention to a system that is essential to the way our brain functions.
 
 ## The Reticular Activating System
 
-This system is very ancient and extremely important for the brain. It is part of the brainstem, running through it and reaching the diencephalon, and it serves to sort and transmit information from the environment around us. This essential part of the brain is known as the Reticular Activating System, or RAS. In everyday language, it is often described as a "sorting gate." But why is it so special, and why should we pay attention to it today?
+This system is very ancient and extremely important for the brain. It is part of the brainstem, running through it and reaching the diencephalon, and its function is to sort and transmit information from the environment around us.
 
-In our daily lives, we are flooded with information that our brain simply does not have the capacity to process. And I am not talking only about the things we consciously notice. This is where the RAS comes to our aid. It helps the brain select which information should move further along the chain and be processed. In other words, the RAS determines what reaches our conscious awareness. In the distant past, this system directed our attention toward dangers or opportunities and helped us survive. Today, our survival may not depend on it in the same way, but its influence remains just as strong.
+This essential part of the brain is known as the Reticular Activating System, or RAS. In everyday language, it is often described as a “sorting gate.” But why is it so special, and why should we pay attention to it today?
 
-Both in the past and today, the RAS sorts incoming information from the environment and passes on only what it determines serves our conscious mind. Personally, I find this function of the brain very useful, because it helps us ignore a great deal of unnecessary noise around us — every bird flying by as we walk in the park, every word spoken by the people we pass, every engine growl from a car speeding past us, even the grumbling of a partner or child at home. On the other hand, this system can also direct our attention toward the things that interest us.
+In our daily lives, we are flooded with information that our brain simply does not have the capacity to process. I am not talking only about the things we consciously notice. This is where the RAS comes to our aid. It helps the brain select which information should move further along the chain and be processed.
 
-## How the RAS chooses what we see
+In other words, the RAS determines what reaches our conscious awareness. In the distant past, this system directed our attention towards dangers and opportunities, helping us survive. Today, our survival may not depend on it in quite the same way, but its influence remains just as strong.
 
-Here is an example. Our car is getting old, and we want to replace it with a newer model. We go to a car dealership and choose a Nissan model — it is not the newest one, but its advantages suddenly begin to seem obvious. It has beautiful curves, ergonomic seats, a dashboard that is pleasant to look at, an excellent sound system, and overall it offers a comfortable ride, while driving it feels like a real pleasure. Happy to have found a car unlike anything we had noticed before, we buy the Nissan and proudly get behind the wheel. On the way home, we suddenly notice in the rear-view mirror that the car behind us is the same model. At the next intersection, we pass another one just like it. Shortly before getting home, we see another parked car exactly like ours. It turns out that this exact Nissan model is everywhere around us. But why had we not noticed it before? It feels as if everyone is driving it. The answer is simple: because of our RAS. As I said earlier, the RAS is the first filter for the information entering our brain. Before we liked this car and signaled our interest to the RAS, the system simply ignored that information, and it did not reach our conscious awareness. But now that it matters to us, the RAS is ready to show us all the surrounding possibilities.
+Both in the past and today, the RAS sorts the information coming from our environment and passes on only what it determines is relevant to our conscious mind.
 
-## When the RAS works against us
+Personally, I find this function of the brain very useful because it helps us ignore a great deal of unnecessary noise around us. It filters out every bird flying past as we walk through the park, every word spoken by the people we pass, every engine growling as a car speeds by and even the grumbling of a partner or child at home.
 
-The RAS, however, has one major limitation. It cannot judge what is good for us, what will help us, or what may actually stand in our way and pose a threat. It is so primitive that it can function only at the level of interest. To give another example — this time one that works against us — I would connect it to a very common habit that unconsciously focuses our attention in a negative direction. Let me ask you: has it ever happened that in the morning, when you get up and make your first coffee of the day, you turn on the television and watch the morning news? Perhaps most of you would answer yes. And has it happened that while watching the morning news, you hear about the number of people infected with coronavirus in the past 24 hours, or about a car accident that took a woman's life, or about the innocent victims of war? Those of you who answered yes to my first question will probably nod again now.
+At the same time, this system can direct our attention towards the things that interest us.
 
-So what is the problem here? By taking in all this negative information, which we cannot positively influence anyway — or at least not directly and not in that moment — we are telling our RAS that all these things interest us. All these troubles become the focus of our attention, and the RAS says, "Oh, so this is what you like? Well, there is plenty more I can show you." After we have finished our coffee, filled ourselves with negative information, and started getting ready for work, the moment comes when we leave home and get in the car. On the way to kindergarten, we get stuck in heavy traffic, and the first thought that comes to mind is: "How have the people at the municipality still not learned that traffic jams happen here, and why haven't they done something about it?" We drop the child off at kindergarten, but because of the traffic, we are already late for work. When we arrive in front of the building, it turns out there is nowhere to park, and the complaint comes up in our mind: "It's always like this — there is never anywhere to park." We walk into the office, already late, and find out that the client we are working with has a very serious problem and will delay the delivery of the equipment we need. The day has barely begun, and we are already thinking how unlucky we are and "why do these things always happen to me?"
+## How the RAS Chooses What We See
 
-## The key to development
+Here is an example.
 
-And perhaps now you are wondering why I am telling you all this and how it affects our development and our success. I am telling you because the key to success lies precisely in the way our brain is tuned. With the right mindset, with the right programming of our RAS, we can become the kind of people who achieve things and become an example for others. Once we train our brain to think in terms of development and growth in every everyday action, the results are only a matter of time. When we accept the challenges in our daily lives as opportunities that develop us and make us better with every new attempt — for example, while sitting in traffic, listening to the audiobook we never seem to have time for, even though it matters so much in our working life — we take the next step toward the final destination: joining the category of successful people.`,
+Our car is getting old, and we want to replace it with a newer model. We go to a car dealership and choose a Nissan. It is not the newest model, but its advantages suddenly begin to seem obvious. It has beautiful curves, ergonomic seats, a dashboard that is pleasant to look at and an excellent sound system. Overall, it offers a comfortable ride, and driving it feels like a real pleasure.
+
+Happy to have found a car unlike anything we had noticed before, we buy the Nissan and proudly get behind the wheel.
+
+On the way home, we suddenly notice in the rear-view mirror that the car behind us is the same model. At the next intersection, we pass another one just like it. Shortly before reaching home, we see another car parked by the road that looks exactly like ours.
+
+It turns out that this exact Nissan model is everywhere around us. But why had we not noticed it before? It suddenly feels as though everyone is driving it.
+
+The answer is simple. It is because of our RAS.
+
+As I mentioned earlier, the RAS is the first filter for the information entering our brain. Before we liked this car and signalled our interest in it, the system simply ignored the information, which meant that it never reached our conscious awareness.
+
+Now that the car matters to us, however, the RAS is ready to show us all the surrounding possibilities.
+
+## When the RAS Works Against Us
+
+The RAS, however, has one major limitation. It cannot judge what is good for us, what will help us or what may actually stand in our way and pose a threat.
+
+It is so primitive that it can function only at the level of interest.
+
+To give another example, this time one in which the system works against us, I would connect it to a very common habit that unconsciously directs our attention towards the negative.
+
+Let me ask you something. Has it ever happened that, when you get up in the morning and make your first coffee of the day, you turn on the television and watch the morning news? Perhaps most of you would answer yes.
+
+Has it also happened that, while watching the morning news, you hear about the number of people infected with coronavirus in the past 24 hours, a car accident that took a woman’s life or the innocent victims of war?
+
+Those of you who answered yes to my first question will probably nod again now.
+
+So, what is the problem?
+
+By taking in all this negative information, which we cannot positively influence anyway, or at least not directly and not in that moment, we are telling our RAS that these things interest us.
+
+All these troubles become the focus of our attention, and the RAS responds as though it were saying, “Oh, so this is what you like? There is plenty more I can show you.”
+
+After we have finished our coffee, filled ourselves with negative information and started getting ready for work, the moment comes when we leave home and get into the car.
+
+On the way to kindergarten, we get stuck in heavy traffic, and the first thought that comes to mind is, “How have the people at the municipality still not realised that traffic jams happen here? Why haven’t they done something about it?”
+
+We drop the child off at kindergarten, but because of the traffic, we are already late for work. When we arrive in front of the building, it turns out that there is nowhere to park, and another complaint appears in our mind: “It is always like this. There is never anywhere to park.”
+
+We walk into the office, already late, and find out that the client we are working with has a serious problem and will delay the delivery of the equipment we need.
+
+The day has barely begun, and we are already thinking about how unlucky we are and wondering, “Why do these things always happen to me?”
+
+## The Key to Development
+
+Perhaps you are now wondering why I am telling you all this and how it affects our development and success.
+
+I am telling you because the key to success lies precisely in the way our brain is tuned. With the right mindset and the right programming of our RAS, we can become the kind of people who achieve meaningful things and become an example for others.
+
+Once we train our brain to think in terms of development and growth in every everyday action, the results become only a matter of time.
+
+When we accept the challenges in our daily lives as opportunities that help us grow and become better with every new attempt, we take another step towards our final destination.
+
+For example, while sitting in traffic, we can listen to the audiobook for which we never seem to have enough time, even though it may be highly relevant to our professional life.
+
+By doing so, we take the next step towards joining the group of people we consider successful.`,
     },
   },
   {
