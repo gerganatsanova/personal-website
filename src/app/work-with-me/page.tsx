@@ -11,6 +11,7 @@ import { PullQuote } from "@/components/pull-quote";
 import { CTA } from "@/components/cta";
 import { fadeUp, EASE } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
+import { siteFeatures } from "@/lib/site-features";
 import { t } from "@/lib/translations";
 
 export default function WorkWithMePage() {
@@ -148,6 +149,10 @@ function LifeDirection() {
 /* ---------------- Section 3 — Growth at work ---------------- */
 function WorkDirection() {
   const { lang } = useLanguage();
+  const topics = siteFeatures.learningDesignService
+    ? t.workWithMe.workTopics[lang]
+    : t.workWithMe.workTopics[lang].slice(0, -1);
+
   return (
     <DirectionSection
       id="work"
@@ -158,7 +163,7 @@ function WorkDirection() {
       pullQuoteAfter={1}
       audience={t.workWithMe.workAudience[lang]}
       topicsLabel={t.workWithMe.workTopicsLabel[lang]}
-      topics={t.workWithMe.workTopics[lang]}
+      topics={topics}
       reverse
     />
   );
@@ -368,6 +373,7 @@ function HowWeWork() {
       description: t.workWithMe.service1Description[lang],
       image:
         "https://images.unsplash.com/photo-1463397952320-023b1defe8a9?w=900&q=80",
+      enabled: true,
     },
     {
       anchor: "facilitation",
@@ -376,6 +382,7 @@ function HowWeWork() {
       description: t.workWithMe.service2Description[lang],
       image:
         "https://images.unsplash.com/photo-1769771744699-7b73a101b318?w=900&q=80",
+      enabled: true,
     },
     {
       anchor: "trainings",
@@ -384,8 +391,11 @@ function HowWeWork() {
       description: t.workWithMe.service3Description[lang],
       image:
         "https://images.unsplash.com/photo-1669833576253-3ac6369b55f3?w=900&q=80",
+      enabled: siteFeatures.learningDesignService,
     },
-  ];
+  ].filter((service) => service.enabled !== false);
+
+  const hasThreeServices = services.length === 3;
 
   return (
     <section className="relative">
@@ -403,7 +413,9 @@ function HowWeWork() {
             {t.workWithMe.howKicker[lang]}
           </p>
           <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
-            {t.workWithMe.howTitle[lang]}{" "}
+            {hasThreeServices
+              ? t.workWithMe.howTitleWithLearningDesign[lang]
+              : t.workWithMe.howTitle[lang]}{" "}
             <span className="italic text-accent">
               {t.workWithMe.howTitleAccent[lang]}
             </span>
@@ -414,7 +426,11 @@ function HowWeWork() {
         </motion.div>
 
         {/* Services columns */}
-        <div className="mt-14 grid grid-cols-1 gap-y-16 md:mt-16 md:grid-cols-3 md:gap-x-10 md:gap-y-0">
+        <div
+          className={`mt-14 grid grid-cols-1 gap-y-16 md:mt-16 md:gap-x-10 md:gap-y-0 ${
+            hasThreeServices ? "md:grid-cols-3" : "md:grid-cols-2"
+          }`}
+        >
           {services.map((service, i) => (
             <motion.div
               key={service.title}
@@ -426,7 +442,11 @@ function HowWeWork() {
               transition={{ delay: i * 0.12 }}
               className="flex scroll-mt-20 flex-col"
             >
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-border/60">
+              <div
+                className={`relative w-full overflow-hidden rounded-sm border border-border/60 ${
+                  hasThreeServices ? "aspect-[4/5]" : "aspect-[4/3]"
+                }`}
+              >
                 <Image
                   src={service.image}
                   alt=""

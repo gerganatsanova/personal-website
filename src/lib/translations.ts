@@ -25,8 +25,8 @@ export const t = {
     brandFirst: { bg: "Гергана", en: "Gergana" },
     brandLast: { bg: "Цанова", en: "Tsanova" },
     tagline: {
-      bg: "Коучинг, обучения и фасилитиране",
-      en: "Coaching, training, and facilitation",
+      bg: "Коучинг и менторство · Обучения и фасилитация",
+      en: "Coaching and mentoring · Training and facilitation",
     },
     rights: {
       bg: "Всички права запазени.",
@@ -39,8 +39,8 @@ export const t = {
   },
   hero: {
     kicker: {
-      bg: "Коуч · Консултант · Фасилитатор",
-      en: "Coach · Consultant · Facilitator",
+      bg: "Коуч · Ментор · Обучител · Фасилитатор",
+      en: "Coach · Mentor · Trainer · Facilitator",
     },
     headlineLine1: {
       bg: "Растеж в живота.",
@@ -55,8 +55,8 @@ export const t = {
       en: " at work.",
     },
     paragraph: {
-      bg: "Помагам на хора и екипи да намират повече яснота, увереност и посока чрез коучинг, обучения и фасилитирани разговори.",
-      en: "I help people and teams find more clarity, confidence, and direction through coaching, training, and facilitated conversations.",
+      bg: "Помагам на хора и екипи да намират повече яснота, увереност и посока чрез коучинг, менторство, обучения и фасилитирани разговори.",
+      en: "I help people and teams find more clarity, confidence, and direction through coaching, mentoring, training, and facilitated conversations.",
     },
     ctaPrimary: {
       bg: "Свържи се с мен",
@@ -95,20 +95,20 @@ export const t = {
     },
     items: {
       bg: [
-        "Имаш нужда да подредиш мислите си и да чуеш себе си по-ясно.",
-        "Преминаваш през промяна, колебание или вътрешно напрежение.",
-        "Екипът ти има нужда от по-ясна комуникация, повече участие и конкретни следващи стъпки.",
-        "Предстои важен разговор, среща или процес, който има нужда от добра структура и водене.",
-        "Имаш тема, обучение или идея, която трябва да стане по-ясна, структурирана и използваема.",
-        "Искаш съдържание, което не просто звучи добре, а помага на хората да мислят, участват и прилагат.",
+        "Искаш да развиеш лидерските си умения и да водиш хората с повече увереност, яснота и последователност.",
+        "Поемаш нова роля или повече отговорност и искаш да изградиш собствен начин да водиш, общуваш и вземаш решения.",
+        "Имаш цел, идея или посока, но ти е нужна структура, за да я превърнеш в конкретни и реалистични действия.",
+        "Искаш да общуваш по-ясно в работата, да даваш обратна връзка, да поставяш граници и да водиш трудните разговори по конструктивен начин.",
+        "Екипът ти има нужда да развие практически умения в комуникацията, лидерството, сътрудничеството или работата с хора.",
+        "Предстои важна среща, дискусия или екипен процес и имате нужда от неутрална фасилитация, ясна структура и конкретни следващи стъпки.",
       ],
       en: [
-        "You need space to sort through your thoughts and hear yourself more clearly.",
-        "You are moving through change, uncertainty, or inner tension.",
-        "Your team needs clearer communication, more participation, and concrete next steps.",
-        "An important conversation, meeting, or process needs clear structure and thoughtful facilitation.",
-        "You have a topic, training, or idea that needs to become clearer, more structured, and usable.",
-        "You want content that does not only sound good, but helps people think, participate, and apply.",
+        "You want to develop your leadership skills and lead people with greater confidence, clarity, and consistency.",
+        "You are stepping into a new role or taking on greater responsibility and want to develop your own way of leading, communicating, and making decisions.",
+        "You have a goal, an idea, or a direction, but need structure to turn it into concrete and realistic action.",
+        "You want to communicate more clearly at work, give feedback, set boundaries, and approach difficult conversations constructively.",
+        "Your team needs to develop practical skills in communication, leadership, collaboration, or working with people.",
+        "An important meeting, discussion, or team process is coming up and you need neutral facilitation, clear structure, and concrete next steps.",
       ],
     },
   },
@@ -285,6 +285,10 @@ export const t = {
       en: "How we work together",
     },
     howTitle: {
+      bg: "Два формата,",
+      en: "Two formats,",
+    },
+    howTitleWithLearningDesign: {
       bg: "Три формата,",
       en: "Three formats,",
     },
@@ -297,14 +301,17 @@ export const t = {
       en: "Each format is built around the same principle of honest conversation, clarity, and a next step that leads to real results.",
     },
     service1Numeral: { bg: "I.", en: "I." },
-    service1Title: { bg: "Индивидуален\nкоучинг", en: "Personal\ncoaching" },
+    service1Title: {
+      bg: "Коучинг и\nменторство",
+      en: "Coaching and\nmentoring",
+    },
     service1Description: {
-      bg: "Пространство за повече яснота, посока и личностно израстване. Индивидуалният коучинг е подходящ, когато си на кръстопът, в период на колебания или просто усещаш, че нещо имаш нужда от промяна. Работим по теми, които засягат както личния, така и професионалния ти живот. Това може да бъде нужда от повече увереност, по-ясна посока, справяне със стрес, усещане за застой или развитие на конкретни умения. Целта не е просто да говорим, а да стигнеш до повече яснота, осъзнаване и следващи стъпки, които има смисъл за теб.",
-      en: "A space for greater clarity, direction, and personal growth. Individual coaching is suitable when you are at a crossroads, in a period of uncertainty, or simply feel that something needs to change. We work on topics that affect both your personal and professional life. This may include a need for more confidence, clearer direction, better stress management, a sense of feeling stuck, or the development of specific skills. The goal is not simply to talk, but to help you reach greater clarity, awareness, and next steps that truly make sense for you.",
+      bg: "Пространство за повече яснота, посока и личностно израстване. Коучингът и менторството са подходящи, когато си на кръстопът, в период на колебание или усещаш, че нещо има нужда от промяна. Според темата можем да работим чрез въпроси, които ти помагат да достигнеш до собствените си отговори, или чрез по-активно споделяне на опит и практически насоки. Целта не е просто да говорим, а да стигнеш до повече яснота, осъзнаване и следващи стъпки, които имат смисъл за теб.",
+      en: "A space for greater clarity, direction, and personal growth. Coaching and mentoring are valuable when you are at a crossroads, moving through uncertainty, or feel that something needs to change. Depending on the topic, we can work through questions that help you reach your own answers or through more active sharing of experience and practical guidance. The goal is not simply to talk, but to help you reach greater clarity, awareness, and next steps that truly make sense for you.",
     },
     service2Numeral: { bg: "II.", en: "II." },
     service2Title: {
-      bg: "Обучения и фасилитиране",
+      bg: "Обучения и фасилитация",
       en: "Training and facilitation",
     },
     service2Description: {
@@ -506,12 +513,16 @@ export const t = {
     titleLead: { bg: "Как работим", en: "How we work" },
     titleAccent: { bg: "заедно.", en: "together." },
     subtitle: {
+      bg: "Две посоки, една философия с фокус върху растеж, който отговаря на твоя живот и на реалните нужди на екипа.",
+      en: "Two directions, one philosophy, focused on growth that responds to your life and the real needs of the team.",
+    },
+    subtitleWithLearningDesign: {
       bg: "Три формата, една философия с фокус върху растеж, който отговаря на твоя живот, не на нечий чужд модел.",
       en: "Three formats, one philosophy, with a focus on growth that responds to your life, not to someone else's model.",
     },
     service1Description: {
-      bg: "Когато си в период на промяна, колебание или вътрешно напрежение и имаш нужда да подредиш мислите си, да чуеш себе си по-ясно и да направиш следваща стъпка.",
-      en: "When you are in a period of change, uncertainty, or inner tension and need space to sort through your thoughts, hear yourself more clearly, and take the next step.",
+      bg: "Когато си в период на промяна, колебание или вътрешно напрежение и имаш нужда да подредиш мислите си, да чуеш себе си по-ясно или да получиш практическа насока за следващата стъпка.",
+      en: "When you are moving through change, uncertainty, or inner tension and need space to sort through your thoughts, hear yourself more clearly, or receive practical guidance for the next step.",
     },
     service2Description: {
       bg: "Когато екипът има нужда от по-ясна комуникация, повече участие и разговор, който води до обща посока и конкретни следващи стъпки.",

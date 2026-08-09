@@ -2,11 +2,14 @@
 
 import { motion } from "motion/react";
 import { useLanguage } from "@/lib/i18n";
+import { siteFeatures } from "@/lib/site-features";
 import { t } from "@/lib/translations";
 
 export function TopicsMarquee() {
   const { lang } = useLanguage();
-  const topics = t.topicsMarquee.items[lang];
+  const topics = t.topicsMarquee.items[lang].filter(
+    (_, index) => siteFeatures.learningDesignService || index !== 3,
+  );
 
   return (
     <section

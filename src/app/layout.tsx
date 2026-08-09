@@ -29,7 +29,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Gergana Tsanova — Coach, Facilitator, Consultant",
   description:
-    "Coaching, training, and facilitation for people and teams who want more clarity, confidence, and direction in life and at work.",
+    "Coaching, mentoring, training, and facilitation for people and teams who want more clarity, confidence, and direction in life and at work.",
 };
 
 export default function RootLayout({

@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { fadeUp } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
+import { siteFeatures } from "@/lib/site-features";
 import { t } from "@/lib/translations";
 
 export function Services() {
@@ -15,20 +16,25 @@ export function Services() {
       title: t.workWithMe.service1Title[lang],
       description: t.homeServices.service1Description[lang],
       href: "/work-with-me#coaching",
+      enabled: true,
     },
     {
       numeral: t.workWithMe.service2Numeral[lang],
       title: t.workWithMe.service2Title[lang],
       description: t.homeServices.service2Description[lang],
       href: "/work-with-me#facilitation",
+      enabled: true,
     },
     {
       numeral: t.workWithMe.service3Numeral[lang],
       title: t.workWithMe.service3Title[lang],
       description: t.homeServices.service3Description[lang],
       href: "/work-with-me#trainings",
+      enabled: siteFeatures.learningDesignService,
     },
-  ];
+  ].filter((service) => service.enabled !== false);
+
+  const hasThreeServices = services.length === 3;
 
   return (
     <section className="relative">
@@ -52,12 +58,18 @@ export function Services() {
             </span>
           </h2>
           <p className="mt-6 text-[15px] leading-[1.75] text-muted md:text-base">
-            {t.homeServices.subtitle[lang]}
+            {hasThreeServices
+              ? t.homeServices.subtitleWithLearningDesign[lang]
+              : t.homeServices.subtitle[lang]}
           </p>
         </motion.div>
 
         {/* Services columns */}
-        <div className="mt-10 grid grid-cols-1 gap-y-14 border-t border-border/60 pt-10 md:mt-12 md:grid-cols-3 md:gap-x-0 md:gap-y-0 md:pt-12">
+        <div
+          className={`mt-10 grid grid-cols-1 gap-y-14 border-t border-border/60 pt-10 md:mt-12 md:gap-x-0 md:gap-y-0 md:pt-12 ${
+            hasThreeServices ? "md:grid-cols-3" : "md:grid-cols-2"
+          }`}
+        >
           {services.map((service, i) => (
             <motion.div
               key={service.title}
