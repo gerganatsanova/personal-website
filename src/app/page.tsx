@@ -6,6 +6,7 @@ import { Services } from "@/components/services";
 import { TopicsMarquee } from "@/components/topics-marquee";
 import { ArticlesPreview } from "@/components/articles-preview";
 import { Metrics } from "@/components/metrics";
+import { TestimonialsPreview } from "@/components/testimonials-preview";
 import { CTA } from "@/components/cta";
 import { Footer } from "@/components/footer";
 import { SectionDivider } from "@/components/section-divider";
@@ -26,6 +27,8 @@ export default function Home() {
         <TopicsMarquee />
         <SectionDivider />
         <Metrics />
+        <SectionDivider />
+        <TestimonialsPreview />
         <SectionDivider />
         <ArticlesPreview />
         <CTA />

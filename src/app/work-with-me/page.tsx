@@ -9,6 +9,7 @@ import { SectionDivider } from "@/components/section-divider";
 import { Ornament } from "@/components/ornament";
 import { PullQuote } from "@/components/pull-quote";
 import { CTA } from "@/components/cta";
+import { WorkTestimonialsPreview } from "@/components/work-testimonials-preview";
 import { fadeUp, EASE } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
 import { siteFeatures } from "@/lib/site-features";
@@ -28,6 +29,8 @@ export default function WorkWithMePage() {
         <Unifier />
         <SectionDivider />
         <HowWeWork />
+        <SectionDivider />
+        <WorkTestimonialsPreview />
         <SectionDivider />
         <CTA />
       </main>

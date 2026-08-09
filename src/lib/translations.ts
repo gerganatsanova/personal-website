@@ -630,6 +630,41 @@ export const t = {
       en: "individual coaching sessions",
     },
   },
+  // Homepage testimonials — temporary copy for layout review.
+  testimonials: {
+    kicker: { bg: "Отзиви", en: "Testimonials" },
+    titleLead: { bg: "Думи след", en: "Words after" },
+    titleAccent: { bg: "съвместната работа", en: "working together" },
+    readAll: {
+      bg: "Прочети всички коментари тук",
+      en: "Read all testimonials here",
+    },
+    fullKicker: { bg: "Клиентски отзиви", en: "Client testimonials" },
+    fullTitleLead: {
+      bg: "Какво споделят хората,",
+      en: "What people share",
+    },
+    fullTitleAccent: {
+      bg: "с които съм работила",
+      en: "after working with me",
+    },
+    fullIntro: {
+      bg: "Тук ще съберем пълните отзиви — с думите на хората такива, каквито са, и с професионален контекст там, където имаме разрешение да го споделим.",
+      en: "This is where the full testimonials will live — in people’s own words, with professional context wherever we have permission to share it.",
+    },
+    workTitleLead: {
+      bg: "Опитът от",
+      en: "The experience of",
+    },
+    workTitleAccent: {
+      bg: "съвместната работа",
+      en: "working together",
+    },
+    workIntro: {
+      bg: "Няколко подбрани гласа за начина, по който протича работата ни. Пълните отзиви са събрани на отделна страница.",
+      en: "A few selected voices on what working together feels like. The full testimonials are collected on a dedicated page.",
+    },
+  },
   // Homepage "Directions" section — two-column intro to the two growth paths.
   directions: {
     // Intro sentence (line 1 + line 2 with two inline accent words).
