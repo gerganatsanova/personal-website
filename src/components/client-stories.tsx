@@ -36,12 +36,13 @@ export function ClientStories() {
         <div className="mt-12 space-y-5 md:mt-16 md:space-y-6">
           {fullTestimonials.map((story, index) => (
             <motion.article
-              key={`${lang}-${index}`}
+              key={`${lang}-${story.id}`}
+              id={story.id}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.15 }}
               variants={fadeUp}
-              className={`rounded-sm border border-border/70 px-6 py-7 md:px-10 md:py-9 ${
+              className={`scroll-mt-24 rounded-sm border border-border/70 px-6 py-7 md:px-10 md:py-9 ${
                 index % 2 === 0 ? "bg-surface/45" : "bg-surface/20"
               }`}
             >
