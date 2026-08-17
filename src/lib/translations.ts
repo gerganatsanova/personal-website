@@ -648,10 +648,6 @@ export const t = {
       bg: "с които съм работила",
       en: "after working with me",
     },
-    fullIntro: {
-      bg: "Тук ще съберем пълните отзиви — с думите на хората такива, каквито са, и с професионален контекст там, където имаме разрешение да го споделим.",
-      en: "This is where the full testimonials will live — in people’s own words, with professional context wherever we have permission to share it.",
-    },
     workTitleLead: {
       bg: "Опитът от",
       en: "The experience of",

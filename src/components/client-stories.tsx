@@ -28,9 +28,6 @@ export function ClientStories() {
               {t.testimonials.fullTitleAccent[lang]}
             </span>
           </h1>
-          <p className="mt-6 max-w-2xl text-[15px] leading-[1.75] text-muted md:text-base">
-            {t.testimonials.fullIntro[lang]}
-          </p>
         </motion.div>
 
         <div className="mt-12 space-y-5 md:mt-16 md:space-y-6">
