@@ -6,13 +6,10 @@ import { motion } from "motion/react";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { SectionDivider } from "@/components/section-divider";
-import { Ornament } from "@/components/ornament";
-import { PullQuote } from "@/components/pull-quote";
 import { CTA } from "@/components/cta";
 import { WorkTestimonialsPreview } from "@/components/work-testimonials-preview";
 import { fadeUp, EASE } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
-import { siteFeatures } from "@/lib/site-features";
 import { t } from "@/lib/translations";
 
 export default function WorkWithMePage() {
@@ -22,15 +19,15 @@ export default function WorkWithMePage() {
       <main className="flex-1">
         <Intro />
         <SectionDivider />
-        <LifeDirection />
+        <Directions />
         <SectionDivider />
-        <WorkDirection />
+        <Formats />
         <SectionDivider />
-        <Unifier />
-        <SectionDivider />
-        <HowWeWork />
+        <Process />
         <SectionDivider />
         <WorkTestimonialsPreview />
+        <SectionDivider />
+        <Questions />
         <SectionDivider />
         <CTA />
       </main>
@@ -40,13 +37,13 @@ export default function WorkWithMePage() {
   );
 }
 
-/* ---------------- Section 1 — Intro ---------------- */
+/* ---------------- 1. Intro ---------------- */
 function Intro() {
   const { lang } = useLanguage();
-  const paragraphs = t.workWithMe.introParagraphs[lang];
+
   return (
     <section className="relative">
-      <div className="mx-auto max-w-6xl px-6 pt-16 pb-20 md:px-10 md:pt-24 md:pb-28">
+      <div className="mx-auto max-w-6xl px-6 pt-16 pb-20 md:px-10 md:pt-24 md:pb-24">
         <motion.p
           initial="hidden"
           animate="show"
@@ -64,421 +61,346 @@ function Intro() {
           transition={{ delay: 0.05 }}
           className="max-w-4xl font-serif text-[2rem] leading-[1.12] tracking-tight text-foreground sm:text-4xl md:text-[2.75rem] lg:text-[3.25rem]"
         >
-          {t.workWithMe.headline[lang]}{" "}
-          <span
-            className={`italic text-accent ${
-              lang === "en" ? "md:block" : ""
-            }`}
-          >
-            {t.workWithMe.headlineAccent[lang]}
+          {t.workWithMe.practicalHeadline[lang]}{" "}
+          <span className="italic text-accent">
+            {t.workWithMe.practicalHeadlineAccent[lang]}
           </span>
         </motion.h1>
 
-        <div className="mt-8 max-w-4xl">
-          <motion.p
-            initial="hidden"
-            animate="show"
-            variants={fadeUp}
-            transition={{ delay: 0.1 }}
-            className="text-[15px] leading-[1.75] text-muted md:text-base"
-          >
-            {paragraphs[0]}
-          </motion.p>
-
-          <PullQuote text={t.workWithMe.introPullQuote[lang]} />
-
-          <div className="space-y-5">
-            {paragraphs.slice(1).map((p, i) => (
-              <motion.p
-                key={i}
-                initial="hidden"
-                animate="show"
-                variants={fadeUp}
-                transition={{ delay: 0.18 + i * 0.06 }}
-                className="text-[15px] leading-[1.75] text-muted md:text-base"
-              >
-                {p}
-              </motion.p>
-            ))}
-          </div>
-        </div>
-
-        {/* Delicate inline CTA */}
         <motion.p
           initial="hidden"
           animate="show"
           variants={fadeUp}
-          transition={{ delay: 0.3 }}
-          className="mt-10 flex items-center gap-3 text-[13px] italic text-subtle"
+          transition={{ delay: 0.1 }}
+          className="mt-8 max-w-3xl text-[15px] leading-[1.8] text-muted md:text-base"
         >
-          <span className="h-px w-6 bg-accent" aria-hidden />
-          {t.workWithMe.topCtaLead[lang]}{" "}
+          {t.workWithMe.practicalIntro[lang]}
+        </motion.p>
+
+        <motion.p
+          initial="hidden"
+          animate="show"
+          variants={fadeUp}
+          transition={{ delay: 0.15 }}
+          className="mt-5 max-w-3xl border-l-2 border-accent/60 pl-5 text-[15px] italic leading-[1.75] text-foreground/90 md:text-base"
+        >
+          {t.workWithMe.practicalNote[lang]}
+        </motion.p>
+
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={fadeUp}
+          transition={{ delay: 0.2 }}
+          className="mt-10"
+        >
           <Link
             href="/contact#book"
-            className="group not-italic font-medium text-foreground transition-colors hover:text-accent"
+            className="group inline-flex items-center justify-center rounded-full border border-foreground bg-foreground px-7 py-3.5 text-sm font-medium text-background transition-all hover:border-accent hover:bg-accent"
           >
-            {t.workWithMe.topCtaLink[lang]}
+            {t.workWithMe.introCta[lang]}
             <span
               aria-hidden
-              className="ml-1.5 inline-block transition-transform group-hover:translate-x-0.5"
+              className="ml-2 transition-transform group-hover:translate-x-0.5"
             >
               →
             </span>
           </Link>
-        </motion.p>
+        </motion.div>
       </div>
     </section>
   );
 }
 
-/* ---------------- Section 2 — Growth in life ---------------- */
-function LifeDirection() {
+/* ---------------- 2. Two directions ---------------- */
+function Directions() {
   const { lang } = useLanguage();
-  return (
-    <DirectionSection
-      id="life"
-      eyebrow={t.workWithMe.lifeEyebrow[lang]}
-      title={t.workWithMe.lifeTitle[lang]}
-      paragraphs={t.workWithMe.lifeParagraphs[lang]}
-      pullQuote={t.workWithMe.lifePullQuote[lang]}
-      pullQuoteAfter={1}
-      audience={t.workWithMe.lifeAudience[lang]}
-      topicsLabel={t.workWithMe.lifeTopicsLabel[lang]}
-      topics={t.workWithMe.lifeTopics[lang]}
-    />
-  );
-}
-
-/* ---------------- Section 3 — Growth at work ---------------- */
-function WorkDirection() {
-  const { lang } = useLanguage();
-  const topics = siteFeatures.learningDesignService
-    ? t.workWithMe.workTopics[lang]
-    : t.workWithMe.workTopics[lang].slice(0, -1);
+  const directions = [
+    {
+      numeral: "I.",
+      title: t.workWithMe.lifeTitle[lang],
+      description: t.workWithMe.lifePracticalDescription[lang],
+      topics: t.workWithMe.lifePracticalTopics[lang],
+    },
+    {
+      numeral: "II.",
+      title: t.workWithMe.workTitle[lang],
+      description: t.workWithMe.workPracticalDescription[lang],
+      topics: t.workWithMe.workPracticalTopics[lang],
+    },
+  ];
 
   return (
-    <DirectionSection
-      id="work"
-      eyebrow={t.workWithMe.workEyebrow[lang]}
-      title={t.workWithMe.workTitle[lang]}
-      paragraphs={t.workWithMe.workParagraphs[lang]}
-      pullQuote={t.workWithMe.workPullQuote[lang]}
-      pullQuoteAfter={1}
-      audience={t.workWithMe.workAudience[lang]}
-      topicsLabel={t.workWithMe.workTopicsLabel[lang]}
-      topics={topics}
-      reverse
-    />
-  );
-}
-
-function DirectionSection({
-  id,
-  eyebrow,
-  title,
-  paragraphs,
-  pullQuote,
-  pullQuoteAfter = 1,
-  audience,
-  topicsLabel,
-  topics,
-  reverse = false,
-}: {
-  id?: string;
-  eyebrow: string;
-  title: string;
-  paragraphs: readonly string[];
-  pullQuote?: string;
-  pullQuoteAfter?: number;
-  audience: string;
-  topicsLabel: string;
-  topics: readonly string[];
-  reverse?: boolean;
-}) {
-  const words = title.split(" ");
-  const lastWord = words[words.length - 1];
-  const titlePrefix = words.slice(0, -1).join(" ");
-
-  return (
-    <section id={id} className="relative scroll-mt-20">
-      <div className="mx-auto max-w-6xl px-6 pt-20 pb-20 md:px-10 md:pt-28 md:pb-28">
-        {/* Top: eyebrow + title, full width */}
+    <section className="relative">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.4 }}
           variants={fadeUp}
           className="max-w-3xl"
         >
-          <p className="mb-5 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
+          <p className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
             <span className="h-px w-8 bg-accent" aria-hidden />
-            {eyebrow}
+            {t.workWithMe.directionsKicker[lang]}
           </p>
-          <h2 className="font-serif text-4xl leading-[1.08] tracking-tight text-foreground md:text-5xl lg:text-[3.25rem]">
-            {titlePrefix && <span>{titlePrefix} </span>}
-            <span className="italic text-accent">{lastWord}</span>
-          </h2>
-        </motion.div>
-
-        {/* Two-column body */}
-        <div
-          className={`mt-10 grid grid-cols-1 gap-10 md:mt-14 md:grid-cols-12 md:gap-12 ${
-            reverse ? "md:[&>*:first-child]:order-2" : ""
-          }`}
-        >
-          {/* Paragraphs + audience */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={fadeUp}
-            className="md:col-span-7"
-          >
-            <div className="max-w-[62ch] space-y-4">
-              {paragraphs.slice(0, pullQuoteAfter + 1).map((p, i) => (
-                <p
-                  key={`pre-${i}`}
-                  className="text-[15px] leading-[1.75] text-muted md:text-base"
-                >
-                  {p}
-                </p>
-              ))}
-            </div>
-
-            {pullQuote && (
-              <div className="max-w-[62ch]">
-                <PullQuote text={pullQuote} />
-              </div>
-            )}
-
-            {paragraphs.length > pullQuoteAfter + 1 && (
-              <div className="max-w-[62ch] space-y-4">
-                {paragraphs.slice(pullQuoteAfter + 1).map((p, i) => (
-                  <p
-                    key={`post-${i}`}
-                    className="text-[15px] leading-[1.75] text-muted md:text-base"
-                  >
-                    {p}
-                  </p>
-                ))}
-              </div>
-            )}
-
-            <div className="mt-8 max-w-[62ch] border-l-2 border-accent/60 pl-5">
-              <p className="text-[15px] leading-[1.75] italic text-foreground/90 md:text-base">
-                {audience}
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Topics */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={fadeUp}
-            transition={{ delay: 0.1 }}
-            className="md:col-span-5"
-          >
-            <p className="mb-6 text-[11px] uppercase tracking-[0.22em] text-subtle">
-              {topicsLabel}
-            </p>
-            <ul className="space-y-0">
-              {topics.map((topic, i) => (
-                <motion.li
-                  key={topic}
-                  initial={{ opacity: 0, y: 8 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: i * 0.04,
-                    ease: EASE,
-                  }}
-                  className="group relative border-b border-border/60 py-4 text-[15px] leading-snug text-foreground/90 md:text-base"
-                >
-                  <span
-                    aria-hidden
-                    className="absolute left-0 top-1/2 h-4 w-0 -translate-y-1/2 bg-accent transition-[width] duration-300 ease-out group-hover:w-[2px]"
-                  />
-                  <span className="block transition-[padding] duration-300 ease-out group-hover:pl-3">
-                    {topic}
-                  </span>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- Section 4 — Unifier ---------------- */
-function Unifier() {
-  const { lang } = useLanguage();
-  const paragraphs = t.workWithMe.unifierParagraphs[lang];
-  return (
-    <section className="relative">
-      <div className="mx-auto max-w-3xl px-6 pt-20 pb-20 md:px-10 md:pt-28 md:pb-28">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.9, ease: EASE }}
-          className="flex flex-col items-center text-center"
-        >
-          <Ornament className="mb-8" />
-          <h2 className="font-serif text-3xl leading-[1.15] tracking-tight text-foreground md:text-4xl lg:text-[2.75rem]">
-            {t.workWithMe.unifierHeadline[lang]}{" "}
+          <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-[2.75rem]">
+            {t.workWithMe.directionsTitleLead[lang]}{" "}
             <span className="italic text-accent">
-              {t.workWithMe.unifierHeadlineAccent[lang]}
+              {t.workWithMe.directionsTitleAccent[lang]}
             </span>
           </h2>
+          <p className="mt-6 max-w-[62ch] text-[15px] leading-[1.8] text-muted md:text-base">
+            {t.workWithMe.directionsIntro[lang]}
+          </p>
         </motion.div>
 
-        <div className="mt-10 md:mt-14">
-          {paragraphs.map((p, i) => (
-            <div key={i}>
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{
-                  duration: 0.7,
-                  delay: i * 0.08,
-                  ease: EASE,
-                }}
-                className="text-[15px] leading-[1.8] text-muted md:text-base"
-              >
-                {p}
-              </motion.p>
-              {i < paragraphs.length - 1 && <Ornament className="my-6" />}
-            </div>
+        <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2">
+          {directions.map((direction, directionIndex) => (
+            <motion.article
+              key={direction.title}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeUp}
+              transition={{ delay: directionIndex * 0.1 }}
+              className="rounded-sm border border-border/70 bg-surface/30 p-7 md:p-9"
+            >
+              <span className="font-serif text-sm italic text-accent">
+                {direction.numeral}
+              </span>
+              <h3 className="mt-4 font-serif text-3xl leading-tight tracking-tight text-foreground">
+                {direction.title}
+              </h3>
+              <p className="mt-5 text-[15px] leading-[1.75] text-muted md:text-base">
+                {direction.description}
+              </p>
+              <ul className="mt-7 border-t border-border/60">
+                {direction.topics.map((topic, i) => (
+                  <motion.li
+                    key={topic}
+                    initial={{ opacity: 0, y: 6 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{
+                      duration: 0.45,
+                      delay: i * 0.035,
+                      ease: EASE,
+                    }}
+                    className="flex gap-3 border-b border-border/60 py-3.5 text-[14px] leading-snug text-foreground/90 md:text-[15px]"
+                  >
+                    <span
+                      aria-hidden
+                      className="mt-[0.65em] h-px w-4 shrink-0 bg-accent"
+                    />
+                    <span>{topic}</span>
+                  </motion.li>
+                ))}
+              </ul>
+              <p className="mt-6 text-[13px] italic leading-[1.7] text-subtle md:text-sm">
+                {t.workWithMe.directionsMore[lang]}
+              </p>
+            </motion.article>
           ))}
         </div>
-
-        <Ornament className="mt-10" />
       </div>
     </section>
   );
 }
 
-/* ---------------- Section 5 — How we work together ---------------- */
-function HowWeWork() {
+/* ---------------- 3. Formats ---------------- */
+function Formats() {
   const { lang } = useLanguage();
-
-  const services = [
+  const formats = [
     {
-      anchor: "coaching",
-      numeral: t.workWithMe.service1Numeral[lang],
+      numeral: "I.",
       title: t.workWithMe.service1Title[lang],
-      description: t.workWithMe.service1Description[lang],
+      description: t.workWithMe.primaryFormatDescription[lang],
+      note: t.workWithMe.primaryFormatNote[lang],
       image:
         "https://images.unsplash.com/photo-1463397952320-023b1defe8a9?w=900&q=80",
-      enabled: true,
     },
     {
-      anchor: "facilitation",
-      numeral: t.workWithMe.service2Numeral[lang],
+      numeral: "II.",
       title: t.workWithMe.service2Title[lang],
-      description: t.workWithMe.service2Description[lang],
+      description: t.workWithMe.additionalFormatDescription[lang],
+      note: t.workWithMe.additionalFormatNote[lang],
       image:
         "https://images.unsplash.com/photo-1769771744699-7b73a101b318?w=900&q=80",
-      enabled: true,
     },
-    {
-      anchor: "trainings",
-      numeral: t.workWithMe.service3Numeral[lang],
-      title: t.workWithMe.service3Title[lang],
-      description: t.workWithMe.service3Description[lang],
-      image:
-        "https://images.unsplash.com/photo-1669833576253-3ac6369b55f3?w=900&q=80",
-      enabled: siteFeatures.learningDesignService,
-    },
-  ].filter((service) => service.enabled !== false);
-
-  const hasThreeServices = services.length === 3;
+  ];
 
   return (
     <section className="relative">
-      <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:px-10 md:pt-28 md:pb-32">
-        {/* Section header */}
+      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.4 }}
           variants={fadeUp}
-          className="max-w-xl"
+          className="max-w-3xl"
         >
           <p className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
             <span className="h-px w-8 bg-accent" aria-hidden />
-            {t.workWithMe.howKicker[lang]}
+            {t.workWithMe.formatsKicker[lang]}
           </p>
-          <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
-            {hasThreeServices
-              ? t.workWithMe.howTitleWithLearningDesign[lang]
-              : t.workWithMe.howTitle[lang]}{" "}
+          <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-[2.75rem]">
+            {t.workWithMe.formatsTitleLead[lang]}{" "}
             <span className="italic text-accent">
-              {t.workWithMe.howTitleAccent[lang]}
+              {t.workWithMe.formatsTitleAccent[lang]}
             </span>
           </h2>
-          <p className="mt-6 text-[15px] leading-[1.75] text-muted md:text-base">
-            {t.workWithMe.howIntro[lang]}
+          <p className="mt-6 max-w-[62ch] text-[15px] leading-[1.8] text-muted md:text-base">
+            {t.workWithMe.formatsIntro[lang]}
           </p>
         </motion.div>
 
-        {/* Services columns */}
-        <div
-          className={`mt-14 grid grid-cols-1 gap-y-16 md:mt-16 md:gap-x-10 md:gap-y-0 ${
-            hasThreeServices ? "md:grid-cols-3" : "md:grid-cols-2"
-          }`}
-        >
-          {services.map((service, i) => (
-            <motion.div
-              key={service.title}
-              id={service.anchor}
+        <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2">
+          {formats.map((format, i) => (
+            <motion.article
+              key={format.title}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.15 }}
               variants={fadeUp}
-              transition={{ delay: i * 0.12 }}
-              className="flex scroll-mt-20 flex-col"
+              transition={{ delay: i * 0.1 }}
+              className="flex flex-col overflow-hidden rounded-sm border border-border/70 bg-surface/20"
             >
-              <div
-                className={`relative w-full overflow-hidden rounded-sm border border-border/60 ${
-                  hasThreeServices ? "aspect-[4/5]" : "aspect-[4/3]"
-                }`}
-              >
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <Image
-                  src={service.image}
+                  src={format.image}
                   alt=""
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(to bottom, transparent 55%, rgba(20,15,10,0.28))",
-                  }}
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"
                 />
-                <span className="absolute left-4 top-4 font-serif text-sm italic text-background/90">
-                  {service.numeral}
+                <span className="absolute left-4 top-4 font-serif text-sm italic text-white/90">
+                  {format.numeral}
                 </span>
               </div>
 
-              <h3 className="mt-6 flex min-h-[3.25rem] items-center whitespace-pre-line font-serif text-2xl leading-tight tracking-tight text-foreground md:min-h-[4.5rem] md:text-[1.75rem]">
-                {service.title}
-              </h3>
-              <p className="mt-5 text-[15px] leading-[1.75] text-muted">
-                {service.description}
-              </p>
-            </motion.div>
+              <div className="flex flex-1 flex-col p-7 md:p-9">
+                <h3 className="whitespace-pre-line font-serif text-3xl leading-tight tracking-tight text-foreground">
+                  {format.title}
+                </h3>
+                <p className="mt-5 text-[15px] leading-[1.8] text-muted md:text-base">
+                  {format.description}
+                </p>
+                <p className="mt-6 border-l-2 border-accent/60 pl-5 text-[13px] italic leading-[1.75] text-foreground/90 md:text-sm">
+                  {format.note}
+                </p>
+              </div>
+            </motion.article>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- 4. Process ---------------- */
+function Process() {
+  const { lang } = useLanguage();
+  const steps = t.workWithMe.processSteps[lang];
+
+  return (
+    <section className="relative">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.4 }}
+            variants={fadeUp}
+            className="md:col-span-5"
+          >
+            <p className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
+              <span className="h-px w-8 bg-accent" aria-hidden />
+              {t.workWithMe.processKicker[lang]}
+            </p>
+            <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-[2.75rem]">
+              {t.workWithMe.processTitleLead[lang]}{" "}
+              <span className="italic text-accent">
+                {t.workWithMe.processTitleAccent[lang]}
+              </span>
+            </h2>
+            <p className="mt-6 max-w-[48ch] text-[15px] leading-[1.8] text-muted md:text-base">
+              {t.workWithMe.processIntro[lang]}
+            </p>
+          </motion.div>
+
+          <ol className="md:col-span-7 md:pt-10">
+            {steps.map((step, i) => (
+              <motion.li
+                key={step.title}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.4 }}
+                variants={fadeUp}
+                transition={{ delay: i * 0.08 }}
+                className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-border/70 py-6 first:pt-0"
+              >
+                <span className="font-serif text-sm italic text-accent">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="font-serif text-2xl leading-tight text-foreground">
+                    {step.title}
+                  </h3>
+                  <p className="mt-3 text-[15px] leading-[1.75] text-muted">
+                    {step.text}
+                  </p>
+                </div>
+              </motion.li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- 5. Questions link ---------------- */
+function Questions() {
+  const { lang } = useLanguage();
+
+  return (
+    <section className="relative">
+      <div className="mx-auto max-w-3xl px-6 py-20 text-center md:px-10 md:py-28">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={fadeUp}
+          className="flex flex-col items-center"
+        >
+          <span aria-hidden className="mb-6 block h-px w-12 bg-accent" />
+          <p className="text-[11px] uppercase tracking-[0.22em] text-muted">
+            {t.workWithMe.questionsKicker[lang]}
+          </p>
+          <h2 className="mt-4 font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl">
+            {t.workWithMe.questionsTitle[lang]}
+          </h2>
+          <p className="mt-5 max-w-2xl text-[15px] leading-[1.8] text-muted md:text-base">
+            {t.workWithMe.questionsText[lang]}
+          </p>
+          <Link
+            href="/contact#faq"
+            className="group mt-8 inline-flex items-center text-sm font-medium text-foreground transition-colors hover:text-accent"
+          >
+            {t.workWithMe.questionsLink[lang]}
+            <span
+              aria-hidden
+              className="ml-2 transition-transform group-hover:translate-x-0.5"
+            >
+              →
+            </span>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

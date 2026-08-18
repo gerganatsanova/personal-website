@@ -288,7 +288,7 @@ function Faq() {
   const items = t.contactPage.faq[lang];
 
   return (
-    <section className="relative">
+    <section id="faq" className="relative scroll-mt-20">
       <div className="mx-auto max-w-6xl px-6 pt-20 pb-20 md:px-10 md:pt-28 md:pb-28">
         <motion.div
           initial="hidden"

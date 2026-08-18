@@ -117,215 +117,207 @@ export const t = {
       bg: "Работи с мен",
       en: "Work with me",
     },
-    headline: {
-      bg: "Растежът в живота и растежът в работата",
-      en: "Growth in life and growth at work",
+    practicalHeadline: {
+      bg: "Развитие, което започва от",
+      en: "Development that starts with",
     },
-    headlineAccent: {
-      bg: "не са две отделни неща.",
-      en: "are not two separate things.",
+    practicalHeadlineAccent: {
+      bg: "реалната ситуация.",
+      en: "the real situation.",
     },
-    introPullQuote: {
-      bg: "Носим себе си навсякъде.",
-      en: "We carry ourselves everywhere.",
+    practicalIntro: {
+      bg: "Работя с хора и екипи, които искат да развият себе си, професионалната си роля или начина, по който общуват и работят с другите. Темата може да бъде свързана с живота като цяло или с конкретна ситуация от работата.",
+      en: "I work with people and teams who want to develop themselves, their professional role, or the way they communicate and work with others. The topic may be connected to life as a whole or to a specific situation at work.",
     },
-    introParagraphs: {
-      bg: [
-        "Често ги разделяме, сякаш в едната част от деня сме професионалисти, а в другата просто хора. Истината е, че носим себе си навсякъде. Начинът, по който мислим, общуваме, вземаме решения, реагираме на напрежение и се справяме с трудните моменти, се проявява и в работата, и извън нея.",
-        "Затова за мен развитието не е само въпрос на професионални умения или само на лични търсения. То е процес, в който човек изгражда повече яснота, увереност, вътрешна опора и зрялост. Понякога това се вижда в начина, по който водиш екип, говориш пред хора или поставяш граници. Друг път в начина, по който се справяш със стрес, изграждаш отношения или правиш по-честни избори за себе си. Най-често и двете са свързани.",
-        "Вярвам, че когато човек расте отвътре, това естествено се отразява и в работата му. И когато се развива професионално по смислен начин, това също променя начина, по който живее. Именно затова работя в две посоки, които се допълват, а не се изключват.",
-      ],
-      en: [
-        "We often divide them as if we are professionals during one part of the day and simply people during the other. The truth is that we carry ourselves everywhere. The way we think, communicate, make decisions, respond to pressure, and move through difficult moments shows up both at work and outside of it.",
-        "That is why, for me, growth is not only about professional skills, nor only about personal exploration. It is a process through which a person builds more clarity, confidence, inner grounding, and maturity. Sometimes this shows in the way you lead a team, speak in front of others, or set boundaries. Other times it shows in the way you manage stress, build relationships, or make more honest choices for yourself. Most often, the two are connected.",
-        "I believe that when a person grows inwardly, it naturally affects their work. And when they grow professionally in a meaningful way, that also changes the way they live. That is exactly why I work in two directions that complement each other rather than cancel each other out.",
-      ],
+    practicalNote: {
+      bg: "Личното и професионалното често се срещат в един и същи разговор. Затова започваме от конкретната нужда, без да поставяме човека или ситуацията в предварително определена рамка.",
+      en: "Personal and professional themes often meet in the same conversation. That is why we begin with the specific need, without placing the person or situation into a predetermined framework.",
     },
-    topCtaLead: {
-      bg: "Ако вече знаеш, че искаш разговор —",
-      en: "If you already know you want a conversation —",
+    introCta: {
+      bg: "Запази начален разговор",
+      en: "Book an introductory conversation",
     },
-    topCtaLink: {
-      bg: "да си запишем",
-      en: "let's set one up",
+    directionsKicker: {
+      bg: "Посоки на работа",
+      en: "Directions for our work",
     },
-    // Section 1 — Life
-    lifeEyebrow: {
-      bg: "Първа посока · Личностно",
-      en: "First direction · Personal",
+    directionsTitleLead: {
+      bg: "Темата може да бъде свързана с живота",
+      en: "The topic may be connected to life",
     },
+    directionsTitleAccent: {
+      bg: "или с работата.",
+      en: "or work.",
+    },
+    directionsIntro: {
+      bg: "Това не са две отделни услуги, а два контекста, от които може да започне разговорът. Някои теми естествено присъстват и в двата.",
+      en: "These are not two separate services, but two contexts from which the conversation may begin. Some themes naturally belong to both.",
+    },
+    directionsMore: {
+      bg: "Това са част от темите, с които можем да работим. Разговорът винаги започва от конкретната ситуация.",
+      en: "These are some of the themes we can work with. The conversation always begins with the specific situation.",
+    },
+    // Direction 1 — Life
     lifeTitle: {
       bg: "Растеж в живота.",
       en: "Growth in life.",
     },
-    lifeParagraphs: {
+    lifePracticalDescription: {
+      bg: "Когато искаш повече яснота, увереност или последователност в начина, по който живееш, общуваш и правиш избори.",
+      en: "When you want greater clarity, confidence, or consistency in the way you live, communicate, and make choices.",
+    },
+    lifePracticalTopics: {
       bg: [
-        "Личностният растеж е свързан с начина, по който живееш, а не само с начина, по който мислиш за себе си. Той се вижда в изборите, които правиш, в отношенията, които създаваш, в начина, по който минаваш през трудни периоди, и в това дали успяваш да останеш свързан със себе си, когато животът стане шумен, бърз или объркващ.",
-        "За мен растежът в живота е свързан с повече осъзнатост, по-здрава нагласа и по-добро разбиране на вътрешните механизми, които ни движат. Това може да бъде работа със стрес, блокажи, повтарящи се модели, ограничаващи убеждения, трудности в общуването или усещане, че нещо те спира да направиш следващата крачка.",
-        "Вярвам, че вътрешната работа има реално отражение върху ежедневието. Когато човек развива повече яснота, вътрешна опора и по-зряла връзка със себе си, това се усеща не само вътре в него, а и във взаимоотношенията му, в решенията му и в начина, по който присъства в собствения си живот.",
-        "Тук за мен има място и за ценности, и за нагласа, и за онази по-тиха вътрешна посока, която не винаги може да се обясни логично, но често много ясно се усеща. Не говоря за крайности или за куха духовност. По-скоро за това, че има вътрешен свят, който също има значение и който участва във всичко останало.",
+        "По-ясна комуникация и по-здрави взаимоотношения",
+        "Изграждане на навици и повече последователност",
+        "Увереност и поставяне на лични граници",
+        "Яснота при избор или важна следваща стъпка",
+        "Преминаване през период на промяна или колебание",
       ],
       en: [
-        "Personal growth is connected to the way you live, not only to the way you think about yourself. It shows in the choices you make, the relationships you build, the way you move through difficult periods, and in whether you are able to stay connected to yourself when life becomes loud, fast, or confusing.",
-        "For me, growth in life is connected to greater self awareness, a healthier mindset, and a deeper understanding of the inner patterns that drive us. This can mean working with stress, inner blocks, repeating patterns, limiting beliefs, communication difficulties, or the feeling that something is holding you back from taking the next step.",
-        "I believe that inner work has a real impact on everyday life. When a person develops more clarity, inner grounding, and a more mature relationship with themselves, it can be felt not only inwardly, but also in their relationships, their decisions, and the way they show up in their own life.",
-        "For me, this also includes values, mindset, and that quieter inner direction that cannot always be explained logically, but can often be felt very clearly. I am not talking about extremes or empty spirituality. I am talking about the fact that there is an inner world that matters too, and that it is part of everything else.",
+        "Clearer communication and healthier relationships",
+        "Building habits and greater consistency",
+        "Confidence and setting personal boundaries",
+        "Clarity around a choice or important next step",
+        "Moving through a period of change or uncertainty",
       ],
     },
-    lifePullQuote: {
-      bg: "Има вътрешен свят, който също има значение.",
-      en: "There is an inner world that matters too.",
-    },
-    lifeAudience: {
-      bg: "Работя с хора, които искат да се развиват не само отвън, а и отвътре. Хора, които искат да се движат през живота с повече яснота, устойчивост, честност и смисъл.",
-      en: "I work with people who want to grow not only on the outside, but on the inside as well. People who want to move through life with more clarity, resilience, honesty, and meaning.",
-    },
-    lifeTopicsLabel: {
-      bg: "В тази посока можем да работим по теми като:",
-      en: "In this direction, we can work on themes like:",
-    },
-    lifeTopics: {
-      bg: [
-        "Вътрешна яснота и посока",
-        "Нагласа и вътрешна мотивация",
-        "Стрес и емоционално напрежение",
-        "Комуникация и взаимоотношения",
-        "Блокажи и ограничаващи убеждения",
-        "Следваща крачка в период на колебание или преход",
-      ],
-      en: [
-        "Inner clarity and direction",
-        "Mindset and inner motivation",
-        "Stress and emotional pressure",
-        "Communication and relationships",
-        "Inner blocks and limiting beliefs",
-        "The next step during a period of doubt or transition",
-      ],
-    },
-    // Section 2 — Work
-    workEyebrow: {
-      bg: "Втора посока · Професионално",
-      en: "Second direction · Professional",
-    },
+    // Direction 2 — Work
     workTitle: {
       bg: "Растеж в работата.",
       en: "Growth at work.",
     },
-    workParagraphs: {
+    workPracticalDescription: {
+      bg: "Когато искаш да развиеш професионалната си роля, лидерското си присъствие или начина, по който работиш с хора.",
+      en: "When you want to develop your professional role, leadership presence, or the way you work with people.",
+    },
+    workPracticalTopics: {
       bg: [
-        "Да растеш в работата не означава само да вървиш нагоре. Означава да ставаш по-добър в това, което правиш, да се чувстваш по-уверен в ролята си и да развиваш умения, които ти помагат да работиш по-смислено, по-леко и по-устойчиво.",
-        "Понякога това означава да развиеш по-добра комуникация. Понякога да изградиш повече увереност и присъствие. Понякога да станеш по-ефективен, по-добър мениджър или по-зрял професионалист. А понякога означава просто да си върнеш усещането, че си на мястото си и че се движиш в посока, която има смисъл за теб.",
-        "За мен професионалното развитие не е само въпрос на резултати, позиция или следваща стъпка в йерархията. То е свързано и с меките умения, които правят работата по-добра и по-човешка. Това как общуваш, как слушаш, как водиш, как реагираш под напрежение, как поставяш граници, как вземаш решения и как се свързваш с хората около себе си.",
+        "Развитие на лидерски умения и собствен стил на водене",
+        "Повече увереност, присъствие и влияние",
+        "Мотивиране и ангажиране на хора",
+        "Подготовка за труден разговор или обратна връзка",
+        "Преминаване към нова роля или повече отговорност",
       ],
       en: [
-        "Growing at work does not only mean moving up. It means becoming better at what you do, feeling more confident in your role, and developing skills that help you work in a more meaningful, sustainable, and grounded way.",
-        "Sometimes that means building stronger communication skills. Sometimes it means developing more confidence and presence. Sometimes it means becoming more effective, becoming a better manager, or growing into a more mature professional. And sometimes it simply means finding your way back to the feeling that you are where you are meant to be and moving in a direction that makes sense for you.",
-        "For me, professional growth is not only about results, position, or the next step in the hierarchy. It is also about the soft skills that make work better and more human. The way you communicate, listen, lead, respond under pressure, set boundaries, make decisions, and relate to the people around you.",
+        "Developing leadership skills and your own way of leading",
+        "Greater confidence, presence, and influence",
+        "Motivating and engaging people",
+        "Preparing for a difficult conversation or feedback",
+        "Moving into a new role or greater responsibility",
       ],
     },
-    workPullQuote: {
-      bg: "Да си върнеш усещането, че си на мястото си.",
-      en: "Finding your way back to the feeling that you are where you are meant to be.",
+    // Formats
+    formatsKicker: {
+      bg: "Начини за работа",
+      en: "Ways of working",
     },
-    workAudience: {
-      bg: "Работя с хора, които искат да се развиват в работата си по начин, който е едновременно практичен и смислен. Не само да постигат повече, а и да се чувстват по-стабилни, по-ясни и по-удовлетворени в това, което правят.",
-      en: "I work with people who want to grow in their work in a way that is both practical and meaningful. Not only to achieve more, but also to feel more steady, clear, and fulfilled in what they do.",
+    formatsTitleLead: {
+      bg: "Подход, съобразен с",
+      en: "An approach shaped around",
     },
-    workTopicsLabel: {
-      bg: "В тази посока можем да работим по теми като:",
-      en: "In this direction, we can work on themes like:",
+    formatsTitleAccent: {
+      bg: "конкретната нужда.",
+      en: "the specific need.",
     },
-    workTopics: {
-      bg: [
-        "Увереност и професионално присъствие",
-        "Комуникация и взаимоотношения на работното място",
-        "Лидерство и работа с хора",
-        "Управление чрез вдъхновение",
-        "Ефективност и лична организация",
-        "Справяне със стрес и напрежение",
-        "Професионална посока и усещане за смисъл",
-        "Развитие на меки умения в конкретен работен контекст",
-        "Създаване на вдъхновяващи истории",
-      ],
-      en: [
-        "Confidence and professional presence",
-        "Communication and workplace relationships",
-        "Leadership and working with people",
-        "Leading through inspiration",
-        "Effectiveness and personal organization",
-        "Coping with stress and pressure",
-        "Professional direction and a sense of meaning",
-        "Developing soft skills in a specific work context",
-        "Creating inspiring stories",
-      ],
+    formatsIntro: {
+      bg: "Не е необходимо предварително да знаеш кой формат или подход е най-подходящ. Началният разговор ни помага да го определим заедно.",
+      en: "You do not need to know in advance which format or approach is the best fit. The introductory conversation helps us identify it together.",
     },
-    unifierHeadline: {
-      bg: "Не вярвам, че можем да разделим човека",
-      en: "I do not believe we can divide a person",
+    primaryFormatDescription: {
+      bg: "Разговори с фокус върху конкретна тема, промяна или умение, което искаш да развиеш. Работата може да включва въпроси, изследване на различни гледни точки, упражнения и практически насоки. Целта е да достигнеш до повече яснота и до следващи стъпки, които можеш да приложиш в своя контекст.",
+      en: "Conversations focused on a specific topic, change, or skill you want to develop. The work may include questions, exploring different perspectives, exercises, and practical guidance. The aim is to reach greater clarity and next steps that you can apply in your own context.",
     },
-    unifierHeadlineAccent: {
-      bg: "на професионална и лична част.",
-      en: "into a professional self and a personal self.",
+    primaryFormatNote: {
+      bg: "Според темата работата може да бъде по-коучингова или да включва повече менторство и споделяне на опит. Подходът се определя в процеса.",
+      en: "Depending on the topic, the work may be more coaching-led or include more mentoring and shared experience. The approach is shaped throughout the process.",
     },
-    unifierParagraphs: {
-      bg: [
-        "Едни и същи умения ни трябват и в работата, и в живота. Начинът, по който общуваме, управляваме емоциите си, вземаме решения, поемаме отговорност, поставяме граници и се отнасяме към себе си, не се сменя според ролята, в която сме в момента.",
-        "Затова не гледам на личностното и професионалното развитие като на две отделни направления. Виждам ги като различни проявления на един и същи процес. Процесът, в който човек става по-осъзнат, по-уверен, по-зрял и по-цялостен.",
-        "И може би точно тук често се губим. Свикнали сме да говорим за себе си през работата си, да мерим развитието си през резултати и роли, и да забравяме, че животът ни не се изчерпва с това, което правим професионално. Работата е важна. Но тя е част от живота, не негов заместител.",
-      ],
-      en: [
-        "We need the same skills both at work and in life. The way we communicate, manage our emotions, make decisions, take responsibility, set boundaries, and relate to ourselves does not change depending on the role we are in at a given moment.",
-        "That is why I do not see personal and professional growth as two separate directions. I see them as different expressions of the same process. A process through which a person becomes more self aware, more confident, more mature, and more whole.",
-        "And maybe this is exactly where we often lose our way. We are used to talking about ourselves through our work, measuring our growth through results and roles, and forgetting that our lives are not defined only by what we do professionally. Work matters. But it is part of life, not a replacement for it.",
-      ],
+    additionalFormatDescription: {
+      bg: "Работя и с групи и екипи, когато има нужда от развитие на конкретни умения, по-ясна комуникация или структуриран разговор по важна тема. Обученията и фасилитираните процеси се създават според конкретната аудитория, целта и реалния работен контекст.",
+      en: "I also work with groups and teams when there is a need to develop specific skills, improve communication, or create a structured conversation around an important topic. Training and facilitated processes are shaped around the specific audience, the purpose, and the real working context.",
     },
-    // How we work together
-    howKicker: {
-      bg: "Как работим заедно",
-      en: "How we work together",
-    },
-    howTitle: {
-      bg: "Два формата,",
-      en: "Two formats,",
-    },
-    howTitleWithLearningDesign: {
-      bg: "Три формата,",
-      en: "Three formats,",
-    },
-    howTitleAccent: {
-      bg: "една философия.",
-      en: "one philosophy.",
-    },
-    howIntro: {
-      bg: "Всеки формат е създаден около един и същи принцип на честен разговор, яснота и следваща крачка, която да води до резултат.",
-      en: "Each format is built around the same principle of honest conversation, clarity, and a next step that leads to real results.",
+    additionalFormatNote: {
+      bg: "Според целта форматът може да бъде обучение, фасилитирана среща или по-дълъг процес с конкретни следващи стъпки.",
+      en: "Depending on the purpose, the format may be a training session, a facilitated meeting, or a longer process with clear next steps.",
     },
     service1Numeral: { bg: "I.", en: "I." },
     service1Title: {
       bg: "Коучинг и\nменторство",
       en: "Coaching and\nmentoring",
     },
-    service1Description: {
-      bg: "Пространство за повече яснота, посока и личностно израстване. Коучингът и менторството са подходящи, когато си на кръстопът, в период на колебание или усещаш, че нещо има нужда от промяна. Според темата можем да работим чрез въпроси, които ти помагат да достигнеш до собствените си отговори, или чрез по-активно споделяне на опит и практически насоки. Целта не е просто да говорим, а да стигнеш до повече яснота, осъзнаване и следващи стъпки, които имат смисъл за теб.",
-      en: "A space for greater clarity, direction, and personal growth. Coaching and mentoring are valuable when you are at a crossroads, moving through uncertainty, or feel that something needs to change. Depending on the topic, we can work through questions that help you reach your own answers or through more active sharing of experience and practical guidance. The goal is not simply to talk, but to help you reach greater clarity, awareness, and next steps that truly make sense for you.",
-    },
     service2Numeral: { bg: "II.", en: "II." },
     service2Title: {
-      bg: "Обучения и фасилитация",
-      en: "Training and facilitation",
-    },
-    service2Description: {
-      bg: "Пространство, в което хората не просто присъстват, а участват. Обученията и фасилитираните процеси са подходящи, когато има нужда от ясна структура, смислен разговор и реално включване на хората. За мен добрият процес не е просто поднесено съдържание, а среда, в която участниците могат да мислят, да се свързват, да изследват важните въпроси и да стигат до по-ясни изводи и следващи стъпки. Целта не е просто добро преживяване, а стойност, която остава и след края на самата среща или обучение.",
-      en: "A space where people do not simply attend, but take part. Training sessions and facilitated processes are most valuable when there is a need for clear structure, meaningful conversation, and real involvement from the people in the room. For me, a good process is not just about delivering content, but about creating an environment where participants can think, connect, explore the important questions, and arrive at clearer insights and next steps. The goal is not simply a good experience in the moment, but value that remains after the session or workshop is over.",
+      bg: "Обучения и\nфасилитация",
+      en: "Training and\nfacilitation",
     },
     service3Numeral: { bg: "III.", en: "III." },
     service3Title: {
       bg: "Дизайн на обучения и материали",
       en: "Learning design and materials",
     },
-    service3Description: {
-      bg: "Съдържание, което дава структура, яснота и смисъл на обучителния процес. Разработването на обучително съдържание е подходящо, когато има нужда от по-ясна структура, по-добра логика и материали, които да работят в реален контекст. За мен доброто съдържание не е просто добре написан текст, а добре обмислен процес, съобразен с аудиторията, целта и начина, по който хората учат. Това може да включва програми, фасилитаторски насоки, упражнения, работни материали и цялостна рамка, която прави обучението по-смислено, ангажиращо и приложимо.",
-      en: "Content that brings structure, clarity, and meaning to the learning process. Learning content development is most valuable when there is a need for clearer structure, stronger logic, and materials that work in a real context. For me, good content is not simply well written text, but a well designed process shaped around the audience, the purpose, and the way people learn. This can include programs, facilitator guides, exercises, participant materials, and an overall framework that makes learning more meaningful, engaging, and applicable.",
+    // Process
+    processKicker: {
+      bg: "Как започваме",
+      en: "How we begin",
+    },
+    processTitleLead: {
+      bg: "Ясна рамка с място за",
+      en: "A clear framework with room for",
+    },
+    processTitleAccent: {
+      bg: "индивидуален подход.",
+      en: "an individual approach.",
+    },
+    processIntro: {
+      bg: "Всяка работа протича различно според хората, темата и контекста. Все пак началото следва проста рамка, която създава яснота и спокойствие.",
+      en: "Each engagement develops differently depending on the people, topic, and context. The beginning still follows a simple framework that creates clarity and ease.",
+    },
+    processSteps: {
+      bg: [
+        {
+          title: "Начален разговор",
+          text: "Запознаваме се с темата, ситуацията и това, което искаш да промениш или развиеш.",
+        },
+        {
+          title: "Подходяща посока",
+          text: "Уточняваме фокуса и преценяваме какъв формат и подход биха били най-полезни.",
+        },
+        {
+          title: "Съвместна работа",
+          text: "Процесът се адаптира спрямо нуждите, развитието на темата и конкретния контекст.",
+        },
+      ],
+      en: [
+        {
+          title: "Introductory conversation",
+          text: "We explore the topic, the situation, and what you want to change or develop.",
+        },
+        {
+          title: "A suitable direction",
+          text: "We clarify the focus and consider which format and approach would be most useful.",
+        },
+        {
+          title: "Working together",
+          text: "The process adapts to the needs, the way the topic develops, and the specific context.",
+        },
+      ],
+    },
+    // Questions
+    questionsKicker: {
+      bg: "Практическа информация",
+      en: "Practical information",
+    },
+    questionsTitle: {
+      bg: "Имаш въпрос преди да се свържеш?",
+      en: "Have a question before getting in touch?",
+    },
+    questionsText: {
+      bg: "В страницата за контакт ще намериш информация за началния разговор, формата на срещите и други често задавани въпроси.",
+      en: "The contact page includes information about the introductory conversation, meeting formats, and other frequently asked questions.",
+    },
+    questionsLink: {
+      bg: "Виж въпросите и отговорите",
+      en: "View questions and answers",
     },
     // Final CTA
     ctaKicker: {
