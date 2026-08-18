@@ -8,6 +8,10 @@ import { fullTestimonials } from "@/content/testimonials";
 
 export function ClientStories() {
   const { lang } = useLanguage();
+  const publishedTestimonials = fullTestimonials.filter(
+    (testimonial) => !testimonial.id.startsWith("testimonial-demo-"),
+  );
+
   return (
     <section id="client-stories" className="relative scroll-mt-20">
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
@@ -31,7 +35,7 @@ export function ClientStories() {
         </motion.div>
 
         <div className="mt-12 space-y-5 md:mt-16 md:space-y-6">
-          {fullTestimonials.map((story, index) => (
+          {publishedTestimonials.map((story, index) => (
             <motion.article
               key={`${lang}-${story.id}`}
               id={story.id}

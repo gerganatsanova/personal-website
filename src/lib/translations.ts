@@ -927,7 +927,7 @@ export const t = {
         },
         {
           q: "Онлайн или на живо?",
-          a: "Индивидуалните коучинг сесии провеждам онлайн в Zoom или Google Meet, за да можеш да се включиш отвсякъде. Фирмените обучения и фасилитации могат да бъдат на живо в България или в онлайн формат, според нуждите и възможностите.",
+          a: "Индивидуалните коучинг сесии могат да бъдат на живо в София, България, или онлайн. Онлайн срещите провеждам в Zoom или Google Meet, за да можеш да се включиш отвсякъде. Фирмените обучения и фасилитации могат да бъдат на живо в България или в онлайн формат, според нуждите и възможностите.",
         },
         {
           q: "Колко време продължава една коучинг сесия и колко срещи са нужни?",
@@ -961,7 +961,7 @@ export const t = {
         },
         {
           q: "Online or in person?",
-          a: "I offer individual coaching sessions online via Zoom or Google Meet, so you can join from anywhere. Corporate trainings and facilitation sessions can take place in person in Bulgaria or online, depending on your needs and availability.",
+          a: "Individual coaching sessions can take place in person in Sofia, Bulgaria, or online. Online sessions are held via Zoom or Google Meet, so you can join from anywhere. Corporate trainings and facilitation sessions can take place in person in Bulgaria or online, depending on your needs and availability.",
         },
         {
           q: "How long is a coaching session, and how many sessions are needed?",

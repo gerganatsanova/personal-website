@@ -9,6 +9,10 @@ import { homepageTestimonials } from "@/content/testimonials";
 
 export function TestimonialsPreview() {
   const { lang } = useLanguage();
+  const publishedTestimonials = homepageTestimonials.filter(
+    (testimonial) => !testimonial.id.startsWith("homepage-demo-"),
+  );
+
   return (
     <section id="testimonials" className="relative scroll-mt-20">
       <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
@@ -32,9 +36,9 @@ export function TestimonialsPreview() {
         </motion.div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-3 md:gap-5">
-          {homepageTestimonials.map((testimonial, index) => (
+          {publishedTestimonials.map((testimonial, index) => (
             <motion.article
-              key={`${lang}-${index}`}
+              key={`${lang}-${testimonial.id}`}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.2 }}
