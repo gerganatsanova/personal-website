@@ -21,6 +21,8 @@ export default function AboutPage() {
         <SectionDivider />
         <Story />
         <SectionDivider />
+        <DevelopmentView />
+        <SectionDivider />
         <Philosophy />
         <SectionDivider />
         <Experience />
@@ -219,7 +221,62 @@ function Story() {
   );
 }
 
-/* ---------------- 3. Philosophy ---------------- */
+/* ---------------- 3. How I understand development ---------------- */
+function DevelopmentView() {
+  const { lang } = useLanguage();
+  const paragraphs = t.about.developmentParagraphs[lang];
+
+  return (
+    <section className="relative">
+      <div className="mx-auto max-w-6xl px-6 pt-20 pb-20 md:px-10 md:pt-28 md:pb-28">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.35 }}
+            variants={fadeUp}
+            className="md:col-span-5"
+          >
+            <p className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted">
+              <span className="h-px w-8 bg-accent" aria-hidden />
+              {t.about.developmentKicker[lang]}
+            </p>
+            <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl lg:text-[2.75rem]">
+              {t.about.developmentTitleLead[lang]}{" "}
+              <span className="italic text-accent">
+                {t.about.developmentTitleAccent[lang]}
+              </span>
+            </h2>
+
+            <div className="mt-10 border-l-2 border-accent/60 pl-5 md:mt-12">
+              <p className="font-serif text-2xl italic leading-snug text-foreground md:text-[1.75rem]">
+                {t.about.developmentPullQuote[lang]}
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="space-y-5 md:col-span-7 md:pt-12">
+            {paragraphs.map((p, i) => (
+              <motion.p
+                key={i}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={fadeUp}
+                transition={{ delay: 0.08 + i * 0.06 }}
+                className="max-w-[62ch] text-[15px] leading-[1.8] text-muted md:text-base"
+              >
+                {p}
+              </motion.p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- 4. Philosophy ---------------- */
 function Philosophy() {
   const { lang } = useLanguage();
   const principles = [
@@ -288,7 +345,7 @@ function Philosophy() {
   );
 }
 
-/* ---------------- 4. Experience ---------------- */
+/* ---------------- 5. Experience ---------------- */
 function Experience() {
   const { lang } = useLanguage();
 
@@ -323,7 +380,7 @@ function Experience() {
   );
 }
 
-/* ---------------- 5. Credentials ---------------- */
+/* ---------------- 6. Credentials ---------------- */
 function Credentials() {
   const { lang } = useLanguage();
   const items = t.about.credentials[lang];
@@ -380,7 +437,7 @@ function Credentials() {
   );
 }
 
-/* ---------------- 6. Beyond work ---------------- */
+/* ---------------- 7. Beyond work ---------------- */
 function Beyond() {
   const { lang } = useLanguage();
   const paragraphs = t.about.beyondParagraphs[lang];
@@ -388,8 +445,8 @@ function Beyond() {
     <section className="relative">
       <div className="mx-auto max-w-6xl px-6 pt-20 pb-20 md:px-10 md:pt-28 md:pb-28">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
-          {/* Copy */}
-          <div className="md:col-span-6">
+          {/* Heading and personal images */}
+          <div className="md:col-span-5">
             <motion.div
               initial="hidden"
               whileInView="show"
@@ -408,26 +465,7 @@ function Beyond() {
               </h2>
             </motion.div>
 
-            <div className="mt-8 space-y-5 max-w-[55ch]">
-              {paragraphs.map((p, i) => (
-                <motion.p
-                  key={i}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amount: 0.3 }}
-                  variants={fadeUp}
-                  transition={{ delay: 0.1 + i * 0.06 }}
-                  className="text-[15px] leading-[1.75] text-muted md:text-base"
-                >
-                  {p}
-                </motion.p>
-              ))}
-            </div>
-          </div>
-
-          {/* Two personal images */}
-          <div className="md:col-span-6 md:pt-14 lg:pt-16">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="mt-10 grid grid-cols-2 gap-4 md:mt-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -463,6 +501,23 @@ function Beyond() {
                 />
               </motion.div>
             </div>
+          </div>
+
+          {/* Copy */}
+          <div className="space-y-5 md:col-span-7 md:pt-12">
+            {paragraphs.map((p, i) => (
+              <motion.p
+                key={i}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={fadeUp}
+                transition={{ delay: 0.1 + i * 0.06 }}
+                className="max-w-[62ch] text-[15px] leading-[1.8] text-muted md:text-base"
+              >
+                {p}
+              </motion.p>
+            ))}
           </div>
         </div>
       </div>

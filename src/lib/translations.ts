@@ -406,7 +406,36 @@ export const t = {
       bg: "Работен момент",
       en: "A moment at work",
     },
-    // 3. Philosophy
+    // 3. How I understand development
+    developmentKicker: {
+      bg: "Как разбирам развитието",
+      en: "How I see development",
+    },
+    developmentTitleLead: {
+      bg: "Човекът в живота и човекът в работата",
+      en: "Who we are in life and who we are at work",
+    },
+    developmentTitleAccent: {
+      bg: "са едно цяло.",
+      en: "are part of the same whole.",
+    },
+    developmentPullQuote: {
+      bg: "Носим себе си навсякъде.",
+      en: "We carry ourselves everywhere.",
+    },
+    developmentParagraphs: {
+      bg: [
+        "Често говорим за личностното и професионалното развитие като за две отделни посоки. Но начинът, по който общуваме, вземаме решения, поставяме граници, поемаме отговорност и реагираме под напрежение, не се сменя с ролята ни. Носим себе си навсякъде, както в отношенията и работата, така и в трудните моменти между тях.",
+        "Затова за мен развитието не е само придобиване на умения, постигане на резултати или движение към следваща позиция. То включва и повече яснота за това какво е важно, по-добро разбиране на вътрешните механизми, които ни движат, и по-зрял начин да присъстваме в собствения си живот. Ценностите, нагласата и вътрешното усещане за посока имат съвсем практично отражение върху изборите и действията ни.",
+        "Когато човек расте отвътре, това естествено се отразява и в работата му. А смисленото професионално развитие често променя и начина, по който живее. Виждам ги като различни проявления на един и същи процес, в който ставаме по-осъзнати, уверени и цялостни. Работата е важна част от живота, но не е негов заместител.",
+      ],
+      en: [
+        "We often talk about personal and professional development as two separate paths. Yet the way we communicate, make decisions, set boundaries, take responsibility, and respond under pressure does not change with our role. We carry ourselves into our relationships, our work, and the difficult moments in between.",
+        "That is why I do not see development only as gaining skills, achieving results, or moving towards a new position. It also includes greater clarity about what matters, a better understanding of the inner patterns that drive us, and a more mature way of being present in our own lives. Our values, mindset, and inner sense of direction have a very practical effect on the choices we make and the actions we take.",
+        "When a person grows inwardly, it naturally affects their work. And meaningful professional development often changes the way they live as well. I see them as different expressions of the same process through which we become more self-aware, confident, and whole. Work is an important part of life, but it is not a replacement for it.",
+      ],
+    },
+    // 4. Philosophy
     philosophyKicker: { bg: "В какво вярвам", en: "What I believe" },
     philosophyTitleLead: { bg: "Три неща, които", en: "Three things that" },
     philosophyTitleAccent: {
