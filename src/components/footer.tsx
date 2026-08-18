@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { contact, t } from "@/lib/translations";
 import { useLanguage } from "@/lib/i18n";
+import { siteFeatures } from "@/lib/site-features";
 import { useObfuscatedEmail } from "./obfuscated-email";
 
 export function Footer() {
@@ -99,22 +100,24 @@ export function Footer() {
                   </span>
                 </a>
               </li>
-              <li>
-                <a
-                  href={contact.x}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center text-muted transition-colors hover:text-foreground"
-                >
-                  X
-                  <span
-                    aria-hidden
-                    className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+              {siteFeatures.xSocialLink && (
+                <li>
+                  <a
+                    href={contact.x}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center text-muted transition-colors hover:text-foreground"
                   >
-                    ↗
-                  </span>
-                </a>
-              </li>
+                    X
+                    <span
+                      aria-hidden
+                      className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                    >
+                      ↗
+                    </span>
+                  </a>
+                </li>
+              )}
               <li>
                 <a
                   href={contact.instagram}
