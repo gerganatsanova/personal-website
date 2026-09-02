@@ -39,7 +39,7 @@ export const articles: Article[] = [
     slug: "kulturata-nevidimata-chast-ot-rabotnoto-myasto",
     date: "2026-09-01",
     displayDate: { bg: "Септември 2026", en: "September 2026" },
-    cover: "/images/cost-of-silence-team.jpg",
+    cover: "/images/workplace-culture-belonging.jpg",
     title: {
       bg: "Културата. Невидимата част от работното място.",
       en: "",
