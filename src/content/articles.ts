@@ -42,18 +42,18 @@ export const articles: Article[] = [
     cover: "/images/workplace-culture-belonging.jpg",
     title: {
       bg: "Културата. Невидимата част от работното място.",
-      en: "",
+      en: "Culture. The Invisible Side of the Workplace.",
     },
     excerpt: {
-      bg: "Организационната култура рядко се вижда в официалните ценности. Тя се усеща в доверието, контрола, отношението към грешките и малките сигнали, които ни казват дали принадлежим.",
-      en: "",
+      bg: "Организационната култура рядко се вижда в официалните ценности, написани на сайта. Тя се усеща в доверието, свободата да бъдеш себе си, отношението към грешките и малките сигнали, които ни казват дали принадлежим към средата или не.",
+      en: "Organizational culture is rarely visible in the official values written on a company's website. It is felt in the trust, the freedom to be yourself, the way mistakes are treated, and the small signals that tell us whether we belong in that environment or not.",
     },
     body: {
       bg: `Всяка организация със собствена екосистема, собствени правила, ритуали, отношения, герои и табута. Свое разбиране за успеха, отговорността, доверието и мястото на човека сред всичко това. И над тях една почти невидима сила: културата.
 
-Понякога под формата на красиви думи върху корпоративния сайт. Доверие, уважение, екипност, развитие, отговорност, иновации. Думи с правилното звучене и правилното място в корпоративната презентация.
+Понякога под формата на красиви думи в корпоративния сайт. Доверие, уважение, екипност, развитие, отговорност, иновации. Думи с правилното звучене и правилното място в корпоративната презентация.
 
-Но отвъд официалните ценности? Още един, много по-тих език. Ежедневното усещане за приемане или дистанция, за сигурност или предпазливост, за подкрепа или наказание. Отношението към грешката, различното мнение, времето и личните граници. Доверието в професионалната преценка или необходимостта от постоянен контрол. Отговорността за крайния резултат или проследяването до последната минута.
+Но отвъд официалните ценности? Едни, много по-тихи сигнали. Ежедневното усещане за приемане или дистанция, за сигурност или предпазливост, за подкрепа или наказание. Отношението към грешката, различното мнение, времето и личните граници. Доверието в професионалната преценка или необходимостта от постоянен контрол. Отговорността за крайния резултат или проследяването до последната минута.
 
 Култура без официална дефиниция и без място на стената. Но с присъствие във всеки малък сигнал, всяка реакция, всяко неписано правило.
 
@@ -61,9 +61,9 @@ export const articles: Article[] = [
 
 ## Една и съща работа. Две различни екосистеми.
 
-Допреди броени дни - моето ежедневие в една съвсем различна екосистема. Ново бюро, нови хора, нова среда и много бързо усещане за чужд дом. За ясно разделение между „ние“ и „вие“. За принадлежност чрез стаж и привилегии чрез история. За професионалния опит някъде на заден план и човека преди тази организация почти извън картината.
+Допреди броени дни: моето ежедневие в една съвсем различна екосистема. Ново бюро, нови хора, нова среда и много бързо усещане за чужд дом. За ясно разделение между „ние“ и "другите“. За принадлежност чрез стаж и привилегии чрез история. За професионалния опит някъде на заден план и човека преди тази организация почти извън картината.
 
-Малки сигнали, но едно общо послание. Три минути закъснение с по-голяма тежест от причината зад тях. Интерес към съдържанието на екрана вместо към резултата от работата. Правилният процес с предимство пред личната преценка. Историята в организацията като по-силен капитал от опита извън нея.
+Малки сигнали, но едно общо послание. Три минути закъснение с по-голяма тежест от причината зад тях. Интерес към съдържанието на екрана вместо към резултата от работата. Правилният процес с предимство пред професионалната преценка. Историята в организацията като по-силен капитал от опита извън нея.
 
 В центъра? Правилата, часовникът, контролът, правилният начин.
 
@@ -71,9 +71,9 @@ export const articles: Article[] = [
 
 Просто огромно разстояние между една организационна култура и моите собствени ценности.
 
-Само няколко дни по-късно - същият човек в друга екосистема. Отново ново бюро, нови хора и нова среда. Този път други малки сигнали. Представяне пред останалите още в началото. Срещи и разговори с цел по-бърза ориентация. Интерес не само към задачите, а и към човека зад тях. Помощ и контекст вместо очакване за самостоятелно разгадаване на неписаните правила.
+Само няколко дни по-късно - същият човек в друга екосистема. Отново ново бюро, нови хора и нова среда. Този път други малки сигнали. Представяне пред останалите по друг начин. Срещи и разговори с цел по-бърза ориентация. Интерес не само към задачите, а и към човека зад тях. Помощ и контекст вместо очакване за самостоятелно разгадаване на неписаните правила.
 
-Не „ние“ и „вие“, а общо „ние“.
+Не „ние“ и „другите“, а "всички заедно“.
 
 Разлика и в разбирането за отговорност. От едната страна: присъствие, час, процес, наблюдение. От другата - резултат, срок, качество, професионална преценка. Високи очаквания и сериозна динамика, но редом с тях свобода в подхода и доверие.
 
@@ -93,7 +93,9 @@ export const articles: Article[] = [
 
 Позиция, заплата, отговорности, придобивки, работно време, офис, възможности за развитие. Обичайните ориентири при избора на работа.
 
-А сред тях един много по-труден за предварителна оценка фактор. Културата.
+А сред тях един много по-труден за предварителна оценка фактор.
+
+Културата.
 
 Почти невидима отвън. Осезаема отвътре.
 
@@ -107,7 +109,7 @@ export const articles: Article[] = [
 
 Между двете понякога пълно съвпадение. Понякога огромна пропаст.
 
-## А понякога просто грешната екосистема
+> А понякога просто грешната екосистема
 
 Едно неприятно преживяване в дадена организация и куп възможни заключения. Неподходяща работа. Неподходяща професия. Поредното доказателство за „корпоративния свят“. А понякога дори съмнение в самите нас.
 
@@ -126,7 +128,87 @@ export const articles: Article[] = [
 Само няколко дни между двете.
 
 Едно неподходящо място. Един неуспешен сблъсък между човек и култура. Но отвъд него? Безброй други екосистеми. Други ценности. Други отношения. Друг начин на принадлежност.`,
-      en: "",
+      en: `Every organisation with its own ecosystem: its own rules, rituals, relationships, heroes and taboos. Its own understanding of success, responsibility, trust, and the place of the individual within it all. And woven through it all, an almost invisible force: culture.
+
+Sometimes, a collection of beautiful words on a corporate website. Trust. Respect. Teamwork. Growth. Responsibility. Innovation. The right words, with the right tone, in the right place on a corporate presentation.
+
+Beyond the official values, however, another, much quieter language. The everyday sense of acceptance or distance, safety or caution, support or punishment. Attitudes towards mistakes, disagreement, time, and personal boundaries. Trust in professional judgement or the need for constant control. Responsibility for the final outcome or scrutiny down to the very last minute.
+
+Culture without an official definition or a place on the wall. In every small signal, every reaction, every unwritten rule.
+
+Not in the words. In the experience.
+
+## One Job. Two Different Ecosystems.
+
+Just a few days ago: my everyday reality within a very different ecosystem. A new desk, new people, a new environment — and, almost immediately, the feeling of a stranger in someone else’s home. A clear divide between “us” and “the others.” Belonging through tenure. Privilege through history. Professional experience somewhere in the background, and the person before this organisation almost outside the picture.
+
+Small signals, one shared message. Three minutes of lateness with more weight than the reason behind them. More interest in the content on the screen than in the outcome of the work. The prescribed process above individual judgement. Time within the organisation as a stronger currency than experience beyond it.
+
+At the centre: rules, the clock, control, the “right” way.
+
+Not necessarily a bad company. Not necessarily bad people.
+
+Simply a vast distance between one organisational culture and my own values.
+
+Just a few days later: the same person in a different ecosystem. Again, a new desk, new people, a new environment. This time, different signals. A different kind of introduction to the wider team. Meetings and conversations for a quicker sense of direction. Interest not only in the tasks, but in the person behind them. Support and context instead of the expectation of navigating unwritten rules alone.
+
+No “us” and “the others.” A sense of belonging together.
+
+A different definition of responsibility, too. On one side: presence, the clock, process, observation. On the other: results, deadlines, quality, professional judgement. High expectations and a fast pace, alongside freedom in approach and trust.
+
+And a few more small signals. A manager’s personal working rhythm without an automatic expectation of the same rhythm from the team. A late email without an obligation for a late reply. Freedom in finding information and choosing an approach. Questions as part of orientation, rather than a reason for suspicion.
+
+Small moments. Bigger messages.
+
+Trust. Autonomy. Support. Boundaries. Respect for personal time.
+
+Only a few days between the two experiences.
+
+The same person. The same professional experience. The same knowledge and abilities.
+
+A completely different feeling.
+
+## Culture Beyond the Benefits Package
+
+Position, salary, responsibilities, benefits, working hours, office, opportunities for growth. The usual considerations in a job search.
+
+And among them, one factor far more difficult to assess in advance.
+
+Culture.
+
+Almost invisible from the outside. Unmistakable from within.
+
+In the welcome of a new person. In the response to a different opinion. In the reaction to a mistake. In the space for trust and freedom. In the line between personal responsibility and control. In the attitude towards time, individuality, and professional judgement.
+
+And within all of this, a crucial distinction: corporate values versus organisational culture.
+
+On one side, words for a desired identity.
+
+On the other, the everyday experience behind them.
+
+Between the two, sometimes perfect alignment. Sometimes an enormous gap.
+
+> And Sometimes, Simply the Wrong Ecosystem
+
+One unpleasant experience in an organisation, and a whole list of possible conclusions. The wrong job. The wrong profession. Another confirmation of all the stereotypes about “the corporate world.” Sometimes, even self-doubt.
+
+Not adaptable enough? Expectations too high? Too much resistance to rules? Difficulty with authority?
+
+Or perhaps something much simpler.
+
+A mismatch.
+
+Between personal and organisational values. Between our own understanding of trust and that of the environment around us. Between the need for autonomy and a culture of control. Between the desire for belonging and the clearly drawn lines of “us” and “the others.”
+
+One culture: a constant sense of foreign ground.
+
+Another: an invitation into the community.
+
+Only a few days between the two.
+
+One wrong place. One mismatch between a person and a culture. But beyond it?
+
+Countless other ecosystems. Other values. Other relationships. Other ways of belonging.`,
     },
   },
   {
