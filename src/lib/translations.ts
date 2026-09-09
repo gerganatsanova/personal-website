@@ -892,9 +892,9 @@ export const t = {
       bg: "Запази час в календара",
       en: "Pick a time in the calendar",
     },
-    bookFallback: {
-      bg: "Календарът ще се появи тук скоро. Междувременно можеш да ми пишеш на имейл.",
-      en: "The calendar will appear here soon. In the meantime, feel free to email me.",
+    bookDescription: {
+      bg: "Избери удобен ден и час за безплатен 20-минутен онлайн разговор чрез бутона по-долу или ми пиши на имейл.",
+      en: "Choose a convenient date and time for a free 20-minute online call using the button below, or email me.",
     },
     transitionOr: {
       bg: "Или просто ми пиши",

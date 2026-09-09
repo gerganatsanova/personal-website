@@ -120,7 +120,6 @@ function Connect() {
   return (
     <section id="book" className="relative scroll-mt-20">
       <div className="mx-auto max-w-6xl px-6 pt-20 pb-20 md:px-10 md:pt-28 md:pb-28">
-        {/* Combined header */}
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -140,9 +139,7 @@ function Connect() {
           </p>
         </motion.div>
 
-        {/* Booking sub-block */}
         <div className="mt-12 grid grid-cols-1 gap-10 md:mt-14 md:grid-cols-12 md:gap-12">
-          {/* Bullets */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -173,7 +170,6 @@ function Connect() {
             </ul>
           </motion.div>
 
-          {/* Booking card */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -188,7 +184,7 @@ function Connect() {
                 {t.contactPage.connectTitleLead[lang]}
               </p>
               <p className="mt-3 text-[14px] leading-[1.7] text-muted">
-                {t.contactPage.bookFallback[lang]}
+                {t.contactPage.bookDescription[lang]}
               </p>
               <a
                 href={CAL_BOOKING_URL}
@@ -208,7 +204,6 @@ function Connect() {
           </motion.div>
         </div>
 
-        {/* "Or simply write to me" transition heading */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -227,7 +222,6 @@ function Connect() {
           </h3>
         </motion.div>
 
-        {/* Email sub-block */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
