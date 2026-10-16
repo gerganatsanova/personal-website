@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer";
 import { SectionDivider } from "@/components/section-divider";
 import { CTA } from "@/components/cta";
 import { WorkTestimonialsPreview } from "@/components/work-testimonials-preview";
+import { CoachingOptions } from "@/components/coaching-options";
 import { fadeUp, EASE } from "@/lib/motion";
 import { useLanguage } from "@/lib/i18n";
 import { t } from "@/lib/translations";
@@ -18,6 +19,8 @@ export default function WorkWithMePage() {
       <Nav />
       <main className="flex-1">
         <Intro />
+        <SectionDivider />
+        <CoachingOptions />
         <SectionDivider />
         <Directions />
         <SectionDivider />

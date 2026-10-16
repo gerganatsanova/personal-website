@@ -1,0 +1,127 @@
+.introMeeting {
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  border-left: 4px solid var(--accent);
+  background: color-mix(in srgb, var(--surface) 94%, var(--accent));
+}
+
+.deck {
+  display: grid;
+  isolation: isolate;
+}
+
+.card {
+  grid-area: 1 / 1;
+  position: relative;
+  border: 2px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  background: var(--surface);
+  transform: translateY(16px) scale(0.94);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 300ms ease, box-shadow 450ms ease, border-color 300ms ease,
+    background-color 300ms ease, visibility 450ms;
+}
+
+.card[data-active="true"] {
+  z-index: 2;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  border-color: var(--accent);
+  background: var(--background);
+  box-shadow: 0 24px 48px -20px rgb(0 0 0 / 35%);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid color-mix(in srgb, var(--accent) 65%, transparent);
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.card[data-active="true"]::after {
+  opacity: 1;
+}
+
+.details {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.card[data-active="true"] .details {
+  visibility: visible;
+  opacity: 1;
+}
+
+.selectCard {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .deck {
+    grid-template-columns: 56%;
+    justify-content: center;
+  }
+
+  .card {
+    visibility: visible;
+    opacity: 0.78;
+    transform: translateX(40%) scale(0.9);
+    box-shadow: 0 8px 24px -14px rgb(0 0 0 / 25%);
+  }
+
+  .card[data-side="left"] {
+    transform: translateX(-40%) scale(0.9);
+  }
+
+  .card[data-active="true"] {
+    transform: translateX(0) scale(1);
+  }
+
+  .selectCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    width: 32%;
+    padding: 12px;
+    text-align: center;
+    border-radius: inherit;
+  }
+
+  .card[data-side="left"] .selectCard {
+    right: auto;
+    left: 0;
+  }
+
+  .card[data-active="true"] .selectCard {
+    display: none;
+  }
+
+  .selectCard:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -6px;
+  }
+
+  .card:has(.selectCard:hover),
+  .card:has(.selectCard:focus-visible) {
+    border-color: var(--accent);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card::after,
+  .details {
+    transition: none;
+  }
+}

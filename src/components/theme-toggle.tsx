@@ -13,6 +13,7 @@ export function ThemeToggle() {
     const current = getThemeSnapshot();
     const next = current === "dark" ? "light" : "dark";
     document.documentElement.classList.toggle("dark", next === "dark");
+    document.documentElement.style.colorScheme = next;
     try {
       localStorage.setItem("theme", next);
     } catch {}
