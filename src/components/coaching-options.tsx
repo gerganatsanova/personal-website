@@ -36,9 +36,9 @@ const content = {
         ],
       },
       {
-        meetingCount: 4,
+        meetingCount: 6,
         title: "От яснота към действие",
-        duration: "4 срещи · По 50 минути",
+        duration: "6 срещи · По 50 минути",
         description: "Когато искаш да работиш по определена тема или цел и да имаш пространство да опитваш, да обсъждаш случващото се и да коригираш посоката.",
         highlights: [
           "Да изясниш целта и това, което те спира.",
@@ -90,9 +90,9 @@ const content = {
         ],
       },
       {
-        meetingCount: 4,
+        meetingCount: 6,
         title: "From clarity to action",
-        duration: "4 meetings · 50 minutes each",
+        duration: "6 meetings · 50 minutes each",
         description: "When you want to work on a particular topic or goal, with space to try things, discuss what happens, and adjust your direction.",
         highlights: [
           "Clarify your goal and what is holding you back.",
