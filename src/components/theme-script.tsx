@@ -4,9 +4,10 @@ export function ThemeScript() {
       try {
         var stored = localStorage.getItem('theme');
         var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var isDesktop = window.matchMedia('(min-width: 1024px)').matches;
         var theme = stored === 'light' || stored === 'dark'
           ? stored
-          : systemDark ? 'dark' : 'light';
+          : (isDesktop || systemDark) ? 'dark' : 'light';
         document.documentElement.classList.toggle('dark', theme === 'dark');
         document.documentElement.style.colorScheme = theme;
       } catch (_) {

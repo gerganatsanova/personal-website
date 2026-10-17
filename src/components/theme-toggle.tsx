@@ -12,8 +12,7 @@ export function ThemeToggle() {
   function toggle() {
     const current = getThemeSnapshot();
     const next = current === "dark" ? "light" : "dark";
-    document.documentElement.classList.toggle("dark", next === "dark");
-    document.documentElement.style.colorScheme = next;
+    applyTheme(next);
     try {
       localStorage.setItem("theme", next);
     } catch {}
@@ -37,12 +36,49 @@ export function ThemeToggle() {
 }
 
 function subscribeToTheme(onStoreChange: () => void) {
-  window.addEventListener("storage", onStoreChange);
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+  const desktopViewport = window.matchMedia("(min-width: 1024px)");
+
+  function getDefaultTheme(): "light" | "dark" {
+    return (desktopViewport.matches || systemTheme.matches) ? "dark" : "light";
+  }
+
+  function handleStorage(event: StorageEvent) {
+    if (event.key !== "theme") return;
+
+    const stored = event.newValue;
+    const next = stored === "light" || stored === "dark"
+      ? stored
+      : getDefaultTheme();
+    applyTheme(next);
+    onStoreChange();
+  }
+
+  function handleDefaultThemeChange() {
+    try {
+      const stored = localStorage.getItem("theme");
+      if (stored === "light" || stored === "dark") return;
+    } catch {}
+
+    applyTheme(getDefaultTheme());
+    onStoreChange();
+  }
+
+  window.addEventListener("storage", handleStorage);
   window.addEventListener("theme-change", onStoreChange);
+  systemTheme.addEventListener("change", handleDefaultThemeChange);
+  desktopViewport.addEventListener("change", handleDefaultThemeChange);
   return () => {
-    window.removeEventListener("storage", onStoreChange);
+    window.removeEventListener("storage", handleStorage);
     window.removeEventListener("theme-change", onStoreChange);
+    systemTheme.removeEventListener("change", handleDefaultThemeChange);
+    desktopViewport.removeEventListener("change", handleDefaultThemeChange);
   };
+}
+
+function applyTheme(theme: "light" | "dark") {
+  document.documentElement.classList.toggle("dark", theme === "dark");
+  document.documentElement.style.colorScheme = theme;
 }
 
 function getThemeSnapshot(): "light" | "dark" {
